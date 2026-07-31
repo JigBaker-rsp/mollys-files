@@ -19,6 +19,14 @@
       "type": "string",
       "pattern": "^[a-z0-9_]+$"
     },
+    "variant_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9_]+$"
+    },
+    "parent_contract": {
+      "type": "string",
+      "minLength": 1
+    },
     "version": {
       "type": "string"
     },
@@ -72,6 +80,10 @@
           "type": "integer",
           "minimum": 1
         },
+        "finale_recommended_minutes": {
+          "type": "integer",
+          "minimum": 5
+        },
         "organizer_can_play": {
           "const": true
         },
@@ -110,6 +122,9 @@
         }
       },
       "additionalProperties": false
+    },
+    "compact_design": {
+      "type": "object"
     },
     "acts": {
       "type": "array",
@@ -237,6 +252,12 @@
     },
     "late_absence": {
       "type": "object"
+    },
+    "validation_requirements": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     }
   },
   "additionalProperties": false
