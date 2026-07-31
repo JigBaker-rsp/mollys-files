@@ -10,79 +10,135 @@
   "culprit": true,
   "public_identity": {
     "title": "L'héritier ou l'héritière désigné·e",
-    "description": "Parent proche d'Auguste, élevé dans l'idée que le Palace Belladone lui reviendrait un jour.",
-    "public_relation_to_victim": "Une relation familiale faite d'affection affichée, de dépendance financière et de rivalité.",
-    "apparent_motive": "La crainte d'être déshérité·e après l'annonce promise par Auguste.",
-    "costume_cues": ["tenue de soirée impeccable", "bijou ou chevalière familiale", "porte-documents élégant"]
+    "description": "Parent proche d'Auguste, élevé dans la certitude que le Palace Belladone représentait son avenir et l'héritage légitime des de Valleroy.",
+    "public_relation_to_victim": "Une relation familiale faite d'affection affichée, de dépendance financière et d'humiliations privées.",
+    "apparent_motive": "Auguste devait annoncer une réorganisation du palace susceptible de réduire fortement votre place, sans que les autres sachent encore pourquoi.",
+    "costume_cues": [
+      "tenue de soirée impeccable",
+      "bijou ou chevalière familiale",
+      "miniature ou portrait familial"
+    ]
   },
   "casting": {
     "difficulty": "high",
-    "play_style": ["stratégique", "social", "mensonge loyal"],
-    "recommended_for": "Un joueur à l'aise avec la discussion et capable de défendre plusieurs versions sans monopoliser la partie.",
+    "play_style": [
+      "stratégique",
+      "social",
+      "mensonge loyal"
+    ],
+    "recommended_for": "Un joueur à l'aise avec la discussion, capable d'assumer une forte suspicion sans monopoliser la partie.",
     "organizer_friendly": false,
     "culprit_opt_in_recommended": true
   },
   "private_truth": {
-    "relationship_to_victim": "Auguste a financé votre train de vie tout en vous rappelant constamment que votre avenir dépendait de lui.",
-    "secret": "Vous avez fait fabriquer un faux codicille vous désignant comme seul bénéficiaire du palace.",
+    "relationship_to_victim": "Auguste a financé votre train de vie tout en vous rappelant que votre identité et votre avenir dépendaient de lui.",
+    "secret": "Armand Keller vous a remis un codicille très favorable en affirmant qu'Auguste l'avait préparé. Vous avez compris qu'il pouvait être irrégulier, mais vous l'avez laissé rejoindre le dossier successoral sans en demander l'authentification.",
     "independent_secret": "Vous êtes lourdement endetté·e auprès de la banque Keller et avez caché l'ampleur de vos dettes à toute la famille.",
-    "murder_truth": "Ayant appris qu'Auguste avait découvert le faux, vous avez remplacé ses gouttes digestives par une préparation toxique fictive prise dans les effets du médecin. Vous saviez qu'il les utiliserait après le café du gala.",
-    "claimed_alibi": "Vous affirmez être resté·e dans le grand salon pendant toute la préparation du gala.",
+    "historical_stake": "Vous découvrez qu'une partie du palace pourrait appartenir aux Mercier et que l'histoire glorieuse transmise par votre famille repose sur un effacement. Vous refusez d'abord de croire cette vérité.",
+    "murder_truth": "Après qu'Auguste vous a annoncé la suspension de la succession, la remise du faux codicille à la police et la reconnaissance prochaine des droits Mercier, vous avez décidé de l'empêcher de parler. Vous avez remplacé ses gouttes digestives par une préparation toxique fictive prise dans les effets du médecin.",
+    "claimed_alibi": "Vous reconnaissez avoir quitté brièvement le salon pour reprendre une miniature ayant appartenu à votre mère, mais vous affirmez ne pas avoir touché aux affaires d'Auguste.",
     "actual_timeline": [
-      "Vous avez provoqué un prétexte médical dans l'après-midi afin d'approcher la trousse du médecin.",
-      "Vous avez emprunté une clé de service avant le gala sous prétexte de récupérer un souvenir familial.",
-      "Vous avez remplacé le flacon dans les appartements d'Auguste.",
-      "Vous avez ensuite rejoint le salon et construit un alibi social."
+      "À 15:18, Auguste vous révèle que le codicille est faux, que la vente sera suspendue et que les droits Mercier seront examinés.",
+      "À 15:34, vous simulez un malaise afin d'approcher la trousse du médecin.",
+      "À 15:43, vous prélevez une préparation toxique entièrement fictive.",
+      "À 15:50, vous empruntez une clé de service pour reprendre réellement la miniature de votre mère.",
+      "Entre 15:57 et 16:02, vous récupérez la miniature puis remplacez le contenu du flacon d'Auguste.",
+      "Vous rendez la clé et rejoignez les préparatifs du gala afin de construire un alibi social."
     ],
     "knowledge_limits": [
-      "Vous ne connaissez pas tous les documents conservés par Lucien.",
-      "Vous ignorez qu'une copie authentique de l'acte de propriété doit arriver au palace.",
-      "Vous ne savez pas exactement à quel moment les premiers symptômes apparaîtront."
+      "Vous ne savez pas qu'une copie complète de l'acte de 1919 a déjà atteint le palace.",
+      "Vous ignorez jusqu'où Armand connaissait l'irrégularité du codicille.",
+      "Vous ne connaissez pas les photographies prises par Élise ni les copies conservées par Lucien.",
+      "Vous ne savez pas exactement quand les symptômes d'Auguste apparaîtront."
     ]
   },
   "gameplay": {
-    "private_objective": "Éviter qu'une majorité vous accuse tout en récupérant ou discréditant la copie du faux codicille.",
-    "secondary_objective": "Faire reconnaître que le comportement d'Auguste avait donné à plusieurs personnes un mobile aussi sérieux que le vôtre.",
-    "reason_to_lie": "Une confession sur le faux codicille suffirait à vous détruire, même sans preuve du meurtre.",
-    "suspect_axes": ["héritage", "dettes", "accès aux appartements", "connaissance des habitudes de la victime"],
+    "private_objective": "Éviter qu'une majorité vous accuse tout en présentant votre déplacement dans les appartements comme une tentative légitime de sauver un souvenir familial.",
+    "secondary_objective": "Convaincre le groupe que la fraude historique et la future réorganisation donnaient à Jeanne, Armand, Lucien ou Gabriel des raisons tout aussi fortes de craindre Auguste.",
+    "reason_to_lie": "Même sans le meurtre, vos dettes, votre silence sur le codicille et votre refus de la vérité Mercier suffiraient à détruire votre réputation.",
+    "suspect_axes": [
+      "succession suspendue",
+      "dettes",
+      "accès aux appartements",
+      "connaissance des habitudes d'Auguste",
+      "rejet de la revendication Mercier"
+    ],
     "allowed_lies": [
-      "minimiser la dispute avec Auguste",
-      "nier avoir compris la portée du codicille",
-      "présenter l'emprunt de la clé comme anodin",
-      "suggérer que le médecin ou le secrétaire a manipulé le flacon"
+      "minimiser la violence de la confrontation avec Auguste",
+      "présenter le codicille comme un document reçu de bonne foi",
+      "insister sur la réalité de la miniature récupérée",
+      "suggérer que le médecin, la directrice ou le secrétaire possédait un accès plus habituel au flacon",
+      "nier avoir compris que l'annonce concernait aussi les droits Mercier"
     ],
     "forbidden_inventions": [
-      "inventer un autre lieu où le poison aurait été administré",
+      "prétendre ne jamais être entré·e dans les appartements",
+      "inventer un autre lieu d'administration du poison",
       "nier un document collectif authentifié",
       "créer un complice",
       "détruire ou retenir définitivement une preuve"
     ],
     "known_facts": [
-      "Auguste prenait presque toujours ses gouttes digestives après le café.",
+      "Auguste prenait souvent ses gouttes digestives après le café.",
+      "Armand vous a remis le codicille et attendait un refinancement rapide.",
+      "Auguste avait découvert une vérité ancienne concernant la famille Mercier.",
       "Lucien conservait des doubles de nombreux documents familiaux.",
-      "Armand Keller détenait vos dettes.",
-      "Auguste devait faire une annonce au petit déjeuner."
+      "La miniature de votre mère se trouvait réellement dans les appartements d'Auguste."
     ],
     "documents_held": [
-      "lettre de mise en demeure partiellement dissimulée",
-      "photographie familiale annotée par Auguste",
-      "brouillon d'une réponse au sujet de la succession"
+      "miniature familiale effectivement récupérée",
+      "mise en demeure bancaire partiellement dissimulée",
+      "note d'Armand accompagnant le codicille",
+      "photographie ancienne où le nom Mercier a été gratté"
     ]
   },
   "relationships": [
-    {"target_role_id": "role_02", "public": "Vous la traitez comme une employée loyale.", "private": "Vous craignez qu'elle ait conservé le registre des clés."},
-    {"target_role_id": "role_03", "public": "Médecin de la famille.", "private": "Vous avez exploité un moment de distraction pour approcher sa trousse."},
-    {"target_role_id": "role_04", "public": "Secrétaire trop proche d'Auguste.", "private": "Vous pensez qu'il a découvert le faux codicille."},
-    {"target_role_id": "role_06", "public": "Conseiller financier de la famille.", "private": "Il peut révéler l'ampleur de vos dettes."}
+    {
+      "target_role_id": "role_02",
+      "public": "Vous la traitez comme une employée loyale de la famille.",
+      "private": "La revendication Mercier menace votre conception même de l'héritage et vous craignez son registre des clés."
+    },
+    {
+      "target_role_id": "role_03",
+      "public": "Médecin de la famille.",
+      "private": "Vous avez exploité un moment de distraction pour approcher sa trousse."
+    },
+    {
+      "target_role_id": "role_04",
+      "public": "Secrétaire trop proche d'Auguste.",
+      "private": "Vous pensez qu'il possède une copie du faux codicille et des lettres sur les Mercier."
+    },
+    {
+      "target_role_id": "role_06",
+      "public": "Conseiller financier de la famille.",
+      "private": "Il vous a remis le codicille et peut révéler vos dettes comme votre complaisance."
+    }
   ],
   "act_revelations": [
-    {"act": 1, "class": "mandatory", "deadline": "end_of_act", "content": "Admettre qu'Auguste vous a menacé·e de revoir la succession, sans reconnaître le faux.", "fallback": "La lettre de convocation d'Auguste est ajoutée au dossier collectif."},
-    {"act": 2, "class": "conditional", "trigger": "publication du registre des clés", "content": "Admettre avoir emprunté une clé de service, en prétendant avoir seulement récupéré un portrait.", "fallback": "Le compagnon rappelle que la signature du registre doit être attribuée."},
-    {"act": 3, "class": "mandatory", "deadline": "before_ballots", "content": "Révéler vos dettes et reconnaître que vous connaissiez l'habitude des gouttes digestives.", "fallback": "La mise en demeure bancaire et une note de service rendent ces faits publics."}
+    {
+      "act": 1,
+      "class": "mandatory",
+      "deadline": "end_of_act",
+      "content": "Admettre qu'Auguste menaçait de revoir votre place dans le palace et qu'une dispute familiale a eu lieu, sans révéler encore le codicille ni les dettes.",
+      "fallback": "La convocation d'Auguste et un témoignage sur la dispute sont ajoutés au dossier collectif."
+    },
+    {
+      "act": 2,
+      "class": "mandatory",
+      "deadline": "end_of_act",
+      "content": "Reconnaître l'emprunt de la clé et présenter la miniature réellement récupérée. Admettre également que le codicille vous était favorable, tout en affirmant l'avoir reçu comme authentique.",
+      "fallback": "Le registre des clés, la miniature et la note d'accompagnement du codicille deviennent collectifs."
+    },
+    {
+      "act": 3,
+      "class": "mandatory",
+      "deadline": "before_ballots",
+      "content": "Révéler vos dettes, votre connaissance des gouttes et le fait qu'Auguste vous avait annoncé la reconnaissance des droits Mercier. Vous devez continuer à nier la substitution jusqu'à la révélation finale.",
+      "fallback": "La mise en demeure, la note d'Auguste et le rituel médical rendent ces faits publics."
+    }
   ],
   "finale": {
-    "confession_summary": "Vous avez voulu empêcher la révélation du faux codicille et la perte de votre avenir. Vous avez compté sur la réputation cardiaque d'Auguste et sur le bureau fermé pour faire croire à une mort naturelle.",
-    "win_condition": "Moins de la moitié des joueurs vous accuse correctement.",
-    "epilogue": "Même en cas d'acquittement social, la succession reste contestée et vos dettes deviennent publiques."
+    "confession_summary": "Vous n'avez pas créé seul·e le faux codicille, mais vous avez accepté de vous en servir. Lorsque Auguste a voulu révéler à la fois cette fraude et le vol historique du palace, vous avez voulu sauver l'héritage, le nom et le monde dans lequel vous aviez été élevé·e.",
+    "win_condition": "Moins de la moitié des joueurs vous accuse correctement en reliant la double fenêtre d'accès, le mobile complet et la substitution du flacon.",
+    "epilogue": "La culpabilité de votre famille dépasse votre propre crime : la succession est suspendue et l'histoire officielle du Belladone s'effondre."
   }
 }
