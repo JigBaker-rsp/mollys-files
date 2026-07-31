@@ -4,24 +4,15 @@ Moteur de génération d'expériences narratives personnalisées, conçu pour pr
 
 ## Vision
 
-Molly's Files sépare strictement :
+Molly's Files sépare strictement les offres commerciales, les univers narratifs, les variantes de nombre de joueurs, les personnages, le moteur logique, le gameplay autonome et les assets de production.
 
-1. les offres commerciales ;
-2. les univers narratifs ;
-3. les variantes de nombre de joueurs ;
-4. le moteur logique ;
-5. le gameplay autonome ;
-6. les assets et schémas de production.
-
-L'intrigue, la chronologie, les preuves et la solution sont déterministes. La personnalisation modifie l'habillage, jamais la solvabilité de l'enquête.
+L'intrigue, les personnages, la chronologie, les preuves et la solution sont déterministes. La personnalisation modifie les noms et l'habillage, jamais la solvabilité de l'enquête.
 
 ## Expérience promise
 
 L'organisateur prépare la soirée sans connaître la solution, puis joue comme les autres. Aucun maître du jeu n'est requis.
 
 La progression repose sur des dossiers individuels, des enveloppes collectives, des révélations bornées, des questions collectives, un compagnon numérique léger, un parcours hors ligne et quatre niveaux d'aide.
-
-La spécification commune est dans [`docs/gameplay_experience.md`](docs/gameplay_experience.md).
 
 ## Offres initiales
 
@@ -36,51 +27,61 @@ La spécification commune est dans [`docs/gameplay_experience.md`](docs/gameplay
 
 ```text
 offers/      Définition des produits vendus
-universes/   Univers, contrats de gameplay et variantes
-engine/      Génération, progression autonome et validations
+universes/   Univers, personnages, gameplay et variantes
+engine/      Génération, attribution, progression et validations
 assets/      Modèles PDF, graphiques, emails et impression
-schemas/     Contrats JSON des entrées, sorties et sessions
-docs/        Spécifications produit, gameplay et architecture
+schemas/     Contrats JSON des entrées, rôles, sorties et sessions
+docs/        Spécifications produit et expérience
 ```
-
-## Contrats de gameplay
-
-- `engine/autonomous_gameplay.json` : règles communes ;
-- `schemas/gameplay_contract.schema.json` : structure obligatoire ;
-- `universes/palace_1930_gameplay.json` : édition standard 6/8 joueurs ;
-- `universes/palace_1930_4p_gameplay.json` : édition compacte 4 joueurs ;
-- `engine/validation_rules.json` : gates empêchant une livraison incohérente.
 
 ## Premier MVP
 
 Le premier univers est `palace_1930`, **Le Palace des Ombres**.
 
-Deux profils sont prévus :
-
 | Profil | Joueurs | Durée cible | Préparation |
 |---|---:|---:|---:|
-| Édition compacte | 4 | 1 h 30, plage 1 h 15–1 h 45 | environ 15 min |
-| Édition standard | 6 ou 8 | 2 h 30, plage 2 h–3 h | environ 30 min |
+| Édition compacte | 4 | 1 h 30 | environ 15 min |
+| Édition standard | 6 ou 8 | 2 h 30 | environ 30 min |
 
-L'édition compacte est une variante dédiée. Elle conserve quatre personnages actifs et transforme les informations des rôles retirés en témoignages et documents autonomes. Elle ne peut pas être obtenue en supprimant simplement deux dossiers de l'édition standard.
+L'édition compacte est une variante dédiée. Elle conserve quatre personnages actifs et transforme les informations des rôles retirés en témoignages et documents autonomes.
 
-La conception détaillée est décrite dans [`docs/palace_1930_four_players.md`](docs/palace_1930_four_players.md).
+## Casting canonique
+
+Le casting compte huit rôles :
+
+- Camille de Valleroy, l'héritier·ère — coupable canonique ;
+- Jeanne Mercier, la directrice du palace ;
+- Docteur Gabriel Renaud, le médecin de famille ;
+- Lucien Delmas, le secrétaire particulier ;
+- Véra Lenoir, la vedette du gala ;
+- Armand Keller, le banquier et investisseur ;
+- Élise Morel, la journaliste sous couverture ;
+- Madeleine Rochefort, l'aviatrice et messagère privée.
+
+Les quatre premiers constituent l'édition compacte. Véra et Armand complètent l'édition 6 joueurs. Élise et Madeleine complètent l'édition 8 joueurs.
+
+Contrats :
+
+- `universes/palace_1930/characters/index.json` : manifeste du casting et transferts de variante ;
+- `universes/palace_1930/characters/role_01.json` à `role_08.json` : rôles détaillés ;
+- `schemas/character_role.schema.json` : structure obligatoire ;
+- `engine/character_system.json` : règles d'attribution et de personnalisation ;
+- `docs/palace_1930_characters.md` : présentation lisible du casting.
 
 ## Principes non négociables
 
 - une solution unique et démontrable ;
-- aucune anecdote personnelle indispensable ;
+- un seul coupable verrouillé ;
+- chaque rôle possède un mobile, un secret, un objectif, une raison de mentir et une information utile ;
+- aucun rôle purement décoratif ;
 - organisateur sans spoiler et autorisé à jouer ;
 - aucun maître du jeu requis ;
 - aucun déclencheur indispensable sans secours ;
-- parcours hors ligne complet ;
-- variante choisie avant génération ;
 - transfert contrôlé des informations lorsqu'un rôle est retiré ;
 - aucune version compacte résoluble par simple élimination ;
-- aucune retouche manuelle dans le flux normal ;
-- livraison uniquement après passage de tous les contrôles ;
+- noms et pronoms personnalisables, fonctions narratives immuables ;
 - aucune donnée client ou sortie générée committée dans Git.
 
 ## Statut
 
-Socle produit, gameplay autonome et profils 4/6/8 joueurs spécifiés. Le contenu narratif complet, le moteur exécutable, le compagnon web, le front de commande et la génération PDF restent à développer.
+Socle produit, gameplay autonome, profils 4/6/8 joueurs et huit rôles canoniques spécifiés. Il reste à écrire la chronologie minute par minute, les documents, la chaîne de preuves, les dossiers joueurs finaux, le moteur exécutable, le compagnon web et les PDF.
