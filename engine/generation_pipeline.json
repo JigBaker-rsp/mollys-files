@@ -1,5 +1,5 @@
 {
-  "version": "0.2.0",
+  "version": "0.3.0",
   "pipeline": [
     {
       "step": 1,
@@ -14,55 +14,72 @@
     {
       "step": 3,
       "id": "resolve_variant",
-      "blocking": true
+      "blocking": true,
+      "outputs": [
+        "selected_variant_id",
+        "selected_gameplay_contract",
+        "selected_role_set",
+        "selected_duration_profile"
+      ]
     },
     {
       "step": 4,
+      "id": "transfer_removed_role_information",
+      "blocking": true,
+      "applies_when": "selected_variant_removes_roles"
+    },
+    {
+      "step": 5,
       "id": "assign_characters",
       "blocking": true
     },
     {
-      "step": 5,
+      "step": 6,
       "id": "apply_personalization",
       "blocking": true
     },
     {
-      "step": 6,
+      "step": 7,
       "id": "build_autonomous_session_package",
       "blocking": true
     },
     {
-      "step": 7,
+      "step": 8,
       "id": "render_documents",
       "blocking": true
     },
     {
-      "step": 8,
+      "step": 9,
       "id": "run_content_validation",
       "blocking": true
     },
     {
-      "step": 9,
+      "step": 10,
       "id": "run_autonomy_validation",
       "blocking": true
     },
     {
-      "step": 10,
-      "id": "run_file_validation",
-      "blocking": true
-    },
-    {
       "step": 11,
-      "id": "package_delivery",
+      "id": "run_variant_validation",
       "blocking": true
     },
     {
       "step": 12,
-      "id": "deliver_or_fulfill",
+      "id": "run_file_validation",
       "blocking": true
     },
     {
       "step": 13,
+      "id": "package_delivery",
+      "blocking": true
+    },
+    {
+      "step": 14,
+      "id": "deliver_or_fulfill",
+      "blocking": true
+    },
+    {
+      "step": 15,
       "id": "schedule_data_deletion",
       "blocking": false
     }
@@ -77,6 +94,8 @@
     "store_version_ids": true,
     "store_generation_seed": true,
     "store_validation_report": true,
-    "store_gameplay_contract_version": true
+    "store_gameplay_contract_version": true,
+    "store_variant_id": true,
+    "store_role_transfer_map": true
   }
 }
