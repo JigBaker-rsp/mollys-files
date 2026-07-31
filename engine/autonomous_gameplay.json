@@ -1,6 +1,6 @@
 {
   "version": "0.2.0",
-  "purpose": "Define the universe-independent rules that make a Molly's Files investigation playable without a game master.",
+  "purpose": "Définir les règles indépendantes des univers qui rendent une enquête Molly's Files jouable sans maître du jeu.",
   "non_negotiable_principles": {
     "no_game_master_required": true,
     "organizer_can_play": true,
@@ -46,43 +46,43 @@
     ]
   },
   "information_classes": {
-    "free": "The player chooses when and how to reveal it.",
-    "conditional": "The player must reveal it when the written trigger occurs.",
-    "mandatory": "The player must reveal it before the end of the specified act."
+    "free": "Le joueur choisit quand et comment révéler cette information.",
+    "conditional": "Le joueur doit révéler cette information lorsque le déclencheur écrit se produit.",
+    "mandatory": "Le joueur doit révéler cette information avant la fin de l'acte indiqué."
   },
   "player_rules": [
-    "Players speak from their character's known facts.",
-    "Players may lie, evade, minimize and accuse to protect secrets.",
-    "Players may not invent a new alibi, fact, clue or event.",
-    "A player document is authoritative unless explicitly marked forged, incomplete or doubtful.",
-    "Discovered collective documents cannot be destroyed or withheld permanently.",
-    "The culprit may create reasonable doubt but may not block a mandatory clue or contradict immutable facts."
+    "Les joueurs parlent à partir des faits connus par leur personnage.",
+    "Les joueurs peuvent mentir, esquiver, minimiser et accuser pour protéger leurs secrets.",
+    "Les joueurs ne peuvent pas inventer un nouvel alibi, fait, indice ou événement.",
+    "Un document de joueur fait foi sauf s'il est explicitement marqué comme falsifié, incomplet ou douteux.",
+    "Les documents collectifs découverts ne peuvent pas être détruits ou cachés définitivement.",
+    "Le coupable peut créer un doute raisonnable mais ne peut pas bloquer un indice obligatoire ou contredire les faits immuables."
   ],
   "act_loop": [
     {
       "order": 1,
       "id": "private_reading",
-      "purpose": "Read new personal information."
+      "purpose": "Lire les nouvelles informations personnelles."
     },
     {
       "order": 2,
       "id": "free_investigation",
-      "purpose": "Question, compare versions and inspect documents."
+      "purpose": "Interroger, comparer les versions et examiner les documents."
     },
     {
       "order": 3,
       "id": "personal_objectives",
-      "purpose": "Drive player initiative without a facilitator."
+      "purpose": "Susciter l'initiative des joueurs sans facilitateur."
     },
     {
       "order": 4,
       "id": "collective_question",
-      "purpose": "Force a shared synthesis before progression."
+      "purpose": "Imposer une synthèse collective avant la progression."
     },
     {
       "order": 5,
       "id": "controlled_unlock",
-      "purpose": "Open the next envelope or digital reveal."
+      "purpose": "Ouvrir l'enveloppe ou la révélation numérique suivante."
     }
   ],
   "progression": {
