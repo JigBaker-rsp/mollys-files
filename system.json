@@ -2,7 +2,7 @@
   "project": {
     "id": "mollys_files",
     "name": "Molly's Files",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "default_language": "fr",
     "status": "gameplay_foundation"
   },
@@ -32,8 +32,12 @@
   },
   "mvp": {
     "universe_id": "palace_1930",
-    "gameplay_contract": "universes/palace_1930_gameplay.json",
+    "gameplay_contracts": {
+      "compact_4_players": "universes/palace_1930_4p_gameplay.json",
+      "standard_6_8_players": "universes/palace_1930_gameplay.json"
+    },
     "player_counts": [
+      4,
       6,
       8
     ],
@@ -46,6 +50,17 @@
       "mobile_pdf"
     ],
     "acts": 3,
-    "recommended_duration_minutes": 150
+    "duration_profiles_minutes": {
+      "compact_4_players": {
+        "min": 75,
+        "recommended": 90,
+        "max": 105
+      },
+      "standard_6_8_players": {
+        "min": 120,
+        "recommended": 150,
+        "max": 180
+      }
+    }
   }
 }
