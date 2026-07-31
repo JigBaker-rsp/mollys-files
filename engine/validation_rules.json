@@ -1,16 +1,21 @@
 {
-  "version": "0.2.0",
+  "version": "0.3.0",
   "blocking_gates": [
     "input_schema_valid",
     "offer_exists",
     "universe_exists",
+    "selected_variant_contract_exists",
+    "selected_variant_matches_player_count",
     "player_count_supported",
     "every_player_assigned",
     "every_required_role_assigned",
+    "removed_role_information_transfer_complete",
     "every_mandatory_clue_present",
     "every_mandatory_clue_distributed",
+    "compact_mandatory_information_has_redundant_channel",
     "solution_unique",
     "solution_provable",
+    "compact_solution_not_based_on_simple_elimination",
     "immutable_logic_unchanged",
     "gameplay_contract_schema_valid",
     "organizer_spoiler_free",
@@ -23,6 +28,7 @@
     "offline_fallback_complete",
     "final_solution_locked_until_accusation",
     "late_absence_information_transfer_valid",
+    "variant_duration_profile_valid",
     "prohibited_content_absent",
     "all_documents_rendered",
     "no_empty_pages",
@@ -35,7 +41,9 @@
     "low_contrast_asset",
     "estimated_print_pages_high",
     "preparation_time_over_target",
-    "estimated_act_duration_outside_target"
+    "estimated_act_duration_outside_target",
+    "compact_player_information_load_high",
+    "compact_red_herring_count_high"
   ],
   "delivery_rule": "all_blocking_gates_must_pass",
   "validation_report_retention_days": 30
