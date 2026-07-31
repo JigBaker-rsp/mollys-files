@@ -1,0 +1,196 @@
+{
+  "timeline_id": "palace_1930_variant_delivery",
+  "canonical_timeline_path": "universes/palace_1930/timeline/canonical_timeline.json",
+  "version": "0.5.0",
+  "principle": {
+    "core_crime_timeline_shared": true,
+    "full_scene_timeline_identical": false,
+    "explanation": "Les faits du crime et leurs horaires sont immuables. Les scènes impliquant des rôles non joués sont remplacées par des documents, des témoignages neutres ou ne sont pas activées lorsqu'elles ne sont pas nécessaires à la résolution."
+  },
+  "variants": {
+    "compact_4_players": {
+      "active_roles": ["role_01", "role_02", "role_03", "role_04"],
+      "target_duration_minutes": 90,
+      "evidence_delivery": [
+        {
+          "canonical_event_id": "evt_001",
+          "delivery": "pli notarial scellé conservé à la réception, ouvert comme preuve collective à l'acte III",
+          "replaces_roles": ["role_08"]
+        },
+        {
+          "canonical_event_id": "evt_002",
+          "delivery": "projet de vente signé et note financière joints au dossier collectif",
+          "replaces_roles": ["role_06"]
+        },
+        {
+          "canonical_event_id": "evt_007",
+          "delivery": "mise en demeure trouvée dans le portefeuille de Camille",
+          "replaces_roles": ["role_06"]
+        },
+        {
+          "canonical_event_id": "evt_013",
+          "delivery": "déclaration écrite d'un membre du personnel et plan du couloir privé",
+          "replaces_roles": ["role_05"]
+        },
+        {
+          "canonical_event_id": "evt_016",
+          "delivery": "reproduction certifiée de l'acte authentique dans le pli notarial",
+          "replaces_roles": ["role_08"]
+        },
+        {
+          "canonical_event_id": "evt_017",
+          "delivery": "fiche de comparaison notariale entre le sceau authentique et celui du codicille",
+          "replaces_roles": ["role_07"]
+        }
+      ],
+      "inactive_scene_overlays": [
+        "Véra n'entre pas dans le bureau et sa sous-intrigue sentimentale n'est pas activée.",
+        "Armand n'est pas interrogé comme suspect ; ses actions financières sont matérialisées par des documents.",
+        "Élise et Madeleine ne sont pas introduites comme personnages dans l'expérience compacte."
+      ],
+      "compression_rules": [
+        "Aucun document ne doit créer un cinquième suspect principal.",
+        "Les preuves externes doivent confirmer des faits, pas résoudre seules l'enquête.",
+        "La chronologie du crime reste lisible sur une seule feuille A4."
+      ]
+    },
+    "standard_6_players": {
+      "active_roles": ["role_01", "role_02", "role_03", "role_04", "role_05", "role_06"],
+      "target_duration_minutes": 150,
+      "evidence_delivery": [
+        {
+          "canonical_event_id": "evt_001",
+          "delivery": "pli notarial confié à la réception par un courrier extérieur avant la fermeture des routes",
+          "replaces_roles": ["role_08"]
+        },
+        {
+          "canonical_event_id": "evt_013",
+          "delivery": "témoignage direct de Véra Lenoir",
+          "holder_role_id": "role_05"
+        },
+        {
+          "canonical_event_id": "evt_007",
+          "delivery": "mise en demeure remise personnellement par Armand Keller",
+          "holder_role_id": "role_06"
+        },
+        {
+          "canonical_event_id": "evt_017",
+          "delivery": "photographie notariale et note anonyme ajoutées au dossier collectif",
+          "replaces_roles": ["role_07"]
+        }
+      ],
+      "scene_overlays": [
+        {
+          "id": "ovl_6p_001",
+          "time": "14:30",
+          "actors": ["npc_victim", "role_06"],
+          "location": "petit_salon",
+          "scene": "Armand présente directement à Auguste les conditions de vente du palace."
+        },
+        {
+          "id": "ovl_6p_002",
+          "time": "15:26",
+          "actors": ["role_01", "role_06"],
+          "location": "hall_prive",
+          "scene": "Armand remet à Camille la dernière mise en demeure."
+        },
+        {
+          "id": "ovl_6p_003",
+          "time": "15:56",
+          "actors": ["role_01", "role_05"],
+          "location": "couloir_prive",
+          "scene": "Véra aperçoit Camille dans le couloir privé."
+        },
+        {
+          "id": "ovl_6p_004",
+          "time": "18:23",
+          "actors": ["npc_victim", "role_04", "role_05"],
+          "location": "antichambre_du_bureau",
+          "scene": "Véra entend Auguste confirmer qu'il remettra le codicille à la police."
+        },
+        {
+          "id": "ovl_6p_005",
+          "time": "21:12",
+          "end_time": "21:20",
+          "actors": ["role_05"],
+          "location": "bureau_prive",
+          "scene": "Véra entre dans le bureau vide pour récupérer ses lettres, puis ressort avant le dernier toast."
+        },
+        {
+          "id": "ovl_6p_006",
+          "time": "21:25",
+          "end_time": "21:37",
+          "actors": ["role_06"],
+          "location": "cabine_telegraphique",
+          "scene": "Armand quitte le bar pour envoyer un télégramme à sa banque."
+        }
+      ]
+    },
+    "extended_8_players": {
+      "active_roles": ["role_01", "role_02", "role_03", "role_04", "role_05", "role_06", "role_07", "role_08"],
+      "target_duration_minutes": 150,
+      "inherits_overlays_from": "standard_6_players",
+      "evidence_delivery": [
+        {
+          "canonical_event_id": "evt_001",
+          "delivery": "pli transporté par Madeleine Rochefort",
+          "holder_role_id": "role_08"
+        },
+        {
+          "canonical_event_id": "evt_016",
+          "delivery": "acte authentique retenu puis révélé par Madeleine",
+          "holder_role_id": "role_08"
+        },
+        {
+          "canonical_event_id": "evt_017",
+          "delivery": "photographie du registre et analyse du sceau présentées par Élise",
+          "holder_role_id": "role_07"
+        }
+      ],
+      "scene_overlays": [
+        {
+          "id": "ovl_8p_001",
+          "time": "14:12",
+          "actors": ["role_08"],
+          "location": "reception",
+          "scene": "Madeleine arrive avec le pli notarial peu avant la fermeture des accès."
+        },
+        {
+          "id": "ovl_8p_002",
+          "time": "16:20",
+          "actors": ["role_08"],
+          "location": "chambre_invite",
+          "scene": "Madeleine ouvre le pli et découvre que l'acte authentique contredit le codicille favorable à Camille."
+        },
+        {
+          "id": "ovl_8p_003",
+          "time": "16:32",
+          "actors": ["role_07"],
+          "location": "vestiaire_des_dossiers",
+          "scene": "Élise photographie le registre et l'incohérence du sceau."
+        },
+        {
+          "id": "ovl_8p_004",
+          "time": "18:05",
+          "actors": ["npc_victim", "role_08"],
+          "location": "hall_prive",
+          "scene": "Auguste refuse la prime supplémentaire demandée par Madeleine, qui conserve le pli."
+        },
+        {
+          "id": "ovl_8p_005",
+          "time": "21:32",
+          "actors": ["role_07", "role_08"],
+          "location": "vestiaire",
+          "scene": "Élise tente d'approcher la sacoche de Madeleine et est repoussée."
+        },
+        {
+          "id": "ovl_8p_006",
+          "time": "21:42",
+          "actors": ["npc_victim", "role_07"],
+          "location": "couloir_des_dossiers",
+          "scene": "Auguste surprend Élise avec son appareil et menace de la faire arrêter après le gala."
+        }
+      ]
+    }
+  }
+}
