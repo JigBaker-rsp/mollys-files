@@ -30,7 +30,7 @@
     "schemas_path": "schemas",
     "gameplay_spec_path": "docs/gameplay_experience.md",
     "character_engine_path": "engine/character_system.json",
-    "timeline_schema_path": "schemas/timeline.schema.json",
+    "timeline_schema_path": "schemas/timeline_v0_6.schema.json",
     "lore_schema_path": "schemas/lore_secret.schema.json"
   },
   "mvp": {
