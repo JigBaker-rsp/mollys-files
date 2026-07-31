@@ -2,71 +2,144 @@
   "id": "role_05",
   "canonical_name": "Véra Lenoir",
   "role_type": "required",
-  "availability": {"compact_4_players": "converted_to_npc_evidence", "standard_6_players": "active", "extended_8_players": "active"},
+  "availability": {
+    "compact_4_players": "converted_to_npc_evidence",
+    "standard_6_players": "active",
+    "extended_8_players": "active"
+  },
   "culprit": false,
   "public_identity": {
     "title": "La vedette du gala",
     "description": "Chanteuse célèbre invitée à se produire pour la soirée privée d'Auguste.",
     "public_relation_to_victim": "Une relation mondaine en apparence, plus ancienne et plus intime en réalité.",
-    "apparent_motive": "Auguste conservait des lettres capables de provoquer un scandale public.",
-    "costume_cues": ["tenue de scène", "gants", "étui à cigarettes"]
+    "apparent_motive": "Auguste conservait des lettres capables de provoquer un scandale et de révéler que Véra connaissait son projet secret.",
+    "costume_cues": [
+      "tenue de scène",
+      "gants",
+      "étui à cigarettes"
+    ]
   },
   "casting": {
     "difficulty": "medium",
-    "play_style": ["expressif", "relationnel", "fausse piste"],
-    "recommended_for": "Un joueur qui aime les échanges directs et les secrets personnels.",
+    "play_style": [
+      "expressif",
+      "relationnel",
+      "fausse piste"
+    ],
+    "recommended_for": "Un joueur qui aime les échanges directs et les secrets émotionnels.",
     "organizer_friendly": true,
     "culprit_opt_in_recommended": false
   },
   "private_truth": {
-    "relationship_to_victim": "Vous avez été son amante ou son amant plusieurs années auparavant.",
-    "secret": "Vous êtes entré·e dans le bureau avant la fin du gala pour reprendre des lettres compromettantes.",
-    "independent_secret": "Vous avez menti sur votre heure de sortie de scène afin de dissimuler cette intrusion.",
+    "relationship_to_victim": "Vous avez entretenu avec Auguste une liaison ancienne, intermittente et jamais entièrement terminée.",
+    "secret": "Vous êtes entré·e dans son bureau avant la fin du gala afin de reprendre des lettres compromettantes.",
+    "independent_secret": "Vous avez menti sur votre heure de sortie de scène et lu une lettre où Auguste reconnaissait que son père avait volé la place d'Émile Mercier.",
+    "historical_stake": "Vous êtes l'une des seules personnes à savoir qu'Auguste éprouvait de la honte et envisageait réellement une restitution, mais révéler cette lettre exposerait aussi votre intimité.",
     "claimed_alibi": "Vous affirmez être resté·e avec les musiciens jusqu'au toast final.",
     "actual_timeline": [
-      "Vous avez quitté votre loge plus tôt que prévu.",
-      "Vous avez vu Camille sortir du couloir privé avant le gala.",
-      "Vous avez entendu Auguste menacer de remettre le codicille à la police.",
-      "Vous avez récupéré vos lettres dans le bureau alors qu'Auguste se trouvait encore au salon."
+      "Vous quittez votre loge plus tôt que prévu.",
+      "Vous distinguez dans le couloir privé une silhouette portant un signe familial des de Valleroy, sans voir clairement son visage.",
+      "Vous entendez Auguste dire qu'il remettra le codicille à la police et rendra son nom à Émile Mercier.",
+      "De 21:12 à 21:20, vous entrez dans le bureau vide pour reprendre vos lettres, alors qu'Auguste se trouve encore au salon."
     ],
-    "knowledge_limits": ["Vous n'avez pas vu le flacon être remplacé.", "Vous ne connaissez pas le contenu financier exact du codicille.", "Vous ignorez les faux reçus de Lucien."]
+    "knowledge_limits": [
+      "Vous n'avez pas vu le flacon être remplacé.",
+      "Votre observation du couloir ne permet pas à elle seule d'identifier Camille.",
+      "Vous ne connaissez pas le montage financier exact d'Armand.",
+      "Vous ignorez les faux reçus de Lucien."
+    ]
   },
   "gameplay": {
-    "private_objective": "Récupérer ou protéger vos lettres sans que votre intrusion soit prise pour la mise en scène du bureau fermé.",
-    "secondary_objective": "Identifier qui a parlé de votre ancienne relation au personnel.",
-    "reason_to_lie": "Votre présence dans le bureau et votre conflit avec Auguste constituent une fausse piste majeure.",
-    "suspect_axes": ["intrusion dans le bureau", "chantage sentimental", "faux alibi", "proximité avec la victime"],
-    "allowed_lies": ["nier l'ancienne liaison", "retarder l'aveu de l'intrusion", "présenter les lettres comme anodines"],
-    "forbidden_inventions": ["prétendre avoir vu le meurtre", "inventer une autre sortie du bureau", "détruire les lettres si elles deviennent collectives"],
+    "private_objective": "Protéger votre correspondance tout en décidant si la volonté de réparation d'Auguste mérite d'être révélée.",
+    "secondary_objective": "Établir que votre intrusion précède largement l'enfermement et n'explique pas la mort.",
+    "reason_to_lie": "Votre présence dans le bureau, votre conflit sentimental et votre possession d'une lettre décisive constituent une fausse piste majeure.",
+    "suspect_axes": [
+      "intrusion dans le bureau",
+      "chantage sentimental",
+      "faux alibi",
+      "connaissance du secret Mercier"
+    ],
+    "allowed_lies": [
+      "nier l'ancienne liaison",
+      "retarder l'aveu de l'intrusion",
+      "présenter les lettres comme anodines",
+      "rester vague sur la silhouette du couloir"
+    ],
+    "forbidden_inventions": [
+      "affirmer avoir reconnu formellement Camille dans le couloir",
+      "prétendre avoir vu le meurtre",
+      "inventer une autre sortie du bureau",
+      "détruire les lettres lorsqu'elles deviennent collectives"
+    ],
     "known_facts": [
-      "Camille se trouvait dans le couloir privé avant le gala.",
-      "Auguste parlait de remettre le codicille à la police.",
-      "Le bureau était accessible plus tôt dans la soirée.",
+      "Une personne portant un signe familial des de Valleroy se trouvait dans le couloir privé avant le gala.",
+      "Auguste voulait remettre le codicille à la police.",
+      "Auguste souhaitait reconnaître le rôle d'Émile Mercier.",
+      "Le bureau était accessible et vide plus tôt dans la soirée.",
       "Lucien vous a indiqué où les lettres étaient rangées."
     ],
-    "documents_held": ["lettre sentimentale", "programme de scène annoté", "billet de Lucien indiquant le tiroir"]
+    "documents_held": [
+      "lettre sentimentale",
+      "programme de scène annoté",
+      "billet de Lucien indiquant le tiroir",
+      "lettre d'Auguste évoquant sa volonté de restitution"
+    ]
   },
   "relationships": [
-    {"target_role_id": "role_01", "public": "Connaissance mondaine.", "private": "Vous l'avez vu·e là où son alibi le nie."},
-    {"target_role_id": "role_03", "public": "Médecin présent au gala.", "private": "Il a autrefois couvert un incident lié à Auguste."},
-    {"target_role_id": "role_04", "public": "Secrétaire serviable.", "private": "Il vous a aidé·e à reprendre vos lettres."},
-    {"target_role_id": "role_02", "public": "Hôtesse professionnelle.", "private": "Elle sait que votre relation avec Auguste n'était pas seulement mondaine."}
+    {
+      "target_role_id": "role_01",
+      "public": "Connaissance mondaine.",
+      "private": "La silhouette observée pourrait être Camille, mais votre témoignage reste incomplet."
+    },
+    {
+      "target_role_id": "role_03",
+      "public": "Médecin présent au gala.",
+      "private": "Il a autrefois couvert une crise après une dispute avec Auguste."
+    },
+    {
+      "target_role_id": "role_04",
+      "public": "Secrétaire serviable.",
+      "private": "Il vous a aidé·e à reprendre vos lettres et connaît leur portée historique."
+    },
+    {
+      "target_role_id": "role_02",
+      "public": "Hôtesse professionnelle.",
+      "private": "La lettre que vous détenez pourrait rendre publiquement justice à son père."
+    }
   ],
   "act_revelations": [
-    {"act": 1, "class": "conditional", "trigger": "question sur votre relation avec Auguste", "content": "Admettre une ancienne intimité sans parler encore de l'intrusion.", "fallback": "Une lettre personnelle est rendue publique en fin d'acte."},
-    {"act": 2, "class": "mandatory", "deadline": "end_of_act", "content": "Reconnaître votre entrée dans le bureau avant la mort et préciser que le flacon n'y jouait aucun rôle apparent.", "fallback": "Le programme annoté et le billet de Lucien établissent le déplacement."},
-    {"act": 3, "class": "mandatory", "deadline": "before_ballots", "content": "Révéler avoir vu Camille dans le couloir privé et avoir entendu la menace concernant la police.", "fallback": "Votre déclaration écrite est ajoutée au dossier collectif."}
+    {
+      "act": 1,
+      "class": "conditional",
+      "trigger": "question sur votre relation avec Auguste",
+      "content": "Admettre une ancienne intimité sans parler encore de l'intrusion ni de la lettre sur Émile Mercier.",
+      "fallback": "Une lettre personnelle est rendue publique en fin d'acte."
+    },
+    {
+      "act": 2,
+      "class": "mandatory",
+      "deadline": "end_of_act",
+      "content": "Reconnaître votre entrée dans le bureau et révéler avoir entendu la menace de police comme la promesse de restitution.",
+      "fallback": "Le programme annoté, le billet de Lucien et un extrait de lettre établissent les faits."
+    },
+    {
+      "act": 3,
+      "class": "mandatory",
+      "deadline": "before_ballots",
+      "content": "Décrire précisément mais prudemment la silhouette du couloir et lire le passage où Auguste reconnaît le rôle d'Émile Mercier.",
+      "fallback": "Votre déclaration écrite et l'extrait de lettre deviennent collectifs."
+    }
   ],
   "variant_transfer": {
     "compact_4_players": [
-      "déclaration écrite sur le couloir privé",
+      "déclaration partielle sur la silhouette du couloir privé",
       "programme de scène annoté",
-      "extrait de lettre établissant le chantage",
-      "témoignage sur la menace de remise à la police"
+      "extrait de lettre établissant l'intrusion",
+      "lettre d'Auguste sur la restitution Mercier"
     ]
   },
   "finale": {
-    "epilogue": "Le scandale sentimental peut être contenu, mais votre intrusion reste connue du groupe.",
+    "epilogue": "Votre correspondance révèle un Auguste plus complexe, partagé entre domination et désir tardif de réparation.",
     "personal_success": "Vos lettres ne sont pas lues intégralement et le groupe distingue votre intrusion du meurtre."
   }
 }
