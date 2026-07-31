@@ -1,6 +1,6 @@
 {
   "universe_id": "palace_1930",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "status": "gameplay_specified",
   "format": {
     "supported_player_counts": [
@@ -14,7 +14,10 @@
     },
     "acts": 3,
     "organizer_can_play": true,
-    "game_master_required": false
+    "game_master_required": false,
+    "variant_contracts": {
+      "compact_4_players": "universes/palace_1930_4p_gameplay.json"
+    }
   },
   "preparation": {
     "estimated_minutes": 30,
@@ -137,6 +140,7 @@
   "late_absence": {
     "eight_to_seven_players": "remove_one_optional_role_and_transfer_useful_information",
     "seven_to_six_players": "remove_second_optional_role_and_transfer_useful_information",
-    "six_to_five_players": "unsupported_standard_mode_with_documentary_fallback_to_design_later"
+    "six_to_five_players": "unsupported_standard_mode_with_documentary_fallback_to_design_later",
+    "four_player_alternative": "La variante compacte doit être choisie avant génération ; aucune conversion improvisée de la version standard n'est autorisée pendant la partie."
   }
 }
