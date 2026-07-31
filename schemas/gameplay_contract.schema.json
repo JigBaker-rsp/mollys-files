@@ -1,0 +1,243 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mollys-files.local/schemas/gameplay_contract.schema.json",
+  "title": "Molly's Files autonomous gameplay contract",
+  "type": "object",
+  "required": [
+    "universe_id",
+    "version",
+    "status",
+    "format",
+    "preparation",
+    "acts",
+    "organizer_autonomy",
+    "disclosure_contract",
+    "finale"
+  ],
+  "properties": {
+    "universe_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9_]+$"
+    },
+    "version": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "gameplay_specified",
+        "playtest_ready",
+        "validated"
+      ]
+    },
+    "format": {
+      "type": "object",
+      "required": [
+        "supported_player_counts",
+        "recommended_duration_minutes",
+        "acts",
+        "organizer_can_play",
+        "game_master_required"
+      ],
+      "properties": {
+        "supported_player_counts": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "integer",
+            "minimum": 2
+          }
+        },
+        "recommended_duration_minutes": {
+          "type": "integer",
+          "minimum": 30
+        },
+        "duration_range_minutes": {
+          "type": "object",
+          "required": [
+            "min",
+            "max"
+          ],
+          "properties": {
+            "min": {
+              "type": "integer"
+            },
+            "max": {
+              "type": "integer"
+            }
+          },
+          "additionalProperties": false
+        },
+        "acts": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "organizer_can_play": {
+          "const": true
+        },
+        "game_master_required": {
+          "const": false
+        }
+      },
+      "additionalProperties": true
+    },
+    "preparation": {
+      "type": "object",
+      "required": [
+        "spoiler_free",
+        "required_actions"
+      ],
+      "properties": {
+        "estimated_minutes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "spoiler_free": {
+          "const": true
+        },
+        "required_actions": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "optional_actions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "acts": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "number",
+          "id",
+          "title",
+          "recommended_minutes",
+          "collective_question",
+          "unlock_condition"
+        ],
+        "properties": {
+          "number": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9_]+$"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "recommended_minutes": {
+            "type": "integer",
+            "minimum": 10
+          },
+          "player_focus": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "collective_question": {
+            "type": "string",
+            "minLength": 1
+          },
+          "unlock_condition": {
+            "type": "string",
+            "minLength": 1
+          },
+          "closing_reveal": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "organizer_autonomy": {
+      "type": "object",
+      "required": [
+        "organizer_receives_solution_in_advance",
+        "organizer_has_special_runtime_role",
+        "materials_self_identify_when_to_open",
+        "offline_fallback_included"
+      ],
+      "properties": {
+        "organizer_receives_solution_in_advance": {
+          "const": false
+        },
+        "organizer_has_special_runtime_role": {
+          "const": false
+        },
+        "materials_self_identify_when_to_open": {
+          "const": true
+        },
+        "digital_companion_controls_timing_and_unlocks": {
+          "type": "boolean"
+        },
+        "offline_fallback_included": {
+          "const": true
+        },
+        "rules_arbitration_source": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "disclosure_contract": {
+      "type": "object"
+    },
+    "hint_content_required": {
+      "type": "object"
+    },
+    "finale": {
+      "type": "object",
+      "required": [
+        "accusation_modes",
+        "ballot_fields",
+        "solution_formats"
+      ],
+      "properties": {
+        "accusation_modes": {
+          "type": "array",
+          "contains": {
+            "const": "individual"
+          }
+        },
+        "ballot_fields": {
+          "type": "array",
+          "minItems": 4,
+          "items": {
+            "type": "string"
+          }
+        },
+        "solution_formats": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "culprit_final_confession_required": {
+          "type": "boolean"
+        },
+        "epilogue_for_all_characters_required": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "late_absence": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": false
+}
