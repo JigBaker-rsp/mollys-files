@@ -2,67 +2,139 @@
   "id": "role_04",
   "canonical_name": "Lucien Delmas",
   "role_type": "required",
-  "availability": {"compact_4_players": "active", "standard_6_players": "active", "extended_8_players": "active"},
+  "availability": {
+    "compact_4_players": "active",
+    "standard_6_players": "active",
+    "extended_8_players": "active"
+  },
   "culprit": false,
   "public_identity": {
     "title": "Le secrétaire particulier",
     "description": "Gardien de l'agenda, de la correspondance et des dossiers privés d'Auguste.",
     "public_relation_to_victim": "Employé de confiance en apparence, constamment menacé d'être remplacé.",
-    "apparent_motive": "Auguste avait découvert plusieurs signatures imitées dans les comptes personnels.",
-    "costume_cues": ["carnet", "stylo-plume", "chemise de documents"]
+    "apparent_motive": "Auguste avait découvert plusieurs signatures imitées et pouvait l'accuser d'avoir manipulé le dossier successoral.",
+    "costume_cues": [
+      "carnet",
+      "stylo-plume",
+      "chemise de documents"
+    ]
   },
   "casting": {
     "difficulty": "high",
-    "play_style": ["documents", "chronologie", "négociation"],
-    "recommended_for": "Un joueur attentif aux détails et capable de révéler progressivement des pièces importantes.",
+    "play_style": [
+      "documents",
+      "chronologie",
+      "négociation"
+    ],
+    "recommended_for": "Un joueur attentif aux détails, capable de distinguer plusieurs fraudes documentaires.",
     "organizer_friendly": true,
     "culprit_opt_in_recommended": false
   },
   "private_truth": {
-    "relationship_to_victim": "Vous connaissiez presque tous ses secrets, sans jamais être traité comme son égal.",
-    "secret": "Vous avez imité sa signature sur de petites avances pour financer les soins d'un proche.",
-    "independent_secret": "Vous copiez depuis des mois les documents compromettants d'Auguste afin de disposer d'une assurance contre lui.",
-    "claimed_alibi": "Vous affirmez avoir préparé les dossiers du lendemain dans la bibliothèque.",
+    "relationship_to_victim": "Vous connaissiez presque tous les secrets d'Auguste sans jamais être traité comme son égal.",
+    "secret": "Vous avez imité sa signature sur de petites avances afin de financer les soins d'un proche.",
+    "independent_secret": "Vous copiez depuis des mois la correspondance des de Valleroy et avez découvert les premières lettres mentionnant le partenariat entre Alphonse et Émile Mercier.",
+    "historical_stake": "Vous avez compris avant Auguste que la légende familiale était incomplète. Vous avez conservé les copies afin de pouvoir négocier votre sécurité, ce qui ressemble à du chantage.",
+    "claimed_alibi": "Vous affirmez avoir préparé sans interruption les dossiers du lendemain dans la bibliothèque.",
     "actual_timeline": [
-      "Vous avez remis à Auguste le dossier de succession avant le gala.",
-      "Vous avez conservé un carbone du codicille suspect.",
-      "Vous avez quitté la bibliothèque pour cacher vos faux reçus.",
-      "Vous avez entendu Auguste dicter une note annonçant la remise du dossier à la police."
+      "À 14:47, vous remettez à Auguste le dossier de succession contenant le codicille suspect.",
+      "À 14:55, vous l'aidez à constater l'incohérence du sceau et de la formulation.",
+      "À 15:03, vous prenez sous dictée une note destinée à la police et relative au codicille comme aux archives Mercier.",
+      "À 17:07, vous quittez brièvement la bibliothèque pour cacher vos faux reçus et plusieurs copies anciennes.",
+      "À 18:20, vous préparez le dossier du petit déjeuner comprenant succession, vente et droits Mercier."
     ],
     "knowledge_limits": [
-      "Vous savez que le codicille est faux mais pas qui l'a physiquement fabriqué.",
+      "Vous savez que le codicille est faux mais pas qui l'a matériellement fabriqué.",
       "Vous ignorez l'origine de la préparation toxique.",
-      "Vous ne savez pas qui a emprunté la clé avant de voir le registre."
+      "Vous ne savez pas qui a emprunté la clé avant de voir le registre.",
+      "Vous ne possédez qu'une partie de l'annexe authentique de 1919."
     ]
   },
   "gameplay": {
-    "private_objective": "Prouver que le codicille a été falsifié tout en empêchant que vos propres imitations de signature soient confondues avec cette fraude.",
-    "secondary_objective": "Récupérer le carbone et négocier votre avenir auprès de la personne qui contrôlera le palace.",
-    "reason_to_lie": "Vous êtes objectivement capable d'imiter la signature d'Auguste et aviez accès aux documents comme au flacon.",
-    "suspect_axes": ["faux documents", "accès aux appartements", "connaissance de l'agenda", "chantage potentiel"],
-    "allowed_lies": ["nier avoir copié la correspondance", "minimiser les faux reçus", "présenter le carbone comme une précaution professionnelle"],
-    "forbidden_inventions": ["modifier le texte du codicille", "inventer un ordre d'Auguste", "retenir le carbone au-delà de son échéance"],
+    "private_objective": "Démontrer les deux fraudes — le codicille contemporain et l'effacement historique — sans être désigné comme leur auteur.",
+    "secondary_objective": "Conserver assez de copies pour négocier votre avenir après la chute des de Valleroy.",
+    "reason_to_lie": "Vous savez imiter les signatures, aviez accès aux appartements, copiiez les archives et déteniez une note menaçant plusieurs suspects.",
+    "suspect_axes": [
+      "faux documents",
+      "accès aux appartements",
+      "connaissance de l'agenda",
+      "archives Mercier",
+      "chantage potentiel"
+    ],
+    "allowed_lies": [
+      "nier avoir copié la correspondance",
+      "minimiser les faux reçus",
+      "présenter les copies historiques comme une précaution professionnelle",
+      "suggérer que le faux codicille a été introduit par Armand ou Camille"
+    ],
+    "forbidden_inventions": [
+      "modifier le texte du codicille ou de l'acte de 1919",
+      "inventer un ordre d'Auguste",
+      "prétendre avoir rédigé l'annexe authentique",
+      "retenir les pièces au-delà de leur échéance"
+    ],
     "known_facts": [
       "Le codicille utilise une formulation qu'Auguste refusait toujours.",
-      "La machine à écrire laisse un défaut reconnaissable sur certaines lettres.",
-      "Auguste devait remettre le dossier à la police au petit déjeuner.",
+      "Une machine à écrire extérieure au bureau a produit certaines pages suspectes.",
+      "Alphonse de Valleroy écrivait à Émile Mercier comme à un associé.",
+      "Auguste devait remettre le codicille à la police et faire expertiser les droits Mercier.",
       "Camille cherchait à connaître le contenu exact de l'annonce."
     ],
-    "documents_held": ["carbone partiel du codicille", "agenda d'Auguste", "faux reçu signé de votre main", "brouillon de la note destinée à la police"]
+    "documents_held": [
+      "carbone partiel du codicille",
+      "agenda d'Auguste",
+      "faux reçu signé de votre main",
+      "brouillon de la note destinée à la police",
+      "copies de deux lettres entre Alphonse et Émile Mercier"
+    ]
   },
   "relationships": [
-    {"target_role_id": "role_01", "public": "Vous gérez ses demandes auprès d'Auguste.", "private": "Vous pensez que sa panique est liée au codicille."},
-    {"target_role_id": "role_02", "public": "Partenaire de travail.", "private": "Elle peut établir vos absences et vos accès."},
-    {"target_role_id": "role_05", "public": "Invitée du gala.", "private": "Vous l'avez aidée à récupérer des lettres compromettantes."},
-    {"target_role_id": "role_08", "public": "Courrière attendue.", "private": "Vous savez que son paquet peut authentifier la succession."}
+    {
+      "target_role_id": "role_01",
+      "public": "Vous gérez ses demandes auprès d'Auguste.",
+      "private": "Vous pensez que sa panique vient autant du faux codicille que de la vérité Mercier."
+    },
+    {
+      "target_role_id": "role_02",
+      "public": "Partenaire de travail.",
+      "private": "Vous possédez les lettres qui peuvent confirmer l'histoire de son père."
+    },
+    {
+      "target_role_id": "role_05",
+      "public": "Invitée du gala.",
+      "private": "Vous l'avez aidée à localiser des lettres où Auguste exprimait sa honte."
+    },
+    {
+      "target_role_id": "role_08",
+      "public": "Messagère attendue.",
+      "private": "Vous savez que son pli peut transformer vos copies en preuves authentiques."
+    }
   ],
   "act_revelations": [
-    {"act": 1, "class": "mandatory", "deadline": "end_of_act", "content": "Révéler qu'Auguste avait fixé un rendez-vous de succession au petit déjeuner.", "fallback": "L'agenda est ajouté aux preuves collectives."},
-    {"act": 2, "class": "mandatory", "deadline": "end_of_act", "content": "Présenter le carbone du codicille et reconnaître vos propres faux reçus.", "fallback": "Le compagnon libère une copie photographique du carbone et un reçu comparatif."},
-    {"act": 3, "class": "mandatory", "deadline": "before_ballots", "content": "Lire la note d'Auguste destinée à la police et expliquer le défaut de frappe reliant le faux à son contexte de fabrication.", "fallback": "La note et l'analyse typographique deviennent collectives."}
+    {
+      "act": 1,
+      "class": "mandatory",
+      "deadline": "end_of_act",
+      "content": "Révéler qu'Auguste avait fixé un rendez-vous de succession et qu'il enquêtait aussi sur la fondation du palace.",
+      "fallback": "L'agenda et une lettre ancienne sont ajoutés aux preuves collectives."
+    },
+    {
+      "act": 2,
+      "class": "mandatory",
+      "deadline": "end_of_act",
+      "content": "Présenter le carbone du codicille, reconnaître vos propres faux reçus et montrer une correspondance où Alphonse qualifie Émile d'associé.",
+      "fallback": "Les copies photographiques du carbone, du reçu et de la lettre deviennent collectives."
+    },
+    {
+      "act": 3,
+      "class": "mandatory",
+      "deadline": "before_ballots",
+      "content": "Lire la note d'Auguste destinée à la police : elle distingue le faux codicille actuel de la fraude historique et annonce la suspension de la vente.",
+      "fallback": "La note complète et l'analyse typographique sont publiées."
+    }
   ],
   "finale": {
-    "epilogue": "Vos petites falsifications sont révélées, mais elles sont distinguées de la fraude successorale.",
-    "personal_success": "Le groupe utilise correctement le carbone sans vous désigner comme faussaire principal."
+    "epilogue": "Vos petites falsifications sont révélées, mais vos copies contribuent à rendre son nom à Émile Mercier.",
+    "personal_success": "Le groupe distingue vos imitations opportunistes du faux codicille et utilise correctement les archives sans vous désigner comme meurtrier."
   }
 }
