@@ -1,10 +1,18 @@
-# Le Palace des Ombres — Casting canonique
+# Le Palace des Ombres — Casting canonique v0.6
 
 ## Autorité
 
-Le manifeste du casting se trouve dans `universes/palace_1930/characters/index.json`. Chaque rôle détaillé possède son propre fichier et doit respecter `schemas/character_role.schema.json`.
+Le manifeste se trouve dans `universes/palace_1930/characters/index.json`. Le secret fondateur du Belladone est défini dans `universes/palace_1930/lore/foundation_secret.json`.
 
-Les noms, pronoms et titres peuvent être adaptés lors de la personnalisation. Les fonctions narratives, les secrets, la culpabilité, les révélations et les preuves ne peuvent pas être modifiés.
+Les noms et pronoms peuvent être adaptés. Les fonctions narratives, secrets, révélations, culpabilité et horaires restent immuables.
+
+## Histoire dans l'histoire
+
+En 1919, Alphonse de Valleroy et Émile Mercier ont sauvé ensemble le Palace Belladone. Émile a apporté les terrains thermaux, des fonds et le soutien local. Après sa mort accidentelle dans une avalanche en 1920, Alphonse a fait disparaître l'annexe de copropriété et effacé progressivement son associé de l'histoire officielle.
+
+Auguste vient de découvrir cette appropriation. Il allait suspendre la vente, remettre le faux codicille contemporain à la police, reconnaître le rôle d'Émile et faire expertiser les droits Mercier.
+
+Il n'existe aucun second meurtre historique. Cette histoire crée des mobiles concurrents ; elle ne résout jamais seule la mort d'Auguste.
 
 ## Répartition
 
@@ -19,103 +27,71 @@ Les noms, pronoms et titres peuvent être adaptés lors de la personnalisation. 
 | Élise Morel | absent | preuves collectives | joué |
 | Madeleine Rochefort | absent | preuves collectives | joué |
 
-## La victime — Auguste de Valleroy
+## Rééquilibrage de Camille
 
-Auguste, 62 ans, est le propriétaire du Palace Belladone. Brillant en société, il utilisait les dettes et les secrets de son entourage pour conserver le contrôle. Il devait révéler au petit déjeuner une fraude successorale, écarter son héritier désigné et préparer la vente du palace.
+Camille reste le coupable canonique mais n'est plus présenté comme l'auteur évident de toutes les fraudes.
 
-Sa mort est provoquée avant son entrée dans le bureau : ses gouttes digestives ont été remplacées par une préparation toxique entièrement fictive à effet différé. Le jeu ne doit fournir aucune substance réelle, aucun dosage et aucune instruction exploitable. Le bureau fermé est une fausse impossibilité : Auguste s'y est enfermé lui-même après l'ingestion.
+- Armand lui a remis un codicille non authentifié ; Camille a accepté de s'en servir sans l'avoir fabriqué.
+- L'emprunt de la clé possède une raison vraie : récupérer une miniature familiale effectivement retrouvée.
+- Le témoin du couloir ne reconnaît pas formellement Camille.
+- La trousse médicale reste sans surveillance une seconde fois, ce qui élargit provisoirement le cercle des suspects.
+- Les dettes, le bénéfice complet du codicille et la menace liée aux droits Mercier ne deviennent publics qu'à l'acte III.
+- La culpabilité exige de croiser la première fenêtre de la trousse, l'accès aux appartements, les habitudes d'Auguste, le mobile complet et la substitution.
+
+Camille peut être soupçonné tôt, mais aucune preuve isolée ne doit permettre de conclure.
 
 ## Les quatre rôles centraux
 
 ### Camille de Valleroy — l'héritier·ère
 
-Camille a grandi dans la certitude que le palace lui reviendrait. Auguste menaçait pourtant de revoir la succession. Camille est lourdement endetté·e auprès d'Armand Keller et a fait fabriquer un faux codicille le désignant comme seul bénéficiaire.
+Camille a toujours cru que le Belladone lui reviendrait. Armand lui a remis un codicille favorable, présenté comme exploitable. Camille a compris qu'il pouvait être irrégulier mais l'a laissé rejoindre le dossier.
 
-Camille est le coupable canonique. Après avoir appris qu'Auguste avait découvert le faux, Camille a profité d'un faux malaise pour approcher la trousse du médecin, emprunté une clé de service et remplacé le flacon d'Auguste avant le gala.
-
-Son jeu consiste à défendre un mensonge plausible sans bloquer les preuves. Camille doit progressivement reconnaître la menace de déshéritement, l'emprunt de la clé, les dettes et la connaissance des gouttes, mais ne confesse le meurtre qu'après la solution.
+Lorsque Auguste annonce la suspension de la succession, la police et la reconnaissance des droits Mercier, Camille voit s'effondrer son avenir financier et son identité familiale. Camille simule un malaise, prélève la préparation fictive, récupère réellement une miniature dans les appartements et substitue les gouttes.
 
 ### Jeanne Mercier — la directrice
 
-Jeanne dirige le palace depuis douze ans et protège farouchement son personnel. Elle a falsifié les comptes afin de payer les salaires et a caché le grand livre dans l'ancien pavillon thermal. Auguste préparait une vente et pouvait la faire accuser de détournement.
+Jeanne est la fille du fondateur effacé. Elle falsifie des écritures pour payer le personnel et cache un grand livre contenant aussi les anciens versements d'Émile. Elle contrôle les clés, le service du café et s'absente dix-sept minutes.
 
-Jeanne contrôle les clés et le service. Elle a vu Camille dans le couloir privé, constaté l'emprunt d'une clé et connaît l'habitude des gouttes après le café. Son absence de dix-sept minutes et ses comptes falsifiés en font néanmoins une suspecte crédible.
-
-C'est un rôle structuré, particulièrement adapté à l'organisateur ou à un joueur qui aime recouper les horaires.
+Sa revendication historique, ses comptes et son accès font d'elle une suspecte aussi crédible que Camille jusqu'à la reconstitution des fenêtres.
 
 ### Docteur Gabriel Renaud — le médecin
 
-Gabriel est le médecin d'Auguste et le premier à examiner son corps. Il a caché la gravité de l'état cardiaque de son patient à des assureurs et a d'abord conclu trop vite à une mort naturelle afin de protéger son propre dossier.
+Gabriel a caché l'état cardiaque d'Auguste. Son père avait signé le certificat de décès sommaire d'Émile après l'avalanche, sans qu'il y ait eu meurtre.
 
-Sa trousse est restée sans surveillance après un malaise probablement simulé par Camille. Une préparation fictive y manque. Gabriel peut établir que l'action décisive a eu lieu avant l'entrée dans le bureau, mais la médecine seule ne lui permet pas d'identifier le coupable.
-
-Ce rôle porte la démonstration du mécanisme du crime sans devenir un expert omniscient.
+Sa trousse reste sans surveillance deux fois. Gabriel possède le moyen, la connaissance du délai et la capacité de maquiller le diagnostic, mais seule la première fenêtre précède la substitution.
 
 ### Lucien Delmas — le secrétaire
 
-Lucien gère l'agenda, les lettres et les dossiers d'Auguste. Il a imité plusieurs signatures sur de petites avances pour financer les soins d'un proche et copie les documents compromettants afin de se protéger.
+Lucien imite des signatures sur de petites avances, copie les dossiers et a retrouvé des lettres établissant le partenariat Mercier-Valleroy. Il possède le carbone du codicille, la note destinée à la police et l'agenda.
 
-Il détient un carbone du codicille suspect, l'agenda du petit déjeuner et une note destinée à la police. Comme il sait imiter la signature d'Auguste et avait accès aux appartements, il constitue une fausse piste forte.
+Sa maîtrise des documents en fait une fausse piste forte : les joueurs doivent distinguer ses petites falsifications, le codicille contemporain et la fraude historique.
 
-Son rôle est central pour distinguer ses petites falsifications de la fraude successorale préparée contre Auguste.
+## Les rôles supplémentaires
 
-## Les rôles de la version 6 joueurs
+### Véra Lenoir
 
-### Véra Lenoir — la vedette du gala
+Véra entre dans le bureau vide pour reprendre des lettres. Elle détient aussi une lettre où Auguste exprime sa honte et son intention de rendre son nom à Émile. Son témoignage sur le couloir est volontairement incomplet.
 
-Véra est une ancienne relation d'Auguste. Elle est entrée dans son bureau avant la fin du gala afin de récupérer des lettres compromettantes et ment sur son heure de sortie de scène.
+### Armand Keller
 
-Elle a vu Camille dans le couloir privé et entendu Auguste annoncer qu'il remettrait le codicille à la police. Sa présence dans le bureau crée une fausse piste puissante autour de la pièce fermée.
+Armand a préparé une reprise hostile, contrôlé les dettes de Camille et transmis le codicille non authentifié. Les droits Mercier auraient annulé son opération. Il est l'architecte financier d'un montage condamnable, mais pas le meurtrier.
 
-Dans la version 4 joueurs, son programme annoté, sa déclaration et un extrait de lettre deviennent des preuves autonomes.
+### Élise Morel
 
-### Armand Keller — le banquier
+Élise enquête sur l'effacement d'Émile et photographie le registre comme l'ancienne plaque. Elle doit établir une fraude historique sans inventer un assassinat ancien.
 
-Armand négociait une reprise du palace et avait retardé un crédit pour faire baisser son prix. Il détient également les dettes personnelles de Camille et comptait profiter de son influence après la succession.
+### Madeleine Rochefort
 
-Il peut démontrer que le faux codicille aurait permis à Camille de refinancer immédiatement ses dettes, tandis que la vente préparée par Auguste l'aurait écarté·e. Son propre intérêt dans la mort d'Auguste le maintient parmi les suspects.
+Madeleine transporte l'acte de 1919 et l'annexe de copropriété. Elle ouvre et retient le pli pour obtenir une prime, donnant un mobile et une fausse piste autour des documents.
 
-Dans la version 4 joueurs, la mise en demeure, le projet de vente et sa note financière deviennent des documents collectifs.
+## Principe de résolution
 
-## Les rôles de la version 8 joueurs
+L'histoire cachée explique pourquoi plusieurs personnes craignent l'annonce. Elle ne désigne pas Camille.
 
-### Élise Morel — la journaliste sous couverture
+La résolution complète doit réunir trois familles indépendantes :
 
-Élise enquête sous une fausse identité sur les comptes et la succession. Elle a photographié le registre familial et dispose d'une source ayant obtenu illégalement une pièce notariale.
+1. **Méthode** : ingestion après le café, avant le bureau fermé.
+2. **Accès** : première fenêtre de la trousse et accès aux appartements avant le gala.
+3. **Mobile complet** : codicille, dettes, succession gelée et effondrement de la légende familiale.
 
-Elle révèle que le sceau du codicille est incohérent et qu'une copie authentique a été demandée à Genève. Ses intrusions et son conflit avec Auguste lui donnent un mobile apparent.
-
-Dans la version 6 joueurs, ses photographies et la note de sa source deviennent des preuves collectives.
-
-### Madeleine Rochefort — l'aviatrice et messagère
-
-Madeleine est arrivée malgré la tempête avec une copie authentique de l'acte de propriété. Elle a ouvert le pli et retardé sa remise afin d'obtenir une prime plus élevée.
-
-Le document contredit le codicille favorable à Camille. Madeleine devient suspecte parce qu'elle a retenu une preuve essentielle et pouvait être accusée de l'avoir remplacée.
-
-Dans la version 6 joueurs, le reçu de mission, l'enveloppe ouverte et la reproduction certifiée de l'acte sont distribués automatiquement.
-
-## Équilibre de la version 4 joueurs
-
-La version compacte utilise Camille, Jeanne, Gabriel et Lucien. Chacun possède :
-
-- un mobile crédible ;
-- un accès plausible au flacon ou aux appartements ;
-- un secret compromettant indépendant du meurtre ;
-- une raison de mentir ;
-- au moins une information indispensable ;
-- une révélation obligatoire avec mécanisme de secours.
-
-Camille ne doit pas être identifié·e par simple élimination. L'accusation correcte doit croiser la clé de service, la fenêtre d'ingestion, la connaissance des gouttes, les dettes, le faux codicille et les contradictions des témoignages.
-
-## Travail restant
-
-Les rôles sont spécifiés mais pas encore transformés en dossiers clients définitifs. Il reste à produire :
-
-- les fiches publiques d'invitation ;
-- les fiches privées par acte ;
-- les documents cités dans chaque dossier ;
-- la chronologie minute par minute ;
-- la chaîne formelle des preuves ;
-- les variantes grammaticales et nominatives ;
-- les tests dédiés à 4, 6 et 8 joueurs.
+Aucun document historique ne peut remplacer cette démonstration.
