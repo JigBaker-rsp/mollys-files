@@ -2,9 +2,9 @@
   "project": {
     "id": "mollys_files",
     "name": "Molly's Files",
-    "version": "0.3.0",
+    "version": "0.4.0",
     "default_language": "fr",
-    "status": "gameplay_foundation"
+    "status": "character_foundation"
   },
   "product": {
     "category": "personalized_narrative_experiences",
@@ -28,39 +28,25 @@
     "engine_path": "engine",
     "assets_path": "assets",
     "schemas_path": "schemas",
-    "gameplay_spec_path": "docs/gameplay_experience.md"
+    "gameplay_spec_path": "docs/gameplay_experience.md",
+    "character_engine_path": "engine/character_system.json"
   },
   "mvp": {
     "universe_id": "palace_1930",
+    "character_index": "universes/palace_1930/characters/index.json",
+    "character_documentation": "docs/palace_1930_characters.md",
     "gameplay_contracts": {
       "compact_4_players": "universes/palace_1930_4p_gameplay.json",
       "standard_6_8_players": "universes/palace_1930_gameplay.json"
     },
-    "player_counts": [
-      4,
-      6,
-      8
-    ],
-    "offers": [
-      "ready_to_play",
-      "named_enquiry"
-    ],
-    "delivery_format": [
-      "print_pdf",
-      "mobile_pdf"
-    ],
+    "player_counts": [4, 6, 8],
+    "canonical_role_count": 8,
+    "offers": ["ready_to_play", "named_enquiry"],
+    "delivery_format": ["print_pdf", "mobile_pdf"],
     "acts": 3,
     "duration_profiles_minutes": {
-      "compact_4_players": {
-        "min": 75,
-        "recommended": 90,
-        "max": 105
-      },
-      "standard_6_8_players": {
-        "min": 120,
-        "recommended": 150,
-        "max": 180
-      }
+      "compact_4_players": {"min": 75, "recommended": 90, "max": 105},
+      "standard_6_8_players": {"min": 120, "recommended": 150, "max": 180}
     }
   }
 }
