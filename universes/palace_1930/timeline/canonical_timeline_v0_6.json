@@ -1,0 +1,485 @@
+{
+  "timeline_id": "palace_1930_canonical_v0_6",
+  "universe_id": "palace_1930",
+  "version": "0.6.0",
+  "status": "specified",
+  "timezone": "Europe/Paris",
+  "calendar": {
+    "gala_date": "1934-02-17",
+    "discovery_date": "1934-02-18"
+  },
+  "invariance_contract": {
+    "crime_facts_identical_across_variants": true,
+    "culprit_method_motive_and_core_times_locked": true,
+    "social_overlays_may_change_by_variant": true,
+    "rule": "Le crime, les déplacements des quatre rôles centraux, les horaires verrouillés et la vérité historique sont identiques. Les rôles supplémentaires ne font que porter ou dramatiser des informations déjà canoniques."
+  },
+  "locked_windows": {
+    "medical_bag_first_unattended": {"start": "15:41", "end": "15:45"},
+    "preparation_removed": {"start": "15:42", "end": "15:44"},
+    "service_key_held_by_culprit": {"start": "15:50", "end": "16:04"},
+    "bottle_substitution": {"start": "15:57", "end": "16:02"},
+    "medical_bag_second_unattended": {"start": "18:06", "end": "18:10"},
+    "toxic_ingestion": {"start": "22:21", "end": "22:22"},
+    "victim_enters_locked_office": "22:45",
+    "estimated_death": "23:08",
+    "body_discovered": "07:55"
+  },
+  "events": [
+    {
+      "id": "evt_001",
+      "date": "1934-02-17",
+      "time": "14:12",
+      "phase": "historical_truth_arrives",
+      "location": "reception",
+      "classification": "core_fact_variable_carrier",
+      "actors": [],
+      "fact": "Le pli de Genève contenant l'acte de 1919, l'annexe de copropriété Mercier-Valleroy et le registre notarial atteint le palace.",
+      "proof_function": "Introduire la preuve authentique du mensonge fondateur.",
+      "variants": "Le porteur est défini dans la table de diffusion de variante."
+    },
+    {
+      "id": "evt_002",
+      "date": "1934-02-17",
+      "time": "14:30",
+      "phase": "financial_pressure",
+      "location": "petit_salon",
+      "classification": "core_fact_variable_carrier",
+      "actors": ["npc_victim"],
+      "fact": "Auguste reçoit les conditions finales de vente ; une revendication Mercier rendrait l'opération impossible.",
+      "proof_function": "Donner à Armand et Jeanne des intérêts opposés mais puissants."
+    },
+    {
+      "id": "evt_003",
+      "date": "1934-02-17",
+      "time": "14:47",
+      "phase": "fraud_discovery",
+      "location": "bureau_prive",
+      "classification": "core",
+      "actors": ["npc_victim", "role_04"],
+      "fact": "Lucien remet le dossier de succession contenant le codicille non authentifié transmis à Camille.",
+      "proof_function": "Fixer la chaîne de possession du document contemporain."
+    },
+    {
+      "id": "evt_004",
+      "date": "1934-02-17",
+      "time": "14:55",
+      "phase": "fraud_discovery",
+      "location": "bureau_prive",
+      "classification": "core",
+      "actors": ["npc_victim", "role_04"],
+      "fact": "Auguste et Lucien constatent une formulation inhabituelle et un sceau incompatible avec le registre.",
+      "proof_function": "Établir la fausseté probable sans attribuer encore sa fabrication."
+    },
+    {
+      "id": "evt_005",
+      "date": "1934-02-17",
+      "time": "15:03",
+      "phase": "fraud_discovery",
+      "location": "bureau_prive",
+      "classification": "core",
+      "actors": ["npc_victim", "role_04"],
+      "fact": "Auguste dicte une note : il remettra le codicille à la police, suspendra la vente et fera expertiser les droits Mercier au petit déjeuner.",
+      "proof_function": "Créer une menace différente pour presque tous les suspects."
+    },
+    {
+      "id": "evt_006",
+      "date": "1934-02-17",
+      "time": "15:18",
+      "phase": "culprit_trigger",
+      "location": "salon_familial",
+      "classification": "core_secret",
+      "actors": ["npc_victim", "role_01"],
+      "fact": "Auguste annonce à Camille que le codicille est faux, que la succession est gelée et que le palace pourrait devoir reconnaître les droits Mercier.",
+      "proof_function": "Établir le mobile complet, révélé aux joueurs seulement à l'acte III."
+    },
+    {
+      "id": "evt_007",
+      "date": "1934-02-17",
+      "time": "15:26",
+      "phase": "culprit_trigger",
+      "location": "hall_prive",
+      "classification": "core_fact_variable_carrier",
+      "actors": ["role_01"],
+      "fact": "Une dernière mise en demeure confirme que Camille ne peut survivre financièrement sans héritage rapide.",
+      "proof_function": "Compléter le mobile financier sans prouver le meurtre."
+    },
+    {
+      "id": "evt_008",
+      "date": "1934-02-17",
+      "time": "15:34",
+      "phase": "crime_preparation",
+      "location": "petit_salon",
+      "classification": "core",
+      "actors": ["role_01", "role_03"],
+      "fact": "Camille simule un malaise et obtient l'examen de Gabriel.",
+      "proof_function": "Créer une proximité avec la trousse, encore explicable comme un véritable examen."
+    },
+    {
+      "id": "evt_009",
+      "date": "1934-02-17",
+      "time": "15:41",
+      "phase": "crime_preparation",
+      "location": "petit_salon",
+      "classification": "core",
+      "actors": ["role_03"],
+      "fact": "Gabriel est appelé en cuisine et laisse sa trousse fermée dans le petit salon.",
+      "proof_function": "Ouvrir la première fenêtre d'accès."
+    },
+    {
+      "id": "evt_010",
+      "date": "1934-02-17",
+      "time": "15:43",
+      "phase": "crime_preparation",
+      "location": "petit_salon",
+      "classification": "core_secret",
+      "actors": ["role_01"],
+      "fact": "Camille prélève une préparation toxique entièrement fictive.",
+      "proof_function": "Établir l'origine réelle du moyen sans information chimique exploitable."
+    },
+    {
+      "id": "evt_011",
+      "date": "1934-02-17",
+      "time": "15:45",
+      "phase": "crime_preparation",
+      "location": "petit_salon",
+      "classification": "core",
+      "actors": ["role_01", "role_03"],
+      "fact": "Gabriel revient ; la trousse paraît intacte et Camille affirme aller mieux.",
+      "proof_function": "Fermer la première fenêtre."
+    },
+    {
+      "id": "evt_012",
+      "date": "1934-02-17",
+      "time": "15:50",
+      "phase": "crime_preparation",
+      "location": "reception_service",
+      "classification": "core",
+      "actors": ["role_01", "role_02"],
+      "fact": "Camille emprunte une clé pour reprendre une miniature de sa mère conservée dans les appartements d'Auguste.",
+      "proof_function": "Donner un accès réel mais aussi une justification vérifiable."
+    },
+    {
+      "id": "evt_013",
+      "date": "1934-02-17",
+      "time": "15:56",
+      "phase": "crime_preparation",
+      "location": "couloir_prive",
+      "classification": "core_fact_variable_witness",
+      "actors": ["role_01"],
+      "fact": "Une silhouette portant un signe familial des de Valleroy est aperçue dans le couloir privé ; le visage n'est pas identifié.",
+      "proof_function": "Fragiliser l'alibi sans livrer directement le coupable."
+    },
+    {
+      "id": "evt_014",
+      "date": "1934-02-17",
+      "time": "15:57",
+      "end_time": "16:02",
+      "phase": "crime_preparation",
+      "location": "appartements_auguste",
+      "classification": "core_secret",
+      "actors": ["role_01"],
+      "fact": "Camille récupère réellement la miniature puis substitue le contenu des gouttes digestives d'Auguste.",
+      "proof_function": "Combiner une action innocente vérifiable avec l'action meurtrière cachée."
+    },
+    {
+      "id": "evt_015",
+      "date": "1934-02-17",
+      "time": "16:04",
+      "phase": "crime_preparation",
+      "location": "reception_service",
+      "classification": "core",
+      "actors": ["role_01", "role_02"],
+      "fact": "Camille rend la clé et conserve la miniature ; l'emprunt reste inscrit.",
+      "proof_function": "Clore la fenêtre tout en empêchant que la clé soit une preuve suffisante."
+    },
+    {
+      "id": "evt_016",
+      "date": "1934-02-17",
+      "time": "16:20",
+      "phase": "historical_truth",
+      "location": "chambre_invite",
+      "classification": "core_fact_variable_carrier",
+      "actors": [],
+      "fact": "Le pli de Genève est ouvert : l'acte et l'annexe confirment le partenariat Mercier-Valleroy et les droits effacés après 1920.",
+      "proof_function": "Prouver le mensonge fondateur sans désigner le meurtrier actuel."
+    },
+    {
+      "id": "evt_017",
+      "date": "1934-02-17",
+      "time": "16:32",
+      "phase": "historical_truth",
+      "location": "vestiaire_des_dossiers",
+      "classification": "core_fact_variable_carrier",
+      "actors": [],
+      "fact": "Le nom d'Émile Mercier, l'ancienne plaque et le sceau authentique sont documentés indépendamment.",
+      "proof_function": "Éviter que la vérité historique repose sur un seul document."
+    },
+    {
+      "id": "evt_018",
+      "date": "1934-02-17",
+      "time": "17:03",
+      "end_time": "17:20",
+      "phase": "false_leads",
+      "location": "ancien_pavillon_thermal",
+      "classification": "core",
+      "actors": ["role_02"],
+      "fact": "Jeanne cache le grand livre où figurent ses écritures falsifiées et les anciens versements d'Émile Mercier.",
+      "proof_function": "Donner à Jeanne une absence, un secret financier et un mobile historique."
+    },
+    {
+      "id": "evt_019",
+      "date": "1934-02-17",
+      "time": "17:07",
+      "phase": "false_leads",
+      "location": "bibliotheque",
+      "classification": "core",
+      "actors": ["role_04"],
+      "fact": "Lucien cache ses faux reçus et plusieurs copies de lettres sur le partenariat Mercier.",
+      "proof_function": "Donner à Lucien un pouvoir documentaire et une raison de mentir."
+    },
+    {
+      "id": "evt_020",
+      "date": "1934-02-17",
+      "time": "18:06",
+      "end_time": "18:10",
+      "phase": "false_leads",
+      "location": "poste_de_service",
+      "classification": "core",
+      "actors": ["role_03"],
+      "fact": "Gabriel laisse une seconde fois sa trousse sans surveillance pendant qu'il soigne une coupure en cuisine.",
+      "proof_function": "Élargir provisoirement les suspects ayant pu prendre la préparation."
+    },
+    {
+      "id": "evt_021",
+      "date": "1934-02-17",
+      "time": "18:20",
+      "phase": "final_preparation",
+      "location": "bureau_prive",
+      "classification": "core",
+      "actors": ["npc_victim", "role_04"],
+      "fact": "Auguste prépare pour 08:30 un dossier distinct : faux codicille, suspension de la vente, acte Mercier et proposition de protection du personnel.",
+      "proof_function": "Donner à plusieurs personnages une raison de craindre ou de souhaiter l'annonce."
+    },
+    {
+      "id": "evt_022",
+      "date": "1934-02-17",
+      "time": "19:45",
+      "phase": "gala",
+      "location": "restaurant",
+      "classification": "core",
+      "actors": ["npc_victim", "role_01", "role_02", "role_03", "role_04"],
+      "fact": "Le dîner commence ; tous les suspects centraux deviennent visibles et Camille construit un alibi social.",
+      "proof_function": "Masquer une action préparée plusieurs heures auparavant."
+    },
+    {
+      "id": "evt_023",
+      "date": "1934-02-17",
+      "time": "22:10",
+      "phase": "gala",
+      "location": "grand_salon",
+      "classification": "core",
+      "actors": ["npc_victim"],
+      "fact": "Auguste annonce qu'au petit déjeuner il dira à qui appartient réellement le Belladone et ce qu'il adviendra de la vente.",
+      "proof_function": "Rendre publics plusieurs enjeux sans révéler immédiatement le bénéficiaire du codicille."
+    },
+    {
+      "id": "evt_024",
+      "date": "1934-02-17",
+      "time": "22:18",
+      "phase": "ingestion",
+      "location": "grand_salon",
+      "classification": "core",
+      "actors": ["npc_victim", "role_02"],
+      "fact": "Le café et le plateau personnel d'Auguste sont servis selon son rituel.",
+      "proof_function": "Fixer le contexte d'ingestion tout en laissant Jeanne suspecte du service."
+    },
+    {
+      "id": "evt_025",
+      "date": "1934-02-17",
+      "time": "22:21",
+      "phase": "ingestion",
+      "location": "grand_salon",
+      "classification": "core_locked",
+      "actors": ["npc_victim"],
+      "fact": "Auguste utilise ses gouttes après le café et absorbe la préparation substituée.",
+      "proof_function": "Fixer l'ingestion, distincte du moment de substitution."
+    },
+    {
+      "id": "evt_026",
+      "date": "1934-02-17",
+      "time": "22:30",
+      "phase": "delayed_effect",
+      "location": "grand_salon",
+      "classification": "core",
+      "actors": ["npc_victim", "role_03"],
+      "fact": "Auguste ressent un premier malaise qu'il attribue à son cœur et refuse un examen complet.",
+      "proof_function": "Expliquer pourquoi Gabriel ne détecte pas immédiatement l'empoisonnement."
+    },
+    {
+      "id": "evt_027",
+      "date": "1934-02-17",
+      "time": "22:42",
+      "phase": "locked_room",
+      "location": "couloir_du_bureau",
+      "classification": "core",
+      "actors": ["npc_victim"],
+      "fact": "Auguste quitte le salon avec le dossier, son flacon et la clef de son bureau.",
+      "proof_function": "Établir qu'il transporte lui-même le vecteur et les documents."
+    },
+    {
+      "id": "evt_028",
+      "date": "1934-02-17",
+      "time": "22:45",
+      "phase": "locked_room",
+      "location": "bureau_prive",
+      "classification": "core_locked",
+      "actors": ["npc_victim"],
+      "fact": "Auguste entre seul et verrouille la porte de l'intérieur.",
+      "proof_function": "Créer la fausse impossibilité."
+    },
+    {
+      "id": "evt_029",
+      "date": "1934-02-17",
+      "time": "22:48",
+      "phase": "locked_room",
+      "location": "bureau_prive",
+      "classification": "core",
+      "actors": ["npc_victim"],
+      "fact": "Auguste ajoute à sa note quelques lignes sur Émile Mercier et la suspension de la vente.",
+      "proof_function": "Prouver qu'il était vivant après le verrouillage."
+    },
+    {
+      "id": "evt_030",
+      "date": "1934-02-17",
+      "time": "23:02",
+      "phase": "death",
+      "location": "bureau_prive",
+      "classification": "core_locked",
+      "actors": ["npc_victim"],
+      "fact": "Auguste s'effondre seul dans son bureau.",
+      "proof_function": "Dissocier la présence dans la pièce de la responsabilité du meurtre."
+    },
+    {
+      "id": "evt_031",
+      "date": "1934-02-17",
+      "time": "23:08",
+      "phase": "death",
+      "location": "bureau_prive",
+      "classification": "core_locked",
+      "actors": ["npc_victim"],
+      "fact": "Auguste meurt.",
+      "proof_function": "Fixer l'heure canonique de décès."
+    },
+    {
+      "id": "evt_032",
+      "date": "1934-02-18",
+      "time": "07:42",
+      "phase": "discovery",
+      "location": "couloir_du_bureau",
+      "classification": "core",
+      "actors": ["role_04"],
+      "fact": "Lucien frappe à la porte sans réponse.",
+      "proof_function": "Déclencher la découverte."
+    },
+    {
+      "id": "evt_033",
+      "date": "1934-02-18",
+      "time": "07:45",
+      "phase": "discovery",
+      "location": "couloir_du_bureau",
+      "classification": "core",
+      "actors": ["role_02", "role_04"],
+      "fact": "La clef maîtresse ne peut ouvrir à cause du verrou intérieur.",
+      "proof_function": "Confirmer la pièce fermée."
+    },
+    {
+      "id": "evt_034",
+      "date": "1934-02-18",
+      "time": "07:53",
+      "phase": "discovery",
+      "location": "bureau_prive",
+      "classification": "core",
+      "actors": ["role_02", "role_03", "role_04"],
+      "fact": "La porte est forcée devant plusieurs témoins.",
+      "proof_function": "Garantir l'intégrité de la scène."
+    },
+    {
+      "id": "evt_035",
+      "date": "1934-02-18",
+      "time": "07:55",
+      "phase": "discovery",
+      "location": "bureau_prive",
+      "classification": "core_locked",
+      "actors": ["role_02", "role_03", "role_04"],
+      "fact": "Le corps, le flacon et les dossiers sont découverts.",
+      "proof_function": "Fixer le point de départ matériel de l'enquête."
+    },
+    {
+      "id": "evt_036",
+      "date": "1934-02-18",
+      "time": "08:04",
+      "phase": "initial_diagnosis",
+      "location": "bureau_prive",
+      "classification": "core",
+      "actors": ["role_03"],
+      "fact": "Gabriel conclut trop rapidement à une défaillance cardiaque.",
+      "proof_function": "Créer sa fausse piste et masquer temporairement la méthode."
+    },
+    {
+      "id": "evt_037",
+      "date": "1934-02-18",
+      "time": "08:14",
+      "phase": "initial_diagnosis",
+      "location": "bureau_prive",
+      "classification": "core",
+      "actors": ["role_03"],
+      "fact": "Gabriel comprend que l'action décisive précède l'entrée dans le bureau.",
+      "proof_function": "Déverrouiller la véritable logique de l'enquête."
+    },
+    {
+      "id": "evt_038",
+      "date": "1934-02-18",
+      "time": "08:22",
+      "phase": "isolation",
+      "location": "reception",
+      "classification": "core",
+      "actors": ["role_02"],
+      "fact": "L'isolement du palace est confirmé : aucun secours immédiat n'est possible.",
+      "proof_function": "Justifier l'enquête autonome des personnes présentes."
+    },
+    {
+      "id": "evt_039",
+      "date": "1934-02-18",
+      "time": "08:30",
+      "phase": "game_start",
+      "location": "grand_salon",
+      "classification": "game_boundary",
+      "actors": [],
+      "fact": "Les suspects sont réunis ; la partie commence.",
+      "proof_function": "Séparer la chronologie réelle de la chronologie de jeu."
+    }
+  ],
+  "deduction_contract": {
+    "required_chains": [
+      {
+        "id": "chain_method",
+        "question": "Quand et comment Auguste a-t-il été empoisonné ?",
+        "event_ids": ["evt_024", "evt_025", "evt_027", "evt_028", "evt_029", "evt_037"]
+      },
+      {
+        "id": "chain_access",
+        "question": "Qui pouvait réunir la préparation et l'accès au flacon avant le gala ?",
+        "event_ids": ["evt_008", "evt_009", "evt_010", "evt_012", "evt_013", "evt_014", "evt_015", "evt_020"]
+      },
+      {
+        "id": "chain_motive",
+        "question": "Pourquoi l'annonce d'Auguste menaçait-elle Camille tout en donnant des mobiles crédibles aux autres ?",
+        "event_ids": ["evt_001", "evt_002", "evt_003", "evt_004", "evt_005", "evt_006", "evt_007", "evt_016", "evt_017", "evt_021", "evt_023"]
+      }
+    ],
+    "minimum_independent_proof_families": 3,
+    "historical_story_alone_is_insufficient": true,
+    "single_event_must_never_prove_culprit": true
+  }
+}
