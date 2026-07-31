@@ -4,105 +4,66 @@ Moteur de génération d'expériences narratives personnalisées, conçu pour pr
 
 ## Vision
 
-Molly's Files sépare strictement les offres commerciales, les univers narratifs, les variantes de nombre de joueurs, les personnages, la chronologie canonique, le moteur logique, le gameplay autonome et les assets de production.
+Molly's Files sépare strictement les offres, les univers, les variantes, les personnages, la chronologie, les preuves, le gameplay autonome et les assets de production.
 
-L'intrigue, les personnages, la chronologie du crime, les preuves et la solution sont déterministes. La personnalisation modifie les noms et l'habillage, jamais la solvabilité de l'enquête.
+La personnalisation modifie les noms et l'habillage. Le coupable, les faits, les horaires et la solution restent déterministes.
 
 ## Expérience promise
 
 L'organisateur prépare la soirée sans connaître la solution, puis joue comme les autres. Aucun maître du jeu n'est requis.
 
-La progression repose sur des dossiers individuels, des enveloppes collectives, des révélations bornées, des questions collectives, un compagnon numérique léger, un parcours hors ligne et quatre niveaux d'aide.
+## Premier MVP — Le Palace des Ombres
 
-## Offres initiales
+En 1934, le propriétaire d'un palace alpin est retrouvé mort dans son bureau verrouillé. L'enquête immédiate cache une seconde histoire : le Belladone a été construit sur l'effacement d'Émile Mercier, associé oublié de la famille de Valleroy.
 
-| Code | Offre | Livraison |
-|---|---|---|
-| `ready_to_play` | Enquête prête à jouer | Immédiate |
-| `named_enquiry` | Enquête à vos noms | Automatique, moins d'une heure |
-| `complices_edition` | Édition Complices | Automatique, sous 24 h annoncées |
-| `event_box` | Coffret Événement | Impression et expédition à la demande |
+Cette histoire cachée crée des mobiles concurrents mais ne constitue pas une seconde enquête criminelle : Émile est mort accidentellement en 1920.
 
-## Architecture
+| Profil | Joueurs | Durée cible |
+|---|---:|---:|
+| Édition compacte | 4 | 1 h 30 |
+| Édition standard | 6 ou 8 | 2 h 30 |
 
-```text
-offers/      Définition des produits vendus
-universes/   Univers, personnages, chronologies, gameplay et variantes
-engine/      Génération, attribution, progression et validations
-assets/      Modèles PDF, graphiques, emails et impression
-schemas/     Contrats JSON des entrées, rôles, chronologies, sorties et sessions
-docs/        Spécifications produit et expérience
-```
+## Casting
 
-## Premier MVP
+- Camille de Valleroy — héritier·ère et coupable canonique ;
+- Jeanne Mercier — directrice et fille du fondateur effacé ;
+- Docteur Gabriel Renaud — médecin lié aux archives de 1920 ;
+- Lucien Delmas — secrétaire et copiste des dossiers ;
+- Véra Lenoir — vedette du gala et détentrice des lettres d'Auguste ;
+- Armand Keller — banquier à l'origine du montage financier ;
+- Élise Morel — journaliste enquêtant sur l'effacement d'Émile ;
+- Madeleine Rochefort — messagère transportant l'acte de 1919.
 
-Le premier univers est `palace_1930`, **Le Palace des Ombres**.
+Camille peut être soupçonné tôt, mais ne doit jamais être prouvé coupable par une pièce unique. L'emprunt de la clé possède une justification réelle, le témoin du couloir ne l'identifie pas formellement et le mobile complet n'apparaît qu'à l'acte III.
 
-| Profil | Joueurs | Durée cible | Préparation |
-|---|---:|---:|---:|
-| Édition compacte | 4 | 1 h 30 | environ 15 min |
-| Édition standard | 6 ou 8 | 2 h 30 | environ 30 min |
+## Sources de vérité
 
-L'édition compacte est une variante dédiée. Elle conserve quatre personnages actifs et transforme les informations des rôles retirés en témoignages et documents autonomes.
-
-## Casting canonique
-
-Le casting compte huit rôles :
-
-- Camille de Valleroy, l'héritier·ère — coupable canonique ;
-- Jeanne Mercier, la directrice du palace ;
-- Docteur Gabriel Renaud, le médecin de famille ;
-- Lucien Delmas, le secrétaire particulier ;
-- Véra Lenoir, la vedette du gala ;
-- Armand Keller, le banquier et investisseur ;
-- Élise Morel, la journaliste sous couverture ;
-- Madeleine Rochefort, l'aviatrice et messagère privée.
-
-Les quatre premiers constituent l'édition compacte. Véra et Armand complètent l'édition 6 joueurs. Élise et Madeleine complètent l'édition 8 joueurs.
-
-Contrats :
-
-- `universes/palace_1930/characters/index.json` : manifeste du casting et transferts de variante ;
+- `universes/palace_1930.json` : manifeste de l'univers ;
+- `universes/palace_1930/lore/foundation_secret.json` : mensonge fondateur ;
+- `universes/palace_1930/characters/index.json` : manifeste des rôles ;
 - `universes/palace_1930/characters/role_01.json` à `role_08.json` : rôles détaillés ;
-- `schemas/character_role.schema.json` : structure obligatoire ;
-- `engine/character_system.json` : règles d'attribution et de personnalisation ;
-- `docs/palace_1930_characters.md` : présentation lisible du casting.
+- `universes/palace_1930/timeline/index.json` : autorité de version ;
+- `universes/palace_1930/timeline/canonical_timeline_v0_6.json` : chronologie réelle ;
+- `universes/palace_1930/timeline/variant_delivery_v0_6.json` : diffusion 4/6/8 joueurs ;
+- `docs/palace_1930_characters.md` : casting lisible ;
+- `docs/palace_1930_timeline_v0_6.md` : chronologie lisible ;
+- `engine/validation_rules.json` : contrôles bloquants.
 
-## Chronologie canonique
-
-La chronologie criminelle est identique dans les versions 4, 6 et 8 joueurs. Les scènes sociales supplémentaires peuvent varier, mais elles ne modifient jamais :
-
-- le prélèvement de la préparation fictive à 15:43 ;
-- la substitution du flacon entre 15:57 et 16:02 ;
-- l'ingestion à 22:21 ;
-- l'entrée dans le bureau verrouillé à 22:45 ;
-- la mort à 23:08 ;
-- la découverte à 07:55.
-
-Les rôles absents sont remplacés par des documents ou des témoignages ayant la même fonction démonstrative.
-
-Contrats :
-
-- `universes/palace_1930/timeline/canonical_timeline.json` : événements réels et horaires verrouillés ;
-- `universes/palace_1930/timeline/variant_delivery.json` : porteurs des preuves et scènes propres aux variantes ;
-- `schemas/timeline.schema.json` : structure obligatoire ;
-- `docs/palace_1930_timeline.md` : chronologie minute par minute et chaîne de démonstration.
+Les anciens fichiers de chronologie v0.5 restent présents pour l'historique mais sont explicitement dépassés dans `timeline/index.json`.
 
 ## Principes non négociables
 
-- une solution unique et démontrable ;
+- solution unique et démontrable ;
 - un seul coupable verrouillé ;
-- même chronologie criminelle dans toutes les variantes ;
-- chaque rôle possède un mobile, un secret, un objectif, une raison de mentir et une information utile ;
 - aucun rôle purement décoratif ;
+- aucun indice unique suffisant pour condamner ;
+- histoire cachée distincte de la chaîne du meurtre ;
+- aucun second meurtre historique ;
 - organisateur sans spoiler et autorisé à jouer ;
 - aucun maître du jeu requis ;
-- aucun déclencheur indispensable sans secours ;
-- transfert contrôlé des informations lorsqu'un rôle est retiré ;
-- aucune version compacte résoluble par simple élimination ;
-- noms et pronoms personnalisables, fonctions narratives immuables ;
+- transfert contrôlé des preuves selon le nombre de joueurs ;
 - aucune donnée client ou sortie générée committée dans Git.
 
 ## Statut
 
-Socle produit, gameplay autonome, profils 4/6/8 joueurs, huit rôles canoniques et chronologie minute par minute spécifiés. Il reste à écrire les documents, la chaîne de preuves exécutable, les dossiers joueurs finaux, le moteur, le compagnon web et les PDF.
+Socle produit, variantes 4/6/8 joueurs, casting rééquilibré, histoire cachée et chronologie v0.6 spécifiés. Il reste à produire le graphe de preuves, les documents, les fiches joueurs finales, les aides, le moteur exécutable, le compagnon web et les PDF.
