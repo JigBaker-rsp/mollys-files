@@ -1,0 +1,242 @@
+{
+  "timeline_id": "palace_1930_variant_delivery_v0_6",
+  "canonical_timeline_path": "universes/palace_1930/timeline/canonical_timeline_v0_6.json",
+  "version": "0.6.0",
+  "principle": {
+    "core_crime_timeline_shared": true,
+    "full_scene_timeline_identical": false,
+    "embedded_story_shared": true,
+    "explanation": "Les faits du crime et du mensonge fondateur sont immuables. Le nombre de joueurs modifie uniquement les porteurs, les scènes sociales et le rythme de révélation."
+  },
+  "variants": {
+    "compact_4_players": {
+      "active_roles": ["role_01", "role_02", "role_03", "role_04"],
+      "target_duration_minutes": 90,
+      "evidence_delivery": [
+        {
+          "canonical_event_id": "evt_001",
+          "act": 3,
+          "delivery": "pli notarial scellé conservé à la réception puis ouvert collectivement",
+          "replaces_roles": ["role_08"]
+        },
+        {
+          "canonical_event_id": "evt_002",
+          "act": 1,
+          "delivery": "projet de vente et note de risque Mercier",
+          "replaces_roles": ["role_06"]
+        },
+        {
+          "canonical_event_id": "evt_007",
+          "act": 3,
+          "delivery": "mise en demeure trouvée parmi les effets de Camille",
+          "replaces_roles": ["role_06"]
+        },
+        {
+          "canonical_event_id": "evt_013",
+          "act": 2,
+          "delivery": "déclaration prudente d'un membre du personnel décrivant une silhouette et un signe familial, sans identifier Camille",
+          "replaces_roles": ["role_05"]
+        },
+        {
+          "canonical_event_id": "evt_016",
+          "act": 3,
+          "delivery": "acte de 1919 et annexe de copropriété",
+          "replaces_roles": ["role_08"]
+        },
+        {
+          "canonical_event_id": "evt_017",
+          "act": 2,
+          "delivery": "photographie de l'ancienne plaque et comparaison du sceau",
+          "replaces_roles": ["role_07"]
+        },
+        {
+          "canonical_event_id": "evt_020",
+          "act": 2,
+          "delivery": "registre du poste de service établissant la seconde période d'accès à la trousse",
+          "replaces_roles": []
+        }
+      ],
+      "embedded_story_documents": {
+        "act_1": [
+          "photographie ancienne où le nom Mercier a été gratté",
+          "projet de vente conditionné à un titre incontestable"
+        ],
+        "act_2": [
+          "page de versements d'Émile Mercier",
+          "lettre Alphonse-Émile parlant d'association",
+          "photographie de la plaque aux deux noms"
+        ],
+        "act_3": [
+          "acte de 1919",
+          "annexe de copropriété",
+          "note finale d'Auguste"
+        ]
+      },
+      "compression_rules": [
+        "Aucun document ne doit créer un cinquième suspect principal.",
+        "Les preuves historiques créent des mobiles mais ne prouvent jamais le meurtre.",
+        "Le bénéfice complet du faux codicille et les dettes de Camille restent cachés jusqu'à l'acte III.",
+        "La déclaration du couloir ne doit jamais nommer Camille.",
+        "La miniature confirme une raison réelle d'avoir emprunté la clé.",
+        "La chronologie centrale tient sur une feuille A4."
+      ]
+    },
+    "standard_6_players": {
+      "active_roles": ["role_01", "role_02", "role_03", "role_04", "role_05", "role_06"],
+      "target_duration_minutes": 150,
+      "evidence_delivery": [
+        {
+          "canonical_event_id": "evt_001",
+          "act": 3,
+          "delivery": "pli confié à la réception par un courrier extérieur",
+          "replaces_roles": ["role_08"]
+        },
+        {
+          "canonical_event_id": "evt_002",
+          "act": 1,
+          "delivery": "présentation directe du projet de vente par Armand",
+          "holder_role_id": "role_06"
+        },
+        {
+          "canonical_event_id": "evt_007",
+          "act": 3,
+          "delivery": "mise en demeure révélée par Armand",
+          "holder_role_id": "role_06"
+        },
+        {
+          "canonical_event_id": "evt_013",
+          "act": 2,
+          "delivery": "témoignage incomplet de Véra sur la silhouette du couloir",
+          "holder_role_id": "role_05"
+        },
+        {
+          "canonical_event_id": "evt_017",
+          "act": 2,
+          "delivery": "photographies et note anonyme ajoutées au dossier collectif",
+          "replaces_roles": ["role_07"]
+        },
+        {
+          "canonical_event_id": "evt_016",
+          "act": 3,
+          "delivery": "acte et annexe conservés dans le pli collectif",
+          "replaces_roles": ["role_08"]
+        }
+      ],
+      "scene_overlays": [
+        {
+          "id": "ovl_6p_001",
+          "time": "14:30",
+          "actors": ["npc_victim", "role_06"],
+          "location": "petit_salon",
+          "scene": "Armand présente la vente et minimise le risque Mercier."
+        },
+        {
+          "id": "ovl_6p_002",
+          "time": "15:26",
+          "actors": ["role_01", "role_06"],
+          "location": "hall_prive",
+          "scene": "Armand remet la mise en demeure et rappelle à Camille la valeur du codicille non authentifié."
+        },
+        {
+          "id": "ovl_6p_003",
+          "time": "15:56",
+          "actors": ["role_01", "role_05"],
+          "location": "couloir_prive",
+          "scene": "Véra aperçoit une silhouette portant un signe familial sans reconnaître formellement Camille."
+        },
+        {
+          "id": "ovl_6p_004",
+          "time": "18:23",
+          "actors": ["npc_victim", "role_04", "role_05"],
+          "location": "antichambre_du_bureau",
+          "scene": "Véra entend Auguste évoquer la police et la restitution du nom Mercier."
+        },
+        {
+          "id": "ovl_6p_005",
+          "time": "21:12",
+          "end_time": "21:20",
+          "actors": ["role_05"],
+          "location": "bureau_prive",
+          "scene": "Véra entre dans le bureau vide pour récupérer ses lettres, créant une fausse piste sur la pièce fermée."
+        },
+        {
+          "id": "ovl_6p_006",
+          "time": "21:25",
+          "end_time": "21:37",
+          "actors": ["role_06"],
+          "location": "cabine_telegraphique",
+          "scene": "Armand demande à la banque de suspendre la vente si les droits Mercier sont confirmés."
+        }
+      ]
+    },
+    "extended_8_players": {
+      "active_roles": ["role_01", "role_02", "role_03", "role_04", "role_05", "role_06", "role_07", "role_08"],
+      "target_duration_minutes": 150,
+      "inherits_overlays_from": "standard_6_players",
+      "evidence_delivery": [
+        {
+          "canonical_event_id": "evt_001",
+          "act": 1,
+          "delivery": "pli transporté par Madeleine",
+          "holder_role_id": "role_08"
+        },
+        {
+          "canonical_event_id": "evt_016",
+          "act": 3,
+          "delivery": "acte et annexe retenus puis révélés par Madeleine",
+          "holder_role_id": "role_08"
+        },
+        {
+          "canonical_event_id": "evt_017",
+          "act": 2,
+          "delivery": "photographies du registre et de la plaque présentées par Élise",
+          "holder_role_id": "role_07"
+        }
+      ],
+      "scene_overlays": [
+        {
+          "id": "ovl_8p_001",
+          "time": "14:12",
+          "actors": ["role_08"],
+          "location": "reception",
+          "scene": "Madeleine arrive avec le pli avant la fermeture des accès."
+        },
+        {
+          "id": "ovl_8p_002",
+          "time": "16:20",
+          "actors": ["role_08"],
+          "location": "chambre_invite",
+          "scene": "Madeleine ouvre le pli et découvre l'acte comme l'annexe Mercier-Valleroy."
+        },
+        {
+          "id": "ovl_8p_003",
+          "time": "16:32",
+          "actors": ["role_07"],
+          "location": "vestiaire_des_dossiers",
+          "scene": "Élise photographie le registre et l'ancienne plaque."
+        },
+        {
+          "id": "ovl_8p_004",
+          "time": "18:05",
+          "actors": ["npc_victim", "role_08"],
+          "location": "hall_prive",
+          "scene": "Auguste refuse la prime supplémentaire et Madeleine conserve le pli."
+        },
+        {
+          "id": "ovl_8p_005",
+          "time": "21:32",
+          "actors": ["role_07", "role_08"],
+          "location": "vestiaire",
+          "scene": "Élise tente d'approcher la sacoche de Madeleine."
+        },
+        {
+          "id": "ovl_8p_006",
+          "time": "21:42",
+          "actors": ["npc_victim", "role_07"],
+          "location": "couloir_des_dossiers",
+          "scene": "Auguste surprend Élise et menace de la faire arrêter après le gala."
+        }
+      ]
+    }
+  }
+}
