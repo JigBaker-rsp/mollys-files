@@ -1,7 +1,7 @@
 {
   "id": "palace_1930",
   "name": "Le Palace des Ombres",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "status": "mvp_design",
   "setting": {
     "period": "1934",
@@ -31,25 +31,15 @@
   "narrative_contract": {
     "culprit_id": "role_01",
     "victim_id": "npc_victim",
-    "motive_id": "motive_inheritance_fraud",
+    "motive_id": "motive_inheritance_identity_and_exposure",
     "method_id": "method_delayed_poison",
     "solution_locked": true
   },
-  "timeline": {
-    "canonical_path": "universes/palace_1930/timeline/canonical_timeline.json",
-    "variant_delivery_path": "universes/palace_1930/timeline/variant_delivery.json",
-    "schema_path": "schemas/timeline.schema.json",
-    "documentation_path": "docs/palace_1930_timeline.md",
-    "crime_facts_identical_across_variants": true,
-    "social_scene_overlays_variant_specific": true,
-    "locked_times": {
-      "preparation_removed": "15:43",
-      "bottle_substitution": "15:57-16:02",
-      "ingestion": "22:21",
-      "office_locked": "22:45",
-      "death": "23:08",
-      "body_discovered": "07:55"
-    }
+  "embedded_story": {
+    "id": "belladone_foundation_secret",
+    "path": "universes/palace_1930/lore/foundation_secret.json",
+    "schema_path": "schemas/lore_secret.schema.json",
+    "rule": "Le mensonge fondateur crée les mobiles concurrents mais ne peut pas résoudre seul le meurtre."
   },
   "characters": {
     "index_path": "universes/palace_1930/characters/index.json",
@@ -70,6 +60,15 @@
     "names_and_pronouns_personalizable": true,
     "functions_and_secrets_immutable": true
   },
+  "timeline": {
+    "index_path": "universes/palace_1930/timeline/index.json",
+    "canonical_path": "universes/palace_1930/timeline/canonical_timeline_v0_6.json",
+    "variant_delivery_path": "universes/palace_1930/timeline/variant_delivery_v0_6.json",
+    "schema_path": "schemas/timeline.schema.json",
+    "documentation_path": "docs/palace_1930_timeline_v0_6.md",
+    "crime_identical_across_variants": true,
+    "embedded_story_identical_across_variants": true
+  },
   "role_sets": {
     "compact_4_players": {
       "active_roles": ["role_01", "role_02", "role_03", "role_04"],
@@ -89,14 +88,14 @@
     "gameplay_contract": "specified",
     "compact_4_player_contract": "specified",
     "autonomous_progression": "specified",
-    "characters": "specified",
+    "embedded_story": "specified",
+    "characters": "rebalanced",
     "character_relationships": "specified",
     "character_revelations": "specified",
-    "timeline": "specified",
-    "timeline_variant_delivery": "specified",
+    "timeline": "revised_specified",
     "character_documents": "named_not_written",
     "mandatory_clues": "to_write",
-    "red_herrings": "to_write",
+    "red_herrings": "specified_not_written",
     "solution_proof": "to_write",
     "hint_content": "to_write",
     "offline_fallback_material": "to_write",
@@ -105,14 +104,15 @@
   "restrictions": [
     "Aucune personne historique réelle ne peut être impliquée.",
     "La personnalisation ne peut pas modifier le coupable, la méthode, le mobile ou les indices obligatoires.",
-    "Toutes les références d'époque doivent rester compréhensibles sans connaissance spécialisée.",
     "L'organisateur ne doit jamais recevoir la solution avant l'accusation finale.",
-    "Aucune progression obligatoire ne peut dépendre d'un maître du jeu ou d'un animateur extérieur.",
+    "Aucune progression obligatoire ne peut dépendre d'un maître du jeu.",
     "La version quatre joueurs doit être résolue grâce aux preuves et non par simple élimination.",
-    "Les informations détenues par les rôles retirés doivent être transférées par des supports autonomes.",
-    "Les noms et pronoms peuvent changer, mais les fonctions narratives, secrets, révélations et transferts de variante restent immuables.",
-    "La chronologie criminelle et les horaires verrouillés sont identiques dans toutes les variantes.",
-    "Les scènes sociales optionnelles peuvent changer uniquement si elles ne modifient aucun fait du crime.",
+    "Les informations des rôles retirés doivent être transférées par des supports autonomes.",
+    "Camille peut être suspecté tôt mais ne peut être prouvé coupable par une seule pièce.",
+    "L'emprunt de la clé par Camille doit conserver sa justification réelle liée à la miniature.",
+    "Le témoignage du couloir ne peut identifier formellement Camille.",
+    "Le bénéfice complet du codicille et les dettes ne sont révélés qu'à l'acte III.",
+    "Émile Mercier est mort accidentellement et aucun second meurtre historique ne peut être introduit.",
     "Aucun détail réel de substance, dosage ou préparation toxique ne doit être ajouté."
   ]
 }
