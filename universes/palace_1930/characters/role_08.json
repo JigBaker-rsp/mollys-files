@@ -1,0 +1,72 @@
+{
+  "id": "role_08",
+  "canonical_name": "Madeleine Rochefort",
+  "role_type": "optional",
+  "availability": {"compact_4_players": "not_used", "standard_6_players": "converted_to_collective_evidence", "extended_8_players": "active"},
+  "culprit": false,
+  "public_identity": {
+    "title": "L'aviatrice et messagère privée",
+    "description": "Aviatrice connue, arrivée malgré la tempête avec un pli confidentiel destiné à Auguste.",
+    "public_relation_to_victim": "Prestataire occasionnelle et invitée d'honneur, payée pour rapporter un document depuis Genève.",
+    "apparent_motive": "Auguste refusait de payer la mission et menaçait de révéler qu'elle avait ouvert le pli.",
+    "costume_cues": ["veste de voyage", "lunettes d'aviation", "sacoche scellée"]
+  },
+  "casting": {
+    "difficulty": "medium",
+    "play_style": ["direct", "aventure", "objet central"],
+    "recommended_for": "Un joueur qui aime disposer d'un objet important et provoquer les autres.",
+    "organizer_friendly": true,
+    "culprit_opt_in_recommended": false
+  },
+  "private_truth": {
+    "relationship_to_victim": "Auguste vous a engagé·e pour récupérer en urgence une copie authentique de l'acte de propriété.",
+    "secret": "Vous avez ouvert le pli et lu le document avant de le remettre.",
+    "independent_secret": "Vous avez retardé volontairement la remise afin de négocier une prime plus élevée.",
+    "claimed_alibi": "Vous affirmez que le pli est resté scellé dans votre sacoche depuis votre arrivée.",
+    "actual_timeline": [
+      "Vous êtes arrivé·e avant la fermeture complète des routes.",
+      "Vous avez ouvert le pli dans votre chambre.",
+      "Vous avez constaté que la copie authentique contredisait le codicille présenté par Camille.",
+      "Vous avez conservé le pli lorsque Auguste a refusé de payer la prime."
+    ],
+    "knowledge_limits": ["Vous ne connaissez pas la méthode du meurtre.", "Vous ignorez les dettes précises de Camille.", "Vous ne savez pas qui a eu accès aux appartements."]
+  },
+  "gameplay": {
+    "private_objective": "Obtenir votre paiement et décider à quel moment remettre la copie authentique sans être accusé·e de chantage.",
+    "secondary_objective": "Démontrer que vous n'avez pas falsifié ni remplacé le document.",
+    "reason_to_lie": "Vous avez ouvert et retenu un document décisif alors qu'Auguste est mort avant de le recevoir.",
+    "suspect_axes": ["document retenu", "chantage", "faux sceau possible", "déplacement difficile à vérifier"],
+    "allowed_lies": ["nier avoir ouvert le pli", "minimiser la prime demandée", "retarder la remise jusqu'à l'échéance"],
+    "forbidden_inventions": ["modifier le contenu de l'acte", "prétendre avoir remis le pli à Auguste", "détruire le sceau ou l'enveloppe"],
+    "known_facts": [
+      "L'acte authentique contredit le codicille favorable à Camille.",
+      "Le sceau et la formulation authentiques diffèrent du faux.",
+      "Auguste avait demandé le document en urgence.",
+      "Armand Keller cherchait à savoir si vous étiez arrivé·e."
+    ],
+    "documents_held": ["pli notarial authentique", "reçu de mission", "enveloppe au sceau ouvert", "carte du trajet"]
+  },
+  "relationships": [
+    {"target_role_id": "role_01", "public": "Membre de la famille d'Auguste.", "private": "Le document que vous transportez menace directement son héritage."},
+    {"target_role_id": "role_04", "public": "Personne chargée de réceptionner le pli.", "private": "Vous ne lui faites pas confiance pour le conserver intact."},
+    {"target_role_id": "role_06", "public": "Banquier intéressé par le palace.", "private": "Il a tenté de vous acheter une information."},
+    {"target_role_id": "role_07", "public": "Chroniqueuse mondaine.", "private": "Vous l'avez surprise près de votre sacoche."}
+  ],
+  "act_revelations": [
+    {"act": 1, "class": "mandatory", "deadline": "end_of_act", "content": "Révéler avoir transporté un pli urgent pour Auguste.", "fallback": "Le reçu de mission est rendu collectif."},
+    {"act": 2, "class": "conditional", "trigger": "discussion sur le sceau ou le codicille", "content": "Admettre avoir ouvert le pli et en avoir lu le contenu.", "fallback": "L'enveloppe ouverte est ajoutée aux preuves."},
+    {"act": 3, "class": "mandatory", "deadline": "before_ballots", "content": "Remettre la copie authentique de l'acte et expliquer ses différences avec le faux.", "fallback": "Le compagnon débloque une reproduction certifiée."}
+  ],
+  "variant_transfer": {
+    "standard_6_players": [
+      "reçu de mission",
+      "enveloppe notariale ouverte",
+      "reproduction certifiée de l'acte authentique",
+      "note de comparaison des sceaux"
+    ]
+  },
+  "finale": {
+    "epilogue": "Votre réputation survit, mais votre rétention du document nourrit les journaux.",
+    "personal_success": "Vous obtenez votre paiement contractuel et prouvez l'authenticité du pli."
+  }
+}
