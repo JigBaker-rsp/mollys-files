@@ -1,0 +1,209 @@
+{
+  "universe_id": "palace_1930",
+  "variant_id": "compact_4_players",
+  "parent_contract": "universes/palace_1930_gameplay.json",
+  "version": "0.3.0",
+  "status": "gameplay_specified",
+  "format": {
+    "supported_player_counts": [
+      4
+    ],
+    "recommended_duration_minutes": 90,
+    "duration_range_minutes": {
+      "min": 75,
+      "max": 105
+    },
+    "acts": 3,
+    "finale_recommended_minutes": 15,
+    "organizer_can_play": true,
+    "game_master_required": false
+  },
+  "preparation": {
+    "estimated_minutes": 15,
+    "spoiler_free": true,
+    "required_actions": [
+      "confirm_casting",
+      "send_invitations",
+      "print_or_distribute_four_player_packs",
+      "prepare_three_compact_collective_envelopes",
+      "place_compact_timeline_sheet_and_ballots",
+      "make_progress_qr_code_available"
+    ],
+    "optional_actions": [
+      "decorate_room",
+      "suggest_costumes",
+      "prepare_music"
+    ]
+  },
+  "compact_design": {
+    "design_goal": "Conserver une enquête complète dans un format plus intime et plus rapide, sans réduire la résolution à une devinette.",
+    "active_roles": [
+      "role_01",
+      "role_02",
+      "role_03",
+      "role_04"
+    ],
+    "roles_converted_to_npc_evidence": [
+      "role_05",
+      "role_06"
+    ],
+    "roles_not_used": [
+      "role_07",
+      "role_08"
+    ],
+    "culprit_remains_player_controlled": true,
+    "eligible_final_suspects": 4,
+    "player_load": {
+      "secrets_per_player": {
+        "min": 1,
+        "max": 2
+      },
+      "personal_objectives_per_player": 1,
+      "mandatory_disclosures_per_player": {
+        "min": 1,
+        "max": 2
+      },
+      "private_documents_per_player": {
+        "min": 1,
+        "max": 2
+      }
+    },
+    "evidence_budget": {
+      "mandatory_clues": {
+        "min": 5,
+        "max": 7
+      },
+      "supporting_clues": {
+        "min": 3,
+        "max": 5
+      },
+      "red_herrings": {
+        "min": 2,
+        "max": 3
+      },
+      "collective_documents_total": {
+        "min": 10,
+        "max": 14
+      }
+    },
+    "role_transfer_rules": [
+      "Toute information indispensable détenue par role_05 ou role_06 devient un document collectif, un témoignage écrit ou une révélation du compagnon.",
+      "Les rôles retirés ne peuvent pas devenir des suspects nécessaires à l'accusation finale.",
+      "Aucun joueur actif ne reçoit plus de deux révélations obligatoires par acte.",
+      "Les quatre personnages actifs doivent chacun conserver un mobile, une occasion crédible et un secret distinct du meurtre."
+    ]
+  },
+  "acts": [
+    {
+      "number": 1,
+      "id": "appearances_compact",
+      "title": "Les apparences",
+      "recommended_minutes": 20,
+      "player_focus": [
+        "discover_compact_roles",
+        "state_initial_alibis",
+        "identify_four_player_motives"
+      ],
+      "collective_question": "Parmi les quatre personnes présentes, qui avait le mobile le plus sérieux et quel alibi paraît le plus fragile ?",
+      "unlock_condition": "collective_question_answered_or_timer_elapsed",
+      "closing_reveal": "La mort n'est probablement pas naturelle : l'empoisonnement a commencé avant que la victime ne s'enferme dans son bureau."
+    },
+    {
+      "number": 2,
+      "id": "lies_compact",
+      "title": "Les mensonges",
+      "recommended_minutes": 30,
+      "player_focus": [
+        "compare_compact_timeline",
+        "identify_poisoning_vector",
+        "separate_personal_secrets_from_murder_evidence"
+      ],
+      "collective_question": "Quand le poison a-t-il été administré, par quel vecteur et quelles personnes pouvaient agir à ce moment-là ?",
+      "unlock_condition": "collective_question_answered_or_timer_elapsed",
+      "closing_reveal": "Un témoignage et un document financier révèlent qu'Auguste de Valleroy allait dénoncer une fraude successorale."
+    },
+    {
+      "number": 3,
+      "id": "truth_compact",
+      "title": "La vérité",
+      "recommended_minutes": 25,
+      "player_focus": [
+        "connect_motive_method_opportunity",
+        "eliminate_inconsistent_theories",
+        "select_three_main_proofs"
+      ],
+      "collective_question": "Quelle personne réunit le mobile, l'accès au vecteur et la connaissance du document falsifié ?",
+      "unlock_condition": "all_ballots_submitted",
+      "closing_reveal": "final_solution"
+    }
+  ],
+  "organizer_autonomy": {
+    "organizer_receives_solution_in_advance": false,
+    "organizer_has_special_runtime_role": false,
+    "materials_self_identify_when_to_open": true,
+    "digital_companion_controls_timing_and_unlocks": true,
+    "offline_fallback_included": true,
+    "rules_arbitration_source": "spoiler_free_compact_troubleshooting_guide"
+  },
+  "disclosure_contract": {
+    "every_character_has": [
+      "public_identity",
+      "known_facts",
+      "secret",
+      "compromising_element",
+      "useful_information",
+      "personal_objective",
+      "reason_to_lie",
+      "mandatory_disclosure"
+    ],
+    "mandatory_disclosures_due_by_act_end": true,
+    "conditional_disclosures_have_fallback": true,
+    "compact_constraint": "Chaque information indispensable doit exister dans au moins deux canaux parmi personnage, document collectif et compagnon numérique."
+  },
+  "hint_content_required": {
+    "act_1": [
+      "motive_orientation",
+      "compact_timeline_orientation"
+    ],
+    "act_2": [
+      "consumption_comparison",
+      "poisoning_not_in_office",
+      "unblocking_transferred_witness_statement"
+    ],
+    "act_3": [
+      "inheritance_document_comparison",
+      "knowledge_opportunity_link",
+      "unblocking_compact_proof_chain"
+    ]
+  },
+  "finale": {
+    "accusation_modes": [
+      "individual",
+      "collective"
+    ],
+    "ballot_fields": [
+      "culprit",
+      "motive",
+      "method",
+      "poisoning_window",
+      "three_main_proofs"
+    ],
+    "solution_formats": [
+      "written",
+      "audio_ready_script"
+    ],
+    "culprit_final_confession_required": true,
+    "epilogue_for_all_characters_required": true
+  },
+  "late_absence": {
+    "four_to_three_players": "non pris en charge ; reporter la partie ou utiliser ultérieurement un produit dédié à trois joueurs",
+    "automatic_role_removal": false
+  },
+  "validation_requirements": [
+    "La variante doit être testée séparément de la version 6/8 joueurs.",
+    "Au moins trois parties complètes doivent se terminer en 75 à 105 minutes.",
+    "Au moins deux groupes tests doivent identifier le coupable grâce à la chaîne de preuves et non par élimination simple.",
+    "Aucune information transférée depuis les rôles retirés ne doit dépendre d'une intervention humaine.",
+    "Le coupable doit rester défendable sans devenir évident dans un groupe de quatre suspects."
+  ]
+}
