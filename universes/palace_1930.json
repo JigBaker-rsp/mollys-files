@@ -1,7 +1,7 @@
 {
   "id": "palace_1930",
   "name": "Le Palace des Ombres",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "status": "mvp_design",
   "setting": {
     "period": "1934",
@@ -34,6 +34,22 @@
     "motive_id": "motive_inheritance_fraud",
     "method_id": "method_delayed_poison",
     "solution_locked": true
+  },
+  "timeline": {
+    "canonical_path": "universes/palace_1930/timeline/canonical_timeline.json",
+    "variant_delivery_path": "universes/palace_1930/timeline/variant_delivery.json",
+    "schema_path": "schemas/timeline.schema.json",
+    "documentation_path": "docs/palace_1930_timeline.md",
+    "crime_facts_identical_across_variants": true,
+    "social_scene_overlays_variant_specific": true,
+    "locked_times": {
+      "preparation_removed": "15:43",
+      "bottle_substitution": "15:57-16:02",
+      "ingestion": "22:21",
+      "office_locked": "22:45",
+      "death": "23:08",
+      "body_discovered": "07:55"
+    }
   },
   "characters": {
     "index_path": "universes/palace_1930/characters/index.json",
@@ -76,7 +92,8 @@
     "characters": "specified",
     "character_relationships": "specified",
     "character_revelations": "specified",
-    "timeline": "to_write",
+    "timeline": "specified",
+    "timeline_variant_delivery": "specified",
     "character_documents": "named_not_written",
     "mandatory_clues": "to_write",
     "red_herrings": "to_write",
@@ -94,6 +111,8 @@
     "La version quatre joueurs doit être résolue grâce aux preuves et non par simple élimination.",
     "Les informations détenues par les rôles retirés doivent être transférées par des supports autonomes.",
     "Les noms et pronoms peuvent changer, mais les fonctions narratives, secrets, révélations et transferts de variante restent immuables.",
+    "La chronologie criminelle et les horaires verrouillés sont identiques dans toutes les variantes.",
+    "Les scènes sociales optionnelles peuvent changer uniquement si elles ne modifient aucun fait du crime.",
     "Aucun détail réel de substance, dosage ou préparation toxique ne doit être ajouté."
   ]
 }
