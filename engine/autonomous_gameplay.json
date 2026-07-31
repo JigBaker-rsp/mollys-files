@@ -1,0 +1,161 @@
+{
+  "version": "0.2.0",
+  "purpose": "Define the universe-independent rules that make a Molly's Files investigation playable without a game master.",
+  "non_negotiable_principles": {
+    "no_game_master_required": true,
+    "organizer_can_play": true,
+    "organizer_spoiler_free_until_finale": true,
+    "physical_interactions_primary": true,
+    "digital_companion_is_optional_for_core_resolution": true,
+    "mandatory_information_cannot_be_permanently_withheld": true,
+    "culprit_must_play_fair": true
+  },
+  "delivery_bundle": {
+    "organizer_spoiler_free": [
+      "preparation_checklist",
+      "public_character_descriptions",
+      "casting_guide",
+      "invitation_pack",
+      "setup_map",
+      "rules_to_read_aloud",
+      "troubleshooting_guide"
+    ],
+    "individual_player_packs": [
+      "starting_character_sheet",
+      "act_2_revelation",
+      "act_3_revelation",
+      "personal_objectives",
+      "conditional_disclosures"
+    ],
+    "collective_material": [
+      "act_1_envelope",
+      "act_2_envelope",
+      "act_3_envelope",
+      "timeline_sheet",
+      "accusation_ballots",
+      "sealed_final_solution"
+    ],
+    "digital_companion": [
+      "current_act",
+      "timer",
+      "collective_question",
+      "next_reveal_control",
+      "progressive_hints",
+      "what_to_do_now",
+      "final_solution_unlock"
+    ]
+  },
+  "information_classes": {
+    "free": "The player chooses when and how to reveal it.",
+    "conditional": "The player must reveal it when the written trigger occurs.",
+    "mandatory": "The player must reveal it before the end of the specified act."
+  },
+  "player_rules": [
+    "Players speak from their character's known facts.",
+    "Players may lie, evade, minimize and accuse to protect secrets.",
+    "Players may not invent a new alibi, fact, clue or event.",
+    "A player document is authoritative unless explicitly marked forged, incomplete or doubtful.",
+    "Discovered collective documents cannot be destroyed or withheld permanently.",
+    "The culprit may create reasonable doubt but may not block a mandatory clue or contradict immutable facts."
+  ],
+  "act_loop": [
+    {
+      "order": 1,
+      "id": "private_reading",
+      "purpose": "Read new personal information."
+    },
+    {
+      "order": 2,
+      "id": "free_investigation",
+      "purpose": "Question, compare versions and inspect documents."
+    },
+    {
+      "order": 3,
+      "id": "personal_objectives",
+      "purpose": "Drive player initiative without a facilitator."
+    },
+    {
+      "order": 4,
+      "id": "collective_question",
+      "purpose": "Force a shared synthesis before progression."
+    },
+    {
+      "order": 5,
+      "id": "controlled_unlock",
+      "purpose": "Open the next envelope or digital reveal."
+    }
+  ],
+  "progression": {
+    "supported_triggers": [
+      "timer_elapsed",
+      "collective_question_answered",
+      "explicit_player_trigger",
+      "manual_next_act_confirmation"
+    ],
+    "pause_supported": true,
+    "all_mandatory_revelations_must_have_deadline": true,
+    "all_explicit_player_triggers_must_have_fallback": true
+  },
+  "hint_ladder": [
+    {
+      "level": 1,
+      "id": "orientation_question",
+      "reveals_answer": false,
+      "score_penalty": 0
+    },
+    {
+      "level": 2,
+      "id": "comparison_scope",
+      "reveals_answer": false,
+      "score_penalty": 1
+    },
+    {
+      "level": 3,
+      "id": "explicit_deduction",
+      "reveals_answer": true,
+      "score_penalty": 2
+    },
+    {
+      "level": 4,
+      "id": "automatic_unblocking_clue",
+      "reveals_answer": true,
+      "score_penalty": 3
+    }
+  ],
+  "final_accusation": {
+    "modes": [
+      "individual",
+      "collective"
+    ],
+    "required_answers": [
+      "culprit",
+      "motive",
+      "method",
+      "poisoning_window",
+      "three_main_proofs"
+    ],
+    "solution_locked_until_all_ballots_submitted": true
+  },
+  "victory": {
+    "investigator_full_win_requires": [
+      "culprit",
+      "method",
+      "motive"
+    ],
+    "investigator_partial_win_requires": [
+      "culprit"
+    ],
+    "culprit_win_condition": "fewer_than_half_correctly_accuse",
+    "personal_objectives_scored_separately": true
+  },
+  "absence_policy": {
+    "optional_roles_removed_first": true,
+    "mandatory_information_transfer_required": true,
+    "supported_transfers": [
+      "collective_document",
+      "other_character",
+      "digital_reveal"
+    ],
+    "minimum_supported_player_count_must_be_declared_by_universe": true
+  }
+}
