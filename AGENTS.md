@@ -22,6 +22,19 @@ Les fichiers présents sur `main` sont la source de vérité. Ne pas inventer un
 4. Les anecdotes doivent rester secondaires, non humiliantes et facultatives pour résoudre le jeu.
 5. Toute sortie client doit passer les validations bloquantes définies dans `engine/validation_rules.json`.
 
+## Chronologie canonique
+
+1. Chaque univers doit posséder une chronologie canonique validée par `schemas/timeline.schema.json`.
+2. Le coupable, le mobile, la méthode, les fenêtres d'accès, l'ingestion, la mort et la découverte sont identiques dans toutes les variantes.
+3. Une variante peut modifier le porteur d'une information, jamais le fait matériel ni son horaire verrouillé.
+4. Les scènes sociales d'un rôle optionnel peuvent être supprimées ou remplacées uniquement si elles ne changent pas la chaîne du crime.
+5. Toute scène ajoutée doit préciser si elle est canonique ou constitue un overlay de variante.
+6. Les alibis, révélations, documents et horaires des personnages doivent rester compatibles avec la chronologie canonique.
+7. Toute modification d'un horaire verrouillé exige une nouvelle version du contrat narratif, une mise à jour des rôles, des indices, des documents et de toutes les variantes.
+8. Une preuve transférée doit conserver la même fonction démonstrative que dans la variante d'origine.
+9. Aucun événement optionnel ne peut devenir nécessaire à la résolution d'une autre variante sans mécanisme de transfert explicite.
+10. La chronologie réelle et la chronologie de jeu doivent rester séparées : la partie commence après la découverte du corps.
+
 ## Gestion des variantes
 
 1. La variante compatible doit être résolue avant l'attribution des personnages.
@@ -55,7 +68,7 @@ Les règles génériques sont dans `engine/autonomous_gameplay.json`. Chaque uni
 - Ajouter ou mettre à jour un schéma lors de l'introduction d'une nouvelle structure de données.
 - Un changement de règle moteur doit documenter son impact sur les univers existants.
 - Aucun fichier vide uniquement destiné à matérialiser un dossier.
-- Ne pas déclarer un univers ou une variante `playtest_ready` tant que son gameplay autonome, ses aides, son mode hors ligne et ses tests dédiés ne sont pas complets.
+- Ne pas déclarer un univers ou une variante `playtest_ready` tant que son gameplay autonome, ses aides, son mode hors ligne, sa chronologie et ses tests dédiés ne sont pas complets.
 
 ## Sécurité et données
 
