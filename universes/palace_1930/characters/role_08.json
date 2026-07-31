@@ -2,71 +2,147 @@
   "id": "role_08",
   "canonical_name": "Madeleine Rochefort",
   "role_type": "optional",
-  "availability": {"compact_4_players": "not_used", "standard_6_players": "converted_to_collective_evidence", "extended_8_players": "active"},
+  "availability": {
+    "compact_4_players": "not_used",
+    "standard_6_players": "converted_to_collective_evidence",
+    "extended_8_players": "active"
+  },
   "culprit": false,
   "public_identity": {
     "title": "L'aviatrice et messagère privée",
     "description": "Aviatrice connue, arrivée malgré la tempête avec un pli confidentiel destiné à Auguste.",
-    "public_relation_to_victim": "Prestataire occasionnelle et invitée d'honneur, payée pour rapporter un document depuis Genève.",
-    "apparent_motive": "Auguste refusait de payer la mission et menaçait de révéler qu'elle avait ouvert le pli.",
-    "costume_cues": ["veste de voyage", "lunettes d'aviation", "sacoche scellée"]
+    "public_relation_to_victim": "Prestataire occasionnelle et invitée d'honneur, payée pour rapporter depuis Genève les archives originales du palace.",
+    "apparent_motive": "Auguste refusait de payer la prime demandée et menaçait de révéler qu'elle avait ouvert un pli susceptible de bouleverser la propriété du Belladone.",
+    "costume_cues": [
+      "veste de voyage",
+      "lunettes d'aviation",
+      "sacoche scellée"
+    ]
   },
   "casting": {
     "difficulty": "medium",
-    "play_style": ["direct", "aventure", "objet central"],
-    "recommended_for": "Un joueur qui aime disposer d'un objet important et provoquer les autres.",
+    "play_style": [
+      "direct",
+      "aventure",
+      "objet central"
+    ],
+    "recommended_for": "Un joueur qui aime disposer d'un document décisif et décider quand le remettre.",
     "organizer_friendly": true,
     "culprit_opt_in_recommended": false
   },
   "private_truth": {
-    "relationship_to_victim": "Auguste vous a engagé·e pour récupérer en urgence une copie authentique de l'acte de propriété.",
-    "secret": "Vous avez ouvert le pli et lu le document avant de le remettre.",
-    "independent_secret": "Vous avez retardé volontairement la remise afin de négocier une prime plus élevée.",
+    "relationship_to_victim": "Auguste vous a engagée pour récupérer en urgence l'acte de 1919, son annexe et une copie du registre notarial.",
+    "secret": "Vous avez ouvert le pli et lu les documents avant de les remettre.",
+    "independent_secret": "Vous avez retardé volontairement la remise afin de négocier une prime plus élevée, alors que vous saviez que la vente du palace pouvait être conclue rapidement.",
+    "historical_stake": "L'annexe établit que les Mercier possédaient des droits durables et qu'Alphonse de Valleroy n'aurait jamais dû enregistrer seul le palace après la mort accidentelle d'Émile.",
     "claimed_alibi": "Vous affirmez que le pli est resté scellé dans votre sacoche depuis votre arrivée.",
     "actual_timeline": [
-      "Vous êtes arrivé·e avant la fermeture complète des routes.",
-      "Vous avez ouvert le pli dans votre chambre.",
-      "Vous avez constaté que la copie authentique contredisait le codicille présenté par Camille.",
-      "Vous avez conservé le pli lorsque Auguste a refusé de payer la prime."
+      "À 14:12, vous arrivez avec le pli avant la fermeture complète des accès.",
+      "À 16:20, vous ouvrez le pli dans votre chambre et découvrez l'acte comme l'annexe de copropriété.",
+      "À 18:05, Auguste refuse la prime supplémentaire et vous conservez les documents.",
+      "Vous empêchez Élise d'approcher votre sacoche pendant le gala.",
+      "Auguste meurt avant d'avoir reçu la copie complète."
     ],
-    "knowledge_limits": ["Vous ne connaissez pas la méthode du meurtre.", "Vous ignorez les dettes précises de Camille.", "Vous ne savez pas qui a eu accès aux appartements."]
+    "knowledge_limits": [
+      "Vous ne connaissez pas la méthode du meurtre.",
+      "Vous ignorez les dettes précises de Camille.",
+      "Vous ne savez pas qui a eu accès aux appartements.",
+      "Les documents prouvent une appropriation frauduleuse, pas un meurtre ancien."
+    ]
   },
   "gameplay": {
-    "private_objective": "Obtenir votre paiement et décider à quel moment remettre la copie authentique sans être accusé·e de chantage.",
-    "secondary_objective": "Démontrer que vous n'avez pas falsifié ni remplacé le document.",
-    "reason_to_lie": "Vous avez ouvert et retenu un document décisif alors qu'Auguste est mort avant de le recevoir.",
-    "suspect_axes": ["document retenu", "chantage", "faux sceau possible", "déplacement difficile à vérifier"],
-    "allowed_lies": ["nier avoir ouvert le pli", "minimiser la prime demandée", "retarder la remise jusqu'à l'échéance"],
-    "forbidden_inventions": ["modifier le contenu de l'acte", "prétendre avoir remis le pli à Auguste", "détruire le sceau ou l'enveloppe"],
-    "known_facts": [
-      "L'acte authentique contredit le codicille favorable à Camille.",
-      "Le sceau et la formulation authentiques diffèrent du faux.",
-      "Auguste avait demandé le document en urgence.",
-      "Armand Keller cherchait à savoir si vous étiez arrivé·e."
+    "private_objective": "Obtenir votre paiement tout en remettant finalement les archives intactes et en prouvant que vous ne les avez pas falsifiées.",
+    "secondary_objective": "Empêcher Armand ou Élise de s'emparer du pli avant sa révélation officielle.",
+    "reason_to_lie": "Vous avez ouvert, retenu et marchandé un document capable d'annuler une vente et de renverser une succession.",
+    "suspect_axes": [
+      "document retenu",
+      "chantage",
+      "propriété contestée",
+      "déplacement difficile à vérifier"
     ],
-    "documents_held": ["pli notarial authentique", "reçu de mission", "enveloppe au sceau ouvert", "carte du trajet"]
+    "allowed_lies": [
+      "nier avoir ouvert le pli",
+      "minimiser la prime demandée",
+      "retarder la remise jusqu'à l'échéance",
+      "laisser croire que l'acte concerne seulement le codicille"
+    ],
+    "forbidden_inventions": [
+      "modifier le contenu de l'acte ou de l'annexe",
+      "prétendre avoir remis le pli à Auguste",
+      "détruire le sceau ou l'enveloppe",
+      "présenter l'avalanche comme un assassinat"
+    ],
+    "known_facts": [
+      "L'acte de 1919 nomme Alphonse de Valleroy et Émile Mercier comme partenaires.",
+      "L'annexe prévoit des droits de propriété et une protection du personnel.",
+      "Le faux codicille contemporain est incompatible avec les archives authentiques.",
+      "Auguste avait demandé ces documents en urgence afin de suspendre la vente.",
+      "Armand cherchait à savoir si vous étiez arrivée."
+    ],
+    "documents_held": [
+      "acte authentique de 1919",
+      "annexe de copropriété Mercier-Valleroy",
+      "copie du registre notarial",
+      "reçu de mission",
+      "enveloppe au sceau ouvert"
+    ]
   },
   "relationships": [
-    {"target_role_id": "role_01", "public": "Membre de la famille d'Auguste.", "private": "Le document que vous transportez menace directement son héritage."},
-    {"target_role_id": "role_04", "public": "Personne chargée de réceptionner le pli.", "private": "Vous ne lui faites pas confiance pour le conserver intact."},
-    {"target_role_id": "role_06", "public": "Banquier intéressé par le palace.", "private": "Il a tenté de vous acheter une information."},
-    {"target_role_id": "role_07", "public": "Chroniqueuse mondaine.", "private": "Vous l'avez surprise près de votre sacoche."}
+    {
+      "target_role_id": "role_01",
+      "public": "Membre de la famille d'Auguste.",
+      "private": "Les documents menacent son héritage mais ne prouvent pas qu'il ou elle a fabriqué le codicille."
+    },
+    {
+      "target_role_id": "role_04",
+      "public": "Personne chargée de réceptionner le pli.",
+      "private": "Vous ne lui faites pas confiance pour conserver les archives intactes."
+    },
+    {
+      "target_role_id": "role_06",
+      "public": "Banquier intéressé par le palace.",
+      "private": "Il a tenté d'obtenir une information sur le contenu et l'arrivée du pli."
+    },
+    {
+      "target_role_id": "role_07",
+      "public": "Chroniqueuse mondaine.",
+      "private": "Vous l'avez surprise près de votre sacoche."
+    }
   ],
   "act_revelations": [
-    {"act": 1, "class": "mandatory", "deadline": "end_of_act", "content": "Révéler avoir transporté un pli urgent pour Auguste.", "fallback": "Le reçu de mission est rendu collectif."},
-    {"act": 2, "class": "conditional", "trigger": "discussion sur le sceau ou le codicille", "content": "Admettre avoir ouvert le pli et en avoir lu le contenu.", "fallback": "L'enveloppe ouverte est ajoutée aux preuves."},
-    {"act": 3, "class": "mandatory", "deadline": "before_ballots", "content": "Remettre la copie authentique de l'acte et expliquer ses différences avec le faux.", "fallback": "Le compagnon débloque une reproduction certifiée."}
+    {
+      "act": 1,
+      "class": "mandatory",
+      "deadline": "end_of_act",
+      "content": "Révéler avoir transporté des archives urgentes pour Auguste, sans en dévoiler encore le contenu.",
+      "fallback": "Le reçu de mission est rendu collectif."
+    },
+    {
+      "act": 2,
+      "class": "mandatory",
+      "deadline": "end_of_act",
+      "content": "Admettre avoir ouvert le pli et révéler qu'il contient un acte de fondation incompatible avec la légende officielle.",
+      "fallback": "L'enveloppe ouverte et une première page de l'acte sont ajoutées aux preuves."
+    },
+    {
+      "act": 3,
+      "class": "mandatory",
+      "deadline": "before_ballots",
+      "content": "Remettre l'acte, l'annexe et le registre ; expliquer qu'ils prouvent l'appropriation frauduleuse mais aucun meurtre ancien.",
+      "fallback": "Le compagnon débloque une reproduction certifiée complète."
+    }
   ],
   "variant_transfer": {
     "standard_6_players": [
       "reçu de mission",
       "enveloppe notariale ouverte",
-      "reproduction certifiée de l'acte authentique",
+      "reproduction certifiée de l'acte de 1919",
+      "annexe de copropriété Mercier-Valleroy",
       "note de comparaison des sceaux"
     ]
   },
   "finale": {
-    "epilogue": "Votre réputation survit, mais votre rétention du document nourrit les journaux.",
-    "personal_success": "Vous obtenez votre paiement contractuel et prouvez l'authenticité du pli."
+    "epilogue": "Votre rétention du pli nourrit le scandale, mais les documents permettent enfin de restituer une part de l'histoire du Belladone.",
+    "personal_success": "Vous prouvez l'authenticité des archives et obtenez le paiement contractuel sans être confondue avec le meurtrier."
   }
 }
