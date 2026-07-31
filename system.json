@@ -2,9 +2,9 @@
   "project": {
     "id": "mollys_files",
     "name": "Molly's Files",
-    "version": "0.4.0",
+    "version": "0.5.0",
     "default_language": "fr",
-    "status": "character_foundation"
+    "status": "timeline_foundation"
   },
   "product": {
     "category": "personalized_narrative_experiences",
@@ -29,12 +29,16 @@
     "assets_path": "assets",
     "schemas_path": "schemas",
     "gameplay_spec_path": "docs/gameplay_experience.md",
-    "character_engine_path": "engine/character_system.json"
+    "character_engine_path": "engine/character_system.json",
+    "timeline_schema_path": "schemas/timeline.schema.json"
   },
   "mvp": {
     "universe_id": "palace_1930",
     "character_index": "universes/palace_1930/characters/index.json",
     "character_documentation": "docs/palace_1930_characters.md",
+    "canonical_timeline": "universes/palace_1930/timeline/canonical_timeline.json",
+    "variant_timeline_delivery": "universes/palace_1930/timeline/variant_delivery.json",
+    "timeline_documentation": "docs/palace_1930_timeline.md",
     "gameplay_contracts": {
       "compact_4_players": "universes/palace_1930_4p_gameplay.json",
       "standard_6_8_players": "universes/palace_1930_gameplay.json"
@@ -47,6 +51,14 @@
     "duration_profiles_minutes": {
       "compact_4_players": {"min": 75, "recommended": 90, "max": 105},
       "standard_6_8_players": {"min": 120, "recommended": 150, "max": 180}
+    },
+    "locked_crime_times": {
+      "preparation_removed": "15:43",
+      "bottle_substitution": "15:57-16:02",
+      "ingestion": "22:21",
+      "office_locked": "22:45",
+      "death": "23:08",
+      "body_discovered": "07:55"
     }
   }
 }
