@@ -2,9 +2,9 @@
   "project": {
     "id": "mollys_files",
     "name": "Molly's Files",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "default_language": "fr",
-    "status": "foundation"
+    "status": "gameplay_foundation"
   },
   "product": {
     "category": "personalized_narrative_experiences",
@@ -13,6 +13,13 @@
       "daily_supervision_minutes_max": 60,
       "manual_order_processing": false,
       "inventory_required": false
+    },
+    "experience_contract": {
+      "game_master_required": false,
+      "organizer_can_play": true,
+      "organizer_spoiler_free": true,
+      "offline_fallback_required": true,
+      "digital_companion_role": "progression_and_unblocking_only"
     }
   },
   "architecture": {
@@ -20,12 +27,25 @@
     "universes_path": "universes",
     "engine_path": "engine",
     "assets_path": "assets",
-    "schemas_path": "schemas"
+    "schemas_path": "schemas",
+    "gameplay_spec_path": "docs/gameplay_experience.md"
   },
   "mvp": {
     "universe_id": "palace_1930",
-    "player_counts": [6, 8],
-    "offers": ["ready_to_play", "named_enquiry"],
-    "delivery_format": ["print_pdf", "mobile_pdf"]
+    "gameplay_contract": "universes/palace_1930_gameplay.json",
+    "player_counts": [
+      6,
+      8
+    ],
+    "offers": [
+      "ready_to_play",
+      "named_enquiry"
+    ],
+    "delivery_format": [
+      "print_pdf",
+      "mobile_pdf"
+    ],
+    "acts": 3,
+    "recommended_duration_minutes": 150
   }
 }
