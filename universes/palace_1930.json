@@ -64,7 +64,7 @@
     "index_path": "universes/palace_1930/timeline/index.json",
     "canonical_path": "universes/palace_1930/timeline/canonical_timeline_v0_6.json",
     "variant_delivery_path": "universes/palace_1930/timeline/variant_delivery_v0_6.json",
-    "schema_path": "schemas/timeline.schema.json",
+    "schema_path": "schemas/timeline_v0_6.schema.json",
     "documentation_path": "docs/palace_1930_timeline_v0_6.md",
     "crime_identical_across_variants": true,
     "embedded_story_identical_across_variants": true
