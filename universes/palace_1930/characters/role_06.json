@@ -1,0 +1,72 @@
+{
+  "id": "role_06",
+  "canonical_name": "Armand Keller",
+  "role_type": "required",
+  "availability": {"compact_4_players": "converted_to_npc_evidence", "standard_6_players": "active", "extended_8_players": "active"},
+  "culprit": false,
+  "public_identity": {
+    "title": "Le banquier et investisseur",
+    "description": "Représentant d'une banque privée susceptible de sauver ou de reprendre le palace.",
+    "public_relation_to_victim": "Partenaire financier devenu adversaire lors des négociations de vente.",
+    "apparent_motive": "La mort d'Auguste pouvait faire chuter la valeur du palace et accélérer son rachat.",
+    "costume_cues": ["costume sombre", "montre", "dossier bancaire"]
+  },
+  "casting": {
+    "difficulty": "medium_high",
+    "play_style": ["négociation", "analyse financière", "pression"],
+    "recommended_for": "Un joueur qui aime les rapports de force et la lecture stratégique des documents.",
+    "organizer_friendly": true,
+    "culprit_opt_in_recommended": false
+  },
+  "private_truth": {
+    "relationship_to_victim": "Vous négociiez une reprise du palace tout en lui cachant l'urgence réelle de sa trésorerie.",
+    "secret": "Vous avez retardé un crédit afin de forcer Auguste à vendre moins cher.",
+    "independent_secret": "Vous détenez personnellement une partie des dettes de Camille et comptiez obtenir son influence après la succession.",
+    "claimed_alibi": "Vous dites avoir passé toute la fin de soirée au bar avec des témoins.",
+    "actual_timeline": [
+      "Vous avez rencontré Auguste avant le gala pour discuter de la vente.",
+      "Vous avez remis à Camille une dernière mise en demeure.",
+      "Vous avez reçu une copie incomplète du codicille et compris son intérêt financier.",
+      "Vous avez quitté le bar pour envoyer un télégramme à votre banque."
+    ],
+    "knowledge_limits": ["Vous ne savez pas comment Auguste est mort.", "Vous ne connaissez pas l'accès de Camille à la trousse médicale.", "Vous ignorez que Véra se trouvait dans le bureau."]
+  },
+  "gameplay": {
+    "private_objective": "Préserver votre projet de reprise tout en évitant que le groupe découvre votre manipulation du crédit.",
+    "secondary_objective": "Obtenir la copie authentique de l'acte avant Lucien ou Jeanne.",
+    "reason_to_lie": "Vous aviez intérêt à la chute d'Auguste et contrôliez les dettes de l'héritier.",
+    "suspect_axes": ["rachat hostile", "dettes de Camille", "télégramme secret", "documents successoraux"],
+    "allowed_lies": ["minimiser la pression bancaire", "nier le lien personnel avec les dettes de Camille", "présenter le télégramme comme routinier"],
+    "forbidden_inventions": ["modifier les montants inscrits", "inventer une clause bancaire", "prétendre que le codicille authentique vous avantage"],
+    "known_facts": [
+      "Camille devait rembourser une somme impossible sans héritage rapide.",
+      "Le faux codicille permettait un refinancement immédiat.",
+      "Auguste envisageait une vente qui aurait écarté Camille.",
+      "Les comptes du palace étaient moins désespérés que Jeanne ne le pensait."
+    ],
+    "documents_held": ["mise en demeure de Camille", "projet de vente", "télégramme à la banque", "note d'analyse du codicille"]
+  },
+  "relationships": [
+    {"target_role_id": "role_01", "public": "Client·e de la banque.", "private": "Vous détenez sa survie financière entre vos mains."},
+    {"target_role_id": "role_02", "public": "Interlocutrice opérationnelle.", "private": "Elle vous considère comme un prédateur."},
+    {"target_role_id": "role_03", "public": "Médecin de la famille.", "private": "Vous possédez un certificat médical qu'il préférerait oublier."},
+    {"target_role_id": "role_08", "public": "Invitée aventureuse.", "private": "Vous savez qu'elle transporte un document capable de ruiner votre stratégie."}
+  ],
+  "act_revelations": [
+    {"act": 1, "class": "mandatory", "deadline": "end_of_act", "content": "Révéler l'existence des négociations de vente et la fragilité financière du palace.", "fallback": "Le projet de vente est ajouté au dossier collectif."},
+    {"act": 2, "class": "conditional", "trigger": "apparition du codicille", "content": "Expliquer sa valeur financière et reconnaître détenir les dettes de Camille.", "fallback": "La mise en demeure devient publique."},
+    {"act": 3, "class": "mandatory", "deadline": "before_ballots", "content": "Révéler qu'Auguste préparait une vente excluant Camille et que le faux permettait un refinancement immédiat.", "fallback": "Votre note d'analyse et le télégramme sont rendus collectifs."}
+  ],
+  "variant_transfer": {
+    "compact_4_players": [
+      "mise en demeure bancaire adressée à Camille",
+      "note d'analyse financière du faux codicille",
+      "projet de vente excluant l'héritier",
+      "télégramme établissant la pression exercée sur Auguste"
+    ]
+  },
+  "finale": {
+    "epilogue": "Votre stratégie de reprise devient publique et la banque se désolidarise de vos méthodes.",
+    "personal_success": "Vous évitez d'être présenté comme complice du meurtre et conservez une position dans la négociation."
+  }
+}
