@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mollys-files.local/schemas/timeline.schema.json",
+  "title": "Molly's Files canonical timeline",
+  "type": "object",
+  "required": [
+    "timeline_id",
+    "universe_id",
+    "version",
+    "status",
+    "calendar",
+    "invariance_contract",
+    "locked_windows",
+    "events"
+  ],
+  "properties": {
+    "timeline_id": {"type": "string", "pattern": "^[a-z0-9_]+$"},
+    "universe_id": {"type": "string", "pattern": "^[a-z0-9_]+$"},
+    "version": {"type": "string"},
+    "status": {"enum": ["draft", "specified", "playtest_ready", "validated"]},
+    "timezone": {"type": "string"},
+    "calendar": {
+      "type": "object",
+      "required": ["gala_date", "discovery_date"],
+      "properties": {
+        "gala_date": {"type": "string", "format": "date"},
+        "discovery_date": {"type": "string", "format": "date"}
+      },
+      "additionalProperties": false
+    },
+    "invariance_contract": {
+      "type": "object",
+      "required": [
+        "crime_facts_identical_across_variants",
+        "culprit_method_motive_and_core_times_locked",
+        "social_overlays_may_change_by_variant",
+        "rule"
+      ],
+      "properties": {
+        "crime_facts_identical_across_variants": {"const": true},
+        "culprit_method_motive_and_core_times_locked": {"const": true},
+        "social_overlays_may_change_by_variant": {"const": true},
+        "rule": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": false
+    },
+    "locked_windows": {"type": "object", "minProperties": 1},
+    "events": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "date",
+          "time",
+          "phase",
+          "location",
+          "classification",
+          "actors",
+          "fact",
+          "proof_function"
+        ],
+        "properties": {
+          "id": {"type": "string", "pattern": "^evt_[0-9]{3}$"},
+          "date": {"type": "string", "format": "date"},
+          "time": {"type": "string", "pattern": "^([01][0-9]|2[0-3]):[0-5][0-9]$"},
+          "end_time": {"type": "string", "pattern": "^([01][0-9]|2[0-3]):[0-5][0-9]$"},
+          "phase": {"type": "string", "pattern": "^[a-z0-9_]+$"},
+          "location": {"type": "string", "pattern": "^[a-z0-9_]+$"},
+          "classification": {
+            "enum": [
+              "core",
+              "core_locked",
+              "core_secret",
+              "core_fact_variable_carrier",
+              "core_fact_variable_witness"
+            ]
+          },
+          "actors": {
+            "type": "array",
+            "items": {"type": "string", "pattern": "^(role_[0-9]{2}|npc_[a-z0-9_]+)$"}
+          },
+          "fact": {"type": "string", "minLength": 1},
+          "proof_function": {"type": "string", "minLength": 1},
+          "variants": {"type": "string"}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
