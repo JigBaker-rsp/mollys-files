@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.2.0",
   "blocking_gates": [
     "input_schema_valid",
     "offer_exists",
@@ -12,6 +12,17 @@
     "solution_unique",
     "solution_provable",
     "immutable_logic_unchanged",
+    "gameplay_contract_schema_valid",
+    "organizer_spoiler_free",
+    "organizer_has_no_runtime_facilitator_duty",
+    "every_act_has_collective_question",
+    "every_act_has_unlock_condition",
+    "every_mandatory_disclosure_has_deadline",
+    "every_conditional_trigger_has_fallback",
+    "hint_ladder_complete",
+    "offline_fallback_complete",
+    "final_solution_locked_until_accusation",
+    "late_absence_information_transfer_valid",
     "prohibited_content_absent",
     "all_documents_rendered",
     "no_empty_pages",
@@ -22,7 +33,9 @@
     "anecdote_distribution_unbalanced",
     "same_first_names_present",
     "low_contrast_asset",
-    "estimated_print_pages_high"
+    "estimated_print_pages_high",
+    "preparation_time_over_target",
+    "estimated_act_duration_outside_target"
   ],
   "delivery_rule": "all_blocking_gates_must_pass",
   "validation_report_retention_days": 30
