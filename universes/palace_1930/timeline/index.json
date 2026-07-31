@@ -1,0 +1,31 @@
+{
+  "universe_id": "palace_1930",
+  "version": "0.6.0",
+  "status": "specified",
+  "authoritative": {
+    "canonical_timeline": "universes/palace_1930/timeline/canonical_timeline_v0_6.json",
+    "variant_delivery": "universes/palace_1930/timeline/variant_delivery_v0_6.json",
+    "embedded_lore": "universes/palace_1930/lore/foundation_secret.json"
+  },
+  "superseded": [
+    {
+      "path": "universes/palace_1930/timeline/canonical_timeline.json",
+      "version": "0.5.0",
+      "reason": "Camille trop directement incriminé et histoire fondatrice absente."
+    },
+    {
+      "path": "universes/palace_1930/timeline/variant_delivery.json",
+      "version": "0.5.0",
+      "reason": "Témoignage du couloir trop direct et diffusion historique non définie."
+    }
+  ],
+  "invariants": [
+    "Camille reste le coupable canonique.",
+    "La substitution a lieu entre 15:57 et 16:02.",
+    "L'ingestion a lieu à 22:21.",
+    "Auguste verrouille lui-même son bureau à 22:45.",
+    "La mort est estimée à 23:08.",
+    "Le corps est découvert à 07:55.",
+    "Émile Mercier est mort accidentellement en 1920."
+  ]
+}
