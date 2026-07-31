@@ -1,7 +1,7 @@
 {
   "id": "palace_1930",
   "name": "Le Palace des Ombres",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "status": "mvp_design",
   "setting": {
     "period": "1934",
@@ -14,14 +14,29 @@
     ]
   },
   "gameplay": {
-    "contract_path": "universes/palace_1930_gameplay.json",
+    "contracts": {
+      "compact_4_players": "universes/palace_1930_4p_gameplay.json",
+      "standard_6_8_players": "universes/palace_1930_gameplay.json"
+    },
     "engine_path": "engine/autonomous_gameplay.json",
     "duration_minutes": {
-      "min": 120,
+      "min": 75,
       "max": 180
     },
-    "recommended_duration_minutes": 150,
+    "duration_profiles": {
+      "4_players": {
+        "min": 75,
+        "recommended": 90,
+        "max": 105
+      },
+      "6_8_players": {
+        "min": 120,
+        "recommended": 150,
+        "max": 180
+      }
+    },
     "player_counts": [
+      4,
       6,
       8
     ],
@@ -39,21 +54,50 @@
     "method_id": "method_delayed_poison",
     "solution_locked": true
   },
-  "required_roles": [
-    "role_01",
-    "role_02",
-    "role_03",
-    "role_04",
-    "role_05",
-    "role_06"
-  ],
-  "optional_roles": [
-    "role_07",
-    "role_08"
-  ],
+  "role_sets": {
+    "compact_4_players": {
+      "active_roles": [
+        "role_01",
+        "role_02",
+        "role_03",
+        "role_04"
+      ],
+      "roles_converted_to_npc_evidence": [
+        "role_05",
+        "role_06"
+      ],
+      "roles_not_used": [
+        "role_07",
+        "role_08"
+      ]
+    },
+    "standard_6_players": {
+      "active_roles": [
+        "role_01",
+        "role_02",
+        "role_03",
+        "role_04",
+        "role_05",
+        "role_06"
+      ]
+    },
+    "extended_8_players": {
+      "active_roles": [
+        "role_01",
+        "role_02",
+        "role_03",
+        "role_04",
+        "role_05",
+        "role_06",
+        "role_07",
+        "role_08"
+      ]
+    }
+  },
   "content_status": {
     "universe_brief": "specified",
     "gameplay_contract": "specified",
+    "compact_4_player_contract": "specified",
     "autonomous_progression": "specified",
     "timeline": "to_write",
     "characters": "to_write",
@@ -65,10 +109,12 @@
     "playtest": "not_started"
   },
   "restrictions": [
-    "No real historical person is implicated.",
-    "Personalization cannot change culprit, method, motive or mandatory clues.",
-    "All period references must remain understandable without specialist knowledge.",
-    "The organizer must never receive the solution before the final accusation.",
-    "No mandatory progression may depend on a game master or external facilitator."
+    "Aucune personne historique réelle ne peut être impliquée.",
+    "La personnalisation ne peut pas modifier le coupable, la méthode, le mobile ou les indices obligatoires.",
+    "Toutes les références d'époque doivent rester compréhensibles sans connaissance spécialisée.",
+    "L'organisateur ne doit jamais recevoir la solution avant l'accusation finale.",
+    "Aucune progression obligatoire ne peut dépendre d'un maître du jeu ou d'un animateur extérieur.",
+    "La version quatre joueurs doit être résolue grâce aux preuves et non par simple élimination.",
+    "Les informations détenues par les rôles retirés doivent être transférées par des supports autonomes."
   ]
 }
