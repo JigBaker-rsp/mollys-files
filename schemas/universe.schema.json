@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mollys-files.local/schemas/universe.schema.json",
+  "title": "Narrative universe",
+  "type": "object",
+  "required": ["id", "name", "version", "status", "setting", "gameplay", "narrative_contract"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^[a-z][a-z0-9_]*$"},
+    "name": {"type": "string"},
+    "version": {"type": "string"},
+    "status": {"enum": ["backlog", "mvp_design", "writing", "validation", "playtest", "released", "retired"]},
+    "setting": {"type": "object"},
+    "gameplay": {"type": "object"},
+    "narrative_contract": {
+      "type": "object",
+      "required": ["culprit_id", "victim_id", "motive_id", "method_id", "solution_locked"]
+    }
+  },
+  "additionalProperties": true
+}

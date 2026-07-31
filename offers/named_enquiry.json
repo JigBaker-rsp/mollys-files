@@ -1,0 +1,43 @@
+{
+  "id": "named_enquiry",
+  "name": "L'Enquête à Vos Noms",
+  "positioning": "Une enquête professionnelle intégrant les véritables prénoms et l'occasion du groupe.",
+  "customer_inputs": [
+    "universe_id",
+    "player_count",
+    "event_type",
+    "event_date",
+    "event_name",
+    "difficulty",
+    "tone",
+    "players"
+  ],
+  "player_fields": ["first_name", "pronouns", "role_constraints"],
+  "customer_outputs": [
+    "personalized_organizer_guide",
+    "named_character_sheets",
+    "named_invitations",
+    "named_clues",
+    "event_cover",
+    "print_pdf",
+    "mobile_pdf"
+  ],
+  "shelf_content": [
+    "validated_plot",
+    "character_slots",
+    "grammatical_variants",
+    "relationship_rules",
+    "document_templates"
+  ],
+  "generated_per_order": [
+    "role_assignment",
+    "name_substitution",
+    "grammatical_agreements",
+    "event_pages",
+    "final_packages"
+  ],
+  "personalization_level": "light",
+  "delivery": {"mode": "automatic", "target_minutes": 60},
+  "pricing_eur": {"min": 34.9, "max": 49.9},
+  "manual_intervention_expected": false
+}

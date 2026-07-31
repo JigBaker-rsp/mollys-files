@@ -1,0 +1,17 @@
+{
+  "catalog_version": "0.1.0",
+  "universes": [
+    {
+      "id": "palace_1930",
+      "name": "Le Palace des Ombres",
+      "status": "mvp_design",
+      "genre": "closed_room_mystery",
+      "player_counts": [6, 8],
+      "tones": ["elegant", "dramatic", "lightly_humorous"]
+    },
+    {"id": "yacht_mediterranean", "name": "Le Dernier Mouillage", "status": "backlog"},
+    {"id": "space_station", "name": "Silence Orbital", "status": "backlog"},
+    {"id": "isolated_chalet", "name": "La Nuit Blanche", "status": "backlog"},
+    {"id": "tech_company", "name": "Le Protocole Zéro", "status": "backlog"}
+  ]
+}

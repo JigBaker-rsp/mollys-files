@@ -1,0 +1,29 @@
+{
+  "version": "0.1.0",
+  "blocking_gates": [
+    "input_schema_valid",
+    "offer_exists",
+    "universe_exists",
+    "player_count_supported",
+    "every_player_assigned",
+    "every_required_role_assigned",
+    "every_mandatory_clue_present",
+    "every_mandatory_clue_distributed",
+    "solution_unique",
+    "solution_provable",
+    "immutable_logic_unchanged",
+    "prohibited_content_absent",
+    "all_documents_rendered",
+    "no_empty_pages",
+    "no_text_overflow",
+    "download_package_readable"
+  ],
+  "warnings": [
+    "anecdote_distribution_unbalanced",
+    "same_first_names_present",
+    "low_contrast_asset",
+    "estimated_print_pages_high"
+  ],
+  "delivery_rule": "all_blocking_gates_must_pass",
+  "validation_report_retention_days": 30
+}

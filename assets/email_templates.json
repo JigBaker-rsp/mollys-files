@@ -1,0 +1,17 @@
+{
+  "version": "0.1.0",
+  "templates": [
+    "order_confirmation",
+    "digital_delivery",
+    "generation_failure_delay",
+    "print_order_confirmation",
+    "shipping_confirmation",
+    "data_deletion_confirmation"
+  ],
+  "required_variables": ["order_reference", "offer_name", "support_contact"],
+  "rules": {
+    "no_sensitive_player_data_in_subject": true,
+    "download_links_expire": true,
+    "plain_text_alternative_required": true
+  }
+}

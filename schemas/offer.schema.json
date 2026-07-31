@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mollys-files.local/schemas/offer.schema.json",
+  "title": "Offer",
+  "type": "object",
+  "required": ["id", "name", "customer_inputs", "customer_outputs", "delivery", "manual_intervention_expected"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^[a-z][a-z0-9_]*$"},
+    "name": {"type": "string", "minLength": 1},
+    "customer_inputs": {"type": "array"},
+    "customer_outputs": {},
+    "delivery": {"type": "object"},
+    "manual_intervention_expected": {"type": "boolean", "const": false}
+  },
+  "additionalProperties": true
+}

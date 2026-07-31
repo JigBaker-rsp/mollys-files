@@ -1,0 +1,28 @@
+{
+  "id": "ready_to_play",
+  "name": "L'Enquête Prête à Jouer",
+  "positioning": "Une enquête complète à télécharger immédiatement, sans personnalisation.",
+  "customer_inputs": ["universe_id", "player_count", "language", "delivery_format"],
+  "customer_outputs": [
+    "organizer_guide",
+    "rules",
+    "character_sheets",
+    "secret_cards",
+    "clue_pack",
+    "solution",
+    "print_pdf",
+    "mobile_pdf"
+  ],
+  "shelf_content": [
+    "validated_plot",
+    "player_count_variants",
+    "all_texts",
+    "all_graphic_assets",
+    "final_pdf_packages"
+  ],
+  "generated_per_order": ["download_token", "delivery_email"],
+  "personalization_level": "none",
+  "delivery": {"mode": "automatic", "target_minutes": 5},
+  "pricing_eur": {"min": 14.9, "max": 24.9},
+  "manual_intervention_expected": false
+}

@@ -1,0 +1,44 @@
+{
+  "id": "event_box",
+  "name": "Le Coffret Événement",
+  "positioning": "Une expérience personnalisée imprimée et expédiée à la demande, prête à distribuer.",
+  "customer_inputs": [
+    "all_complices_inputs",
+    "shipping_address",
+    "required_delivery_date",
+    "box_design",
+    "gift_message",
+    "spelling_confirmation"
+  ],
+  "customer_outputs": {
+    "physical": [
+      "organizer_booklet",
+      "named_player_envelopes",
+      "character_sheets",
+      "secret_cards",
+      "printed_clues",
+      "sealed_solution",
+      "vote_cards",
+      "certificates",
+      "digital_content_qr"
+    ],
+    "digital": ["backup_pdfs", "mobile_version", "invitations", "souvenir_booklet"]
+  },
+  "shelf_content": [
+    "print_ready_templates",
+    "packaging_specifications",
+    "supplier_product_ids",
+    "shipping_email_templates"
+  ],
+  "generated_per_order": [
+    "print_files",
+    "fulfillment_order",
+    "tracking_notifications",
+    "digital_backup_package"
+  ],
+  "personalization_level": "high_physical",
+  "delivery": {"mode": "print_on_demand", "commercial_sla_business_days": 10},
+  "pricing_eur": {"min": 109, "max": 159},
+  "inventory_model": "no_owned_stock",
+  "manual_intervention_expected": false
+}

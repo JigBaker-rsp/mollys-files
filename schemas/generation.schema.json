@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mollys-files.local/schemas/generation.schema.json",
+  "title": "Generation request",
+  "type": "object",
+  "required": ["order_id", "offer_id", "universe_id", "universe_version", "player_count", "players", "seed"],
+  "properties": {
+    "order_id": {"type": "string"},
+    "offer_id": {"type": "string"},
+    "universe_id": {"type": "string"},
+    "universe_version": {"type": "string"},
+    "player_count": {"type": "integer", "minimum": 4, "maximum": 20},
+    "players": {
+      "type": "array",
+      "items": {"$ref": "player_input.schema.json"}
+    },
+    "seed": {"type": "string"},
+    "language": {"type": "string", "default": "fr"}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"player_count": {"type": "integer"}}},
+      "then": {"properties": {"players": {"type": "array"}}}
+    }
+  ],
+  "additionalProperties": true
+}

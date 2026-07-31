@@ -1,0 +1,18 @@
+{
+  "version": "0.1.0",
+  "status": "supplier_not_selected",
+  "products": [
+    "organizer_booklet",
+    "player_envelope_set",
+    "clue_card_set",
+    "event_poster",
+    "shipping_insert"
+  ],
+  "fulfillment_constraints": {
+    "owned_inventory": false,
+    "automatic_order_api_required": true,
+    "tracking_api_required": true,
+    "multi_page_pdf_support_required": true,
+    "eu_fulfillment_preferred": true
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "version": "0.1.0",
+  "layouts": [
+    {"id": "organizer_a4", "format": "A4", "audience": "organizer"},
+    {"id": "player_a4", "format": "A4", "audience": "player"},
+    {"id": "cards_a4", "format": "A4", "audience": "print_and_cut"},
+    {"id": "mobile_portrait", "format": "1080x1920", "audience": "mobile"}
+  ],
+  "quality_checks": [
+    "fonts_embedded",
+    "no_overflow",
+    "page_count_expected",
+    "links_resolved",
+    "qr_codes_readable"
+  ]
+}

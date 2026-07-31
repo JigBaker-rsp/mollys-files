@@ -1,0 +1,29 @@
+{
+  "version": "0.1.0",
+  "required_components": [
+    "premise",
+    "victim",
+    "culprit",
+    "motive",
+    "method",
+    "timeline",
+    "character_network",
+    "mandatory_clues",
+    "red_herrings",
+    "revelations",
+    "solution_proof"
+  ],
+  "invariants": {
+    "single_solution": true,
+    "culprit_known_before_generation": true,
+    "mandatory_clues_sufficient_without_personalization": true,
+    "every_required_fact_has_source": true,
+    "red_herrings_cannot_invalidate_solution": true,
+    "organizer_information_separated": true
+  },
+  "default_act_model": [
+    {"id": "act_1", "purpose": "introduce_roles_and_initial_facts"},
+    {"id": "act_2", "purpose": "reveal_contradictions_and_new_evidence"},
+    {"id": "act_3", "purpose": "final_evidence_accusation_and_solution"}
+  ]
+}

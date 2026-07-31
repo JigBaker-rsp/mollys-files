@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mollys-files.local/schemas/player_input.schema.json",
+  "title": "Player input",
+  "type": "object",
+  "required": ["first_name"],
+  "properties": {
+    "first_name": {"type": "string", "minLength": 1, "maxLength": 40},
+    "pronouns": {"type": "string", "maxLength": 30},
+    "nickname": {"type": "string", "maxLength": 40},
+    "traits": {"type": "array", "maxItems": 2, "items": {"type": "string"}},
+    "hobby": {"type": "string", "maxLength": 80},
+    "short_anecdote": {"type": "string", "maxLength": 240},
+    "forbidden_topics": {"type": "array", "items": {"type": "string"}},
+    "humor_exposure": {"enum": ["low", "medium", "high"]},
+    "role_constraints": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": false
+}

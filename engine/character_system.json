@@ -1,0 +1,29 @@
+{
+  "version": "0.1.0",
+  "role_types": ["required", "optional", "non_player_character"],
+  "character_contract": {
+    "required_fields": [
+      "id",
+      "role_type",
+      "public_identity",
+      "private_objective",
+      "secret",
+      "known_facts",
+      "relationships",
+      "act_revelations"
+    ],
+    "constraints": {
+      "one_player_per_role": true,
+      "one_role_per_player": true,
+      "all_mandatory_clues_have_holder_or_document": true,
+      "optional_role_removal_preserves_solution": true
+    }
+  },
+  "assignment": {
+    "strategy": "constraint_based",
+    "hard_constraints_first": true,
+    "avoid_unrequested_romantic_roles": true,
+    "avoid_reusing_same_pairings": true,
+    "seeded_for_reproducibility": true
+  }
+}

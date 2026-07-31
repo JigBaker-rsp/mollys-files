@@ -1,0 +1,53 @@
+{
+  "id": "complices_edition",
+  "name": "L'Édition Complices",
+  "positioning": "Une enquête qui semble écrite pour le groupe grâce à des anecdotes et références encadrées.",
+  "customer_inputs": [
+    "universe_id",
+    "player_count",
+    "event_context",
+    "group_profile",
+    "players",
+    "content_exclusions"
+  ],
+  "group_fields": [
+    "group_name",
+    "shared_place",
+    "shared_references",
+    "catchphrase",
+    "collective_anecdote"
+  ],
+  "player_fields": [
+    "first_name",
+    "nickname",
+    "traits",
+    "hobby",
+    "short_anecdote",
+    "forbidden_topics",
+    "humor_exposure"
+  ],
+  "customer_outputs": [
+    "all_named_enquiry_outputs",
+    "personalized_introduction",
+    "custom_secondary_documents",
+    "souvenir_booklet",
+    "character_certificates"
+  ],
+  "shelf_content": [
+    "validated_plot",
+    "personalization_slots",
+    "anecdote_transformers",
+    "tone_variants",
+    "safety_rules"
+  ],
+  "generated_per_order": [
+    "secondary_references",
+    "custom_character_flavor",
+    "souvenir_assets",
+    "final_packages"
+  ],
+  "personalization_level": "high_form_fixed_logic",
+  "delivery": {"mode": "automatic", "commercial_sla_hours": 24},
+  "pricing_eur": {"min": 64.9, "max": 89.9},
+  "manual_intervention_expected": false
+}

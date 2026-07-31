@@ -1,0 +1,21 @@
+{
+  "version": "0.1.0",
+  "template_families": [
+    "cover",
+    "invitation",
+    "character_sheet",
+    "secret_card",
+    "clue_document",
+    "newspaper_extract",
+    "letter",
+    "certificate",
+    "event_poster"
+  ],
+  "requirements": {
+    "print_resolution_dpi": 300,
+    "safe_margin_mm": 5,
+    "supports_variable_names": true,
+    "supports_long_name_fallback": true,
+    "accessible_contrast": true
+  }
+}

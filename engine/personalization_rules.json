@@ -1,0 +1,40 @@
+{
+  "version": "0.1.0",
+  "levels": {
+    "none": ["language", "format"],
+    "light": ["first_names", "pronouns", "event_name", "event_date", "tone", "difficulty"],
+    "high_form_fixed_logic": [
+      "light_fields",
+      "nicknames",
+      "traits",
+      "hobbies",
+      "short_anecdotes",
+      "shared_references",
+      "catchphrases"
+    ]
+  },
+  "immutable_fields": [
+    "culprit",
+    "victim",
+    "motive",
+    "method",
+    "crime_timeline",
+    "mandatory_clue_meaning",
+    "solution"
+  ],
+  "anecdote_rules": {
+    "max_characters": 240,
+    "must_be_optional_for_resolution": true,
+    "cannot_create_new_accusation_fact": true,
+    "cannot_target_forbidden_topics": true,
+    "must_respect_humor_exposure": true
+  },
+  "prohibited_content": [
+    "medical_data",
+    "sexual_data",
+    "political_affiliation",
+    "religious_identity",
+    "criminal_allegations_about_real_people",
+    "humiliating_or_non_consensual_content"
+  ]
+}
