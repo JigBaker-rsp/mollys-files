@@ -1,0 +1,68 @@
+{
+  "id": "role_03",
+  "canonical_name": "Docteur Gabriel Renaud",
+  "role_type": "required",
+  "availability": {"compact_4_players": "active", "standard_6_players": "active", "extended_8_players": "active"},
+  "culprit": false,
+  "public_identity": {
+    "title": "Le médecin de famille",
+    "description": "Médecin d'Auguste depuis de nombreuses années et premier à examiner le corps.",
+    "public_relation_to_victim": "Confident médical devenu dépendant de la protection financière d'Auguste.",
+    "apparent_motive": "Auguste menaçait de révéler des pratiques médicales et des certificats compromettants.",
+    "costume_cues": ["mallette médicale", "lunettes", "montre de gousset"]
+  },
+  "casting": {
+    "difficulty": "medium_high",
+    "play_style": ["analytique", "précis", "déduction"],
+    "recommended_for": "Un joueur qui aime expliquer les faits sans devoir jouer un grand personnage théâtral.",
+    "organizer_friendly": true,
+    "culprit_opt_in_recommended": false
+  },
+  "private_truth": {
+    "relationship_to_victim": "Auguste finançait votre cabinet et exigeait en échange une discrétion absolue.",
+    "secret": "Vous avez dissimulé la gravité de son état cardiaque à un assureur et à des investisseurs.",
+    "independent_secret": "Votre première conclusion de mort naturelle était trop rapide, car vous vouliez éviter l'examen de votre dossier médical.",
+    "claimed_alibi": "Vous affirmez n'avoir quitté le salon que pour répondre à un appel du personnel.",
+    "actual_timeline": [
+      "Vous avez examiné Camille dans l'après-midi après un malaise probablement simulé.",
+      "Votre trousse est restée brièvement sans surveillance.",
+      "Au matin, vous avez attribué la mort au cœur avant de remarquer des signes incompatibles.",
+      "Vous avez ensuite compris que l'ingestion avait précédé l'enfermement dans le bureau."
+    ],
+    "knowledge_limits": [
+      "Vous ne savez pas qui a ouvert votre trousse.",
+      "Vous ignorez la fraude successorale au début de la partie.",
+      "Vous ne pouvez identifier le coupable par la médecine seule."
+    ]
+  },
+  "gameplay": {
+    "private_objective": "Corriger votre diagnostic sans révéler trop tôt la fraude médicale qui pourrait détruire votre carrière.",
+    "secondary_objective": "Retrouver la préparation manquante et comprendre qui connaissait les habitudes d'Auguste.",
+    "reason_to_lie": "Votre négligence et vos certificats dissimulés vous rendent responsable aux yeux du groupe.",
+    "suspect_axes": ["accès à une préparation dangereuse", "diagnostic initial", "dossier cardiaque caché", "dépendance financière"],
+    "allowed_lies": ["présenter le premier diagnostic comme prudent plutôt que complaisant", "retarder l'aveu de la préparation manquante", "minimiser votre dépendance envers Auguste"],
+    "forbidden_inventions": ["nommer une substance réelle ou un dosage absent du jeu", "déclarer médicalement impossible un fait prévu par la solution", "identifier arbitrairement un coupable par expertise"],
+    "known_facts": [
+      "Les symptômes impliquent une ingestion antérieure à l'entrée dans le bureau.",
+      "Une préparation toxique fictive manque dans votre trousse.",
+      "Camille, Jeanne et Lucien connaissaient l'habitude des gouttes.",
+      "La réputation cardiaque d'Auguste pouvait masquer temporairement un empoisonnement."
+    ],
+    "documents_held": ["fiche médicale confidentielle", "inventaire de la trousse", "note d'examen corrigée"]
+  },
+  "relationships": [
+    {"target_role_id": "role_01", "public": "Patient·e occasionnel·le.", "private": "Son malaise vous paraît rétrospectivement opportun."},
+    {"target_role_id": "role_02", "public": "Elle vous a appelé au matin.", "private": "Elle connaît mieux que quiconque les habitudes d'Auguste."},
+    {"target_role_id": "role_05", "public": "Simple connaissance.", "private": "Vous avez autrefois couvert une crise survenue après une dispute avec Auguste."},
+    {"target_role_id": "role_06", "public": "Investisseur du palace.", "private": "Il détient une copie du certificat médical transmis aux assureurs."}
+  ],
+  "act_revelations": [
+    {"act": 1, "class": "mandatory", "deadline": "end_of_act", "content": "Expliquer votre diagnostic initial de mort naturelle et reconnaître l'état cardiaque d'Auguste.", "fallback": "La fiche médicale est rendue collective."},
+    {"act": 2, "class": "mandatory", "deadline": "end_of_act", "content": "Corriger le diagnostic : l'action décisive a eu lieu avant le bureau ; révéler qu'une préparation manque.", "fallback": "Le rapport complémentaire et l'inventaire de la trousse sont débloqués."},
+    {"act": 3, "class": "conditional", "trigger": "question sur les personnes connaissant les gouttes", "content": "Donner la liste limitée des personnes informées de cette habitude.", "fallback": "Une note d'Auguste mentionnant ses gouttes est publiée."}
+  ],
+  "finale": {
+    "epilogue": "Votre réputation est ébranlée par les certificats cachés, mais votre correction du diagnostic permet de résoudre l'affaire.",
+    "personal_success": "Le groupe distingue votre faute professionnelle de la responsabilité du meurtre."
+  }
+}
