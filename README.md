@@ -4,14 +4,14 @@ Moteur de génération d'expériences narratives personnalisées, conçu pour pr
 
 ## Vision
 
-Molly's Files n'est pas une collection de PDF générés librement. Le produit sépare strictement :
+Molly's Files sépare strictement :
 
 1. les offres commerciales ;
 2. les univers narratifs ;
-3. le moteur logique ;
-4. le gameplay autonome ;
-5. les assets de production ;
-6. les entrées et sorties contrôlées par schémas.
+3. les variantes de nombre de joueurs ;
+4. le moteur logique ;
+5. le gameplay autonome ;
+6. les assets et schémas de production.
 
 L'intrigue, la chronologie, les preuves et la solution sont déterministes. La personnalisation modifie l'habillage, jamais la solvabilité de l'enquête.
 
@@ -19,18 +19,9 @@ L'intrigue, la chronologie, les preuves et la solution sont déterministes. La p
 
 L'organisateur prépare la soirée sans connaître la solution, puis joue comme les autres. Aucun maître du jeu n'est requis.
 
-La progression repose sur :
+La progression repose sur des dossiers individuels, des enveloppes collectives, des révélations bornées, des questions collectives, un compagnon numérique léger, un parcours hors ligne et quatre niveaux d'aide.
 
-- des dossiers individuels par acte ;
-- des enveloppes collectives ;
-- des révélations libres, conditionnelles et obligatoires ;
-- des questions collectives ;
-- un compagnon numérique léger ;
-- un parcours hors ligne ;
-- quatre niveaux d'aide anti-blocage ;
-- une solution verrouillée jusqu'aux accusations.
-
-La spécification complète est dans [`docs/gameplay_experience.md`](docs/gameplay_experience.md).
+La spécification commune est dans [`docs/gameplay_experience.md`](docs/gameplay_experience.md).
 
 ## Offres initiales
 
@@ -45,7 +36,7 @@ La spécification complète est dans [`docs/gameplay_experience.md`](docs/gamepl
 
 ```text
 offers/      Définition des produits vendus
-universes/   Packs narratifs et gameplay propre à chaque univers
+universes/   Univers, contrats de gameplay et variantes
 engine/      Génération, progression autonome et validations
 assets/      Modèles PDF, graphiques, emails et impression
 schemas/     Contrats JSON des entrées, sorties et sessions
@@ -54,30 +45,42 @@ docs/        Spécifications produit, gameplay et architecture
 
 ## Contrats de gameplay
 
-- `engine/autonomous_gameplay.json` : règles communes à tous les jeux ;
-- `schemas/gameplay_contract.schema.json` : structure obligatoire d'un contrat d'univers ;
-- `universes/palace_1930_gameplay.json` : progression autonome du premier univers ;
-- `engine/validation_rules.json` : gates empêchant la livraison d'un jeu non autonome.
+- `engine/autonomous_gameplay.json` : règles communes ;
+- `schemas/gameplay_contract.schema.json` : structure obligatoire ;
+- `universes/palace_1930_gameplay.json` : édition standard 6/8 joueurs ;
+- `universes/palace_1930_4p_gameplay.json` : édition compacte 4 joueurs ;
+- `engine/validation_rules.json` : gates empêchant une livraison incohérente.
 
 ## Premier MVP
 
-Le premier univers est `palace_1930`, **Le Palace des Ombres**. La cible de production est une enquête numérique pour 6 à 8 joueurs, en trois actes, d'environ 2 h 30, déclinable en offre prête à jouer puis à vos noms.
+Le premier univers est `palace_1930`, **Le Palace des Ombres**.
 
-Le contenu narratif détaillé reste à produire, mais le cadre, le contrat d'enquête et le fonctionnement autonome sont désormais spécifiés.
+Deux profils sont prévus :
+
+| Profil | Joueurs | Durée cible | Préparation |
+|---|---:|---:|---:|
+| Édition compacte | 4 | 1 h 30, plage 1 h 15–1 h 45 | environ 15 min |
+| Édition standard | 6 ou 8 | 2 h 30, plage 2 h–3 h | environ 30 min |
+
+L'édition compacte est une variante dédiée. Elle conserve quatre personnages actifs et transforme les informations des rôles retirés en témoignages et documents autonomes. Elle ne peut pas être obtenue en supprimant simplement deux dossiers de l'édition standard.
+
+La conception détaillée est décrite dans [`docs/palace_1930_four_players.md`](docs/palace_1930_four_players.md).
 
 ## Principes non négociables
 
 - une solution unique et démontrable ;
-- aucune anecdote personnelle indispensable à la résolution ;
+- aucune anecdote personnelle indispensable ;
 - organisateur sans spoiler et autorisé à jouer ;
-- aucun maître du jeu ou animateur extérieur requis ;
-- aucun déclencheur indispensable sans solution de secours ;
+- aucun maître du jeu requis ;
+- aucun déclencheur indispensable sans secours ;
 - parcours hors ligne complet ;
-- aucune donnée client durablement stockée sans nécessité ;
-- aucune retouche manuelle prévue dans le flux normal ;
-- une commande n'est livrée que si tous les contrôles bloquants passent ;
-- aucun secret, fichier client ou sortie générée n'est committé dans Git.
+- variante choisie avant génération ;
+- transfert contrôlé des informations lorsqu'un rôle est retiré ;
+- aucune version compacte résoluble par simple élimination ;
+- aucune retouche manuelle dans le flux normal ;
+- livraison uniquement après passage de tous les contrôles ;
+- aucune donnée client ou sortie générée committée dans Git.
 
 ## Statut
 
-Socle produit et gameplay autonome spécifiés. Le contenu narratif complet, le moteur exécutable, le compagnon web, le front de commande et la génération PDF restent à développer.
+Socle produit, gameplay autonome et profils 4/6/8 joueurs spécifiés. Le contenu narratif complet, le moteur exécutable, le compagnon web, le front de commande et la génération PDF restent à développer.
