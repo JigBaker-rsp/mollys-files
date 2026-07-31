@@ -2,67 +2,137 @@
   "id": "role_02",
   "canonical_name": "Jeanne Mercier",
   "role_type": "required",
-  "availability": {"compact_4_players": "active", "standard_6_players": "active", "extended_8_players": "active"},
+  "availability": {
+    "compact_4_players": "active",
+    "standard_6_players": "active",
+    "extended_8_players": "active"
+  },
   "culprit": false,
   "public_identity": {
     "title": "La directrice du palace",
     "description": "Responsable du Palace Belladone depuis douze ans, respectée du personnel et redoutée des fournisseurs.",
     "public_relation_to_victim": "Collaboratrice indispensable, souvent humiliée en privé par Auguste.",
-    "apparent_motive": "Auguste envisageait de vendre l'établissement et de la remplacer.",
-    "costume_cues": ["tenue sobre et impeccable", "trousseau de clés", "carnet de service"]
+    "apparent_motive": "Auguste négociait une vente susceptible de la remplacer et de faire disparaître définitivement les derniers droits de sa famille.",
+    "costume_cues": [
+      "tenue sobre et impeccable",
+      "trousseau de clés",
+      "carnet de service"
+    ]
   },
   "casting": {
-    "difficulty": "medium",
-    "play_style": ["autorité", "observation", "protection du groupe"],
-    "recommended_for": "Un joueur structuré qui aime recouper les témoignages.",
+    "difficulty": "medium_high",
+    "play_style": [
+      "autorité",
+      "observation",
+      "protection du groupe"
+    ],
+    "recommended_for": "Un joueur structuré qui aime recouper les témoignages tout en défendant une cause personnelle forte.",
     "organizer_friendly": true,
     "culprit_opt_in_recommended": false
   },
   "private_truth": {
-    "relationship_to_victim": "Vous avez consacré votre vie au palace, tandis qu'Auguste s'attribuait tous les succès.",
+    "relationship_to_victim": "Vous avez consacré votre vie au palace, tandis qu'Auguste s'attribuait tous les succès et traitait l'histoire de votre père comme une légende de domestiques.",
     "secret": "Vous avez falsifié plusieurs écritures comptables pour payer les salaires et empêcher une fermeture immédiate.",
-    "independent_secret": "Vous avez caché un grand livre dans l'ancien pavillon thermal pour éviter qu'Auguste ne vous accuse de détournement.",
-    "claimed_alibi": "Vous dites avoir supervisé sans interruption le service du gala.",
+    "independent_secret": "Vous avez caché dans l'ancien pavillon thermal un grand livre contenant à la fois vos écritures irrégulières et des versements anciens d'Émile Mercier.",
+    "historical_stake": "Émile Mercier était votre père et l'un des véritables fondateurs du Belladone. Vous avez toujours cru que les de Valleroy avaient profité de sa mort, sans disposer jusqu'ici d'une preuve complète.",
+    "claimed_alibi": "Vous dites avoir supervisé sans interruption le service et n'avoir appris l'existence des archives Mercier qu'après la mort.",
     "actual_timeline": [
-      "Vous avez quitté les cuisines pendant dix-sept minutes pour déplacer le grand livre.",
-      "Vous avez vu Camille dans le couloir privé avant l'ouverture du gala.",
-      "Vous avez constaté qu'une clé de service avait été empruntée puis rendue.",
-      "Vous avez fait porter le café et les effets personnels d'Auguste selon ses habitudes."
+      "Vous voyez Camille emprunter une clé de service avant le gala.",
+      "De 17:03 à 17:20, vous quittez le service pour déplacer le grand livre dans l'ancien pavillon thermal.",
+      "Avant le dîner, Auguste vous laisse entendre qu'il a enfin retrouvé des documents concernant votre père, mais vous ne savez pas s'il compte réparer ou exploiter cette vérité.",
+      "Vous faites porter le café et les effets personnels d'Auguste selon ses habitudes."
     ],
     "knowledge_limits": [
-      "Vous ignorez le contenu exact du codicille.",
+      "Vous ignorez le contenu exact du faux codicille au début de la partie.",
       "Vous ne savez pas que la trousse du médecin a été ouverte.",
-      "Vous n'avez pas vu la substitution du flacon."
+      "Vous n'avez pas vu la substitution du flacon.",
+      "Vous ignorez qu'Auguste avait décidé de suspendre la vente et de reconnaître officiellement les droits Mercier."
     ]
   },
   "gameplay": {
-    "private_objective": "Protéger le personnel et prouver que les écritures falsifiées servaient à maintenir le palace, non à vous enrichir.",
-    "secondary_objective": "Empêcher Armand Keller de prendre le contrôle de l'établissement à vil prix.",
-    "reason_to_lie": "Votre grand livre caché vous donne un mobile financier et pourrait vous conduire devant un tribunal.",
-    "suspect_axes": ["clés", "service du café", "comptabilité falsifiée", "conflit sur la vente"],
-    "allowed_lies": ["minimiser la gravité des comptes", "retarder l'aveu de votre absence", "prétendre avoir oublié l'emprunt d'une clé jusqu'à la publication du registre"],
-    "forbidden_inventions": ["modifier les horaires inscrits au registre", "accuser un membre du personnel absent sans support", "cacher un document collectif après sa découverte"],
+    "private_objective": "Protéger le personnel, faire reconnaître le rôle d'Émile Mercier et prouver que vos écritures falsifiées n'étaient pas un enrichissement personnel.",
+    "secondary_objective": "Empêcher Armand Keller de prendre le contrôle du palace avant que les droits Mercier soient établis.",
+    "reason_to_lie": "Votre absence, votre accès aux clés, vos comptes falsifiés et votre revendication familiale vous donnent à la fois le moyen et un mobile puissant.",
+    "suspect_axes": [
+      "clés",
+      "service du café",
+      "comptabilité falsifiée",
+      "droits Mercier",
+      "conflit sur la vente"
+    ],
+    "allowed_lies": [
+      "minimiser la gravité des comptes",
+      "retarder l'aveu de votre absence",
+      "cacher votre certitude intime sur le rôle de votre père",
+      "prétendre avoir oublié l'emprunt d'une clé jusqu'à la publication du registre"
+    ],
+    "forbidden_inventions": [
+      "modifier les horaires inscrits au registre",
+      "prétendre qu'Auguste vous avait déjà transféré la propriété",
+      "accuser un membre du personnel absent sans support",
+      "cacher un document collectif après sa découverte"
+    ],
     "known_facts": [
+      "Émile Mercier a fourni des terrains, de l'argent et du personnel lors du sauvetage du palace.",
       "Auguste prenait ses gouttes après le café lorsqu'il se plaignait de l'estomac.",
       "Camille a emprunté une clé de service avant le gala.",
       "Armand négociait une vente secrète.",
-      "Lucien avait préparé plusieurs dossiers pour le petit déjeuner."
+      "Lucien préparait un dossier sur la succession et les archives anciennes."
     ],
-    "documents_held": ["extrait du registre des clés", "page du grand livre falsifié", "note de service sur le plateau personnel d'Auguste"]
+    "documents_held": [
+      "extrait du registre des clés",
+      "page du grand livre falsifié",
+      "ancienne page de versements signée Émile Mercier",
+      "note de service sur le plateau personnel d'Auguste"
+    ]
   },
   "relationships": [
-    {"target_role_id": "role_01", "public": "Membre de la famille à ménager.", "private": "Vous avez vu son nom dans le registre des clés."},
-    {"target_role_id": "role_04", "public": "Collaboration quotidienne.", "private": "Vous le soupçonnez de copier la correspondance d'Auguste."},
-    {"target_role_id": "role_06", "public": "Interlocuteur financier.", "private": "Vous pensez qu'il organise une reprise hostile."},
-    {"target_role_id": "role_05", "public": "Invitée prestigieuse.", "private": "Vous connaissez son ancienne liaison avec Auguste."}
+    {
+      "target_role_id": "role_01",
+      "public": "Membre de la famille à ménager.",
+      "private": "Vous refusez que Camille hérite seul·e d'un établissement construit aussi par votre père."
+    },
+    {
+      "target_role_id": "role_04",
+      "public": "Collaboration quotidienne.",
+      "private": "Vous le soupçonnez de copier les lettres d'Alphonse et d'Auguste."
+    },
+    {
+      "target_role_id": "role_06",
+      "public": "Interlocuteur financier.",
+      "private": "Vous pensez qu'il veut conclure la vente avant l'apparition des droits Mercier."
+    },
+    {
+      "target_role_id": "role_03",
+      "public": "Médecin du palace.",
+      "private": "Son père a signé le certificat de décès d'Émile après l'avalanche."
+    }
   ],
   "act_revelations": [
-    {"act": 1, "class": "mandatory", "deadline": "end_of_act", "content": "Révéler qu'Auguste préparait une vente ou une restructuration majeure du palace.", "fallback": "Une note de réunion est ajoutée au dossier collectif."},
-    {"act": 2, "class": "mandatory", "deadline": "end_of_act", "content": "Admettre votre absence du service et présenter le registre indiquant l'emprunt de la clé par Camille.", "fallback": "Le compagnon débloque la copie du registre et le plan du couloir privé."},
-    {"act": 3, "class": "conditional", "trigger": "discussion sur les comptes", "content": "Présenter le grand livre et expliquer pourquoi vous l'avez falsifié.", "fallback": "Le document est rendu collectif avant les accusations."}
+    {
+      "act": 1,
+      "class": "mandatory",
+      "deadline": "end_of_act",
+      "content": "Révéler qu'Auguste préparait une vente et que votre famille a toujours affirmé avoir participé à la fondation du Belladone.",
+      "fallback": "Une ancienne photographie et une note de réunion sont ajoutées au dossier collectif."
+    },
+    {
+      "act": 2,
+      "class": "mandatory",
+      "deadline": "end_of_act",
+      "content": "Admettre votre absence de dix-sept minutes, présenter le registre des clés et révéler que le grand livre contient des versements Mercier.",
+      "fallback": "Le compagnon débloque le registre, le plan du couloir et une page du grand livre."
+    },
+    {
+      "act": 3,
+      "class": "mandatory",
+      "deadline": "before_ballots",
+      "content": "Présenter le grand livre complet, reconnaître vos écritures falsifiées et expliquer pourquoi l'acte de 1919 pourrait faire de votre famille une copropriétaire légitime.",
+      "fallback": "Les documents comptables et historiques deviennent collectifs avant les accusations."
+    }
   ],
   "finale": {
-    "epilogue": "Vos falsifications sont découvertes, mais le personnel témoigne qu'elles ont empêché des licenciements immédiats.",
-    "personal_success": "Le groupe comprend que vous avez protégé le palace plutôt que détourné son argent."
+    "epilogue": "Vos falsifications sont découvertes, mais les archives établissent que votre famille a été effacée de l'histoire du palace.",
+    "personal_success": "Le groupe distingue votre protection du personnel du meurtre et reconnaît la légitimité d'une expertise des droits Mercier."
   }
 }
