@@ -1,5 +1,5 @@
 {
-  "version": "0.4.0",
+  "version": "0.5.0",
   "blocking_gates": [
     "input_schema_valid",
     "offer_exists",
@@ -7,6 +7,17 @@
     "selected_variant_contract_exists",
     "selected_variant_matches_player_count",
     "player_count_supported",
+    "canonical_timeline_exists",
+    "canonical_timeline_schema_valid",
+    "canonical_timeline_event_ids_unique",
+    "canonical_timeline_order_valid",
+    "locked_timeline_windows_unchanged",
+    "culprit_method_motive_and_core_times_identical_across_variants",
+    "variant_timeline_delivery_exists",
+    "variant_timeline_delivery_complete",
+    "variant_social_overlays_do_not_change_core_crime_facts",
+    "role_actual_timelines_consistent_with_canonical_timeline",
+    "claimed_alibis_contradicted_only_by_defined_evidence",
     "character_index_exists",
     "every_role_matches_character_schema",
     "exactly_one_locked_culprit",
@@ -55,7 +66,9 @@
     "compact_red_herring_count_high",
     "organizer_assigned_non_friendly_role",
     "culprit_assigned_without_opt_in",
-    "relationship_graph_unbalanced"
+    "relationship_graph_unbalanced",
+    "variant_overlay_scene_count_high",
+    "timeline_fact_delivered_by_single_fragile_channel"
   ],
   "delivery_rule": "all_blocking_gates_must_pass",
   "validation_report_retention_days": 30
