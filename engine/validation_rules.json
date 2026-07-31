@@ -1,5 +1,5 @@
 {
-  "version": "0.3.0",
+  "version": "0.4.0",
   "blocking_gates": [
     "input_schema_valid",
     "offer_exists",
@@ -7,8 +7,17 @@
     "selected_variant_contract_exists",
     "selected_variant_matches_player_count",
     "player_count_supported",
+    "character_index_exists",
+    "every_role_matches_character_schema",
+    "exactly_one_locked_culprit",
+    "culprit_matches_narrative_contract",
     "every_player_assigned",
     "every_required_role_assigned",
+    "every_active_role_has_independent_secret",
+    "every_active_role_has_personal_objective",
+    "every_active_role_has_reason_to_lie",
+    "every_active_role_has_mandatory_disclosure",
+    "every_character_relationship_target_exists",
     "removed_role_information_transfer_complete",
     "every_mandatory_clue_present",
     "every_mandatory_clue_distributed",
@@ -43,7 +52,10 @@
     "preparation_time_over_target",
     "estimated_act_duration_outside_target",
     "compact_player_information_load_high",
-    "compact_red_herring_count_high"
+    "compact_red_herring_count_high",
+    "organizer_assigned_non_friendly_role",
+    "culprit_assigned_without_opt_in",
+    "relationship_graph_unbalanced"
   ],
   "delivery_rule": "all_blocking_gates_must_pass",
   "validation_report_retention_days": 30
