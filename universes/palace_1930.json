@@ -1,17 +1,13 @@
 {
   "id": "palace_1930",
   "name": "Le Palace des Ombres",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "status": "mvp_design",
   "setting": {
     "period": "1934",
     "location": "un palace alpin fictif coupé du monde par une tempête",
     "premise": "Au lendemain d'un gala privé, le propriétaire du palace est retrouvé mort dans son bureau fermé.",
-    "tone": [
-      "elegant",
-      "dramatic",
-      "accessible"
-    ]
+    "tone": ["elegant", "dramatic", "accessible"]
   },
   "gameplay": {
     "contracts": {
@@ -19,27 +15,12 @@
       "standard_6_8_players": "universes/palace_1930_gameplay.json"
     },
     "engine_path": "engine/autonomous_gameplay.json",
-    "duration_minutes": {
-      "min": 75,
-      "max": 180
-    },
+    "duration_minutes": {"min": 75, "max": 180},
     "duration_profiles": {
-      "4_players": {
-        "min": 75,
-        "recommended": 90,
-        "max": 105
-      },
-      "6_8_players": {
-        "min": 120,
-        "recommended": 150,
-        "max": 180
-      }
+      "4_players": {"min": 75, "recommended": 90, "max": 105},
+      "6_8_players": {"min": 120, "recommended": 150, "max": 180}
     },
-    "player_counts": [
-      4,
-      6,
-      8
-    ],
+    "player_counts": [4, 6, 8],
     "acts": 3,
     "organizer_can_play": true,
     "organizer_spoiler_free": true,
@@ -54,44 +35,37 @@
     "method_id": "method_delayed_poison",
     "solution_locked": true
   },
+  "characters": {
+    "index_path": "universes/palace_1930/characters/index.json",
+    "role_schema_path": "schemas/character_role.schema.json",
+    "engine_path": "engine/character_system.json",
+    "documentation_path": "docs/palace_1930_characters.md",
+    "canonical_victim": "Auguste de Valleroy",
+    "canonical_roles": {
+      "role_01": "Camille de Valleroy",
+      "role_02": "Jeanne Mercier",
+      "role_03": "Docteur Gabriel Renaud",
+      "role_04": "Lucien Delmas",
+      "role_05": "Véra Lenoir",
+      "role_06": "Armand Keller",
+      "role_07": "Élise Morel",
+      "role_08": "Madeleine Rochefort"
+    },
+    "names_and_pronouns_personalizable": true,
+    "functions_and_secrets_immutable": true
+  },
   "role_sets": {
     "compact_4_players": {
-      "active_roles": [
-        "role_01",
-        "role_02",
-        "role_03",
-        "role_04"
-      ],
-      "roles_converted_to_npc_evidence": [
-        "role_05",
-        "role_06"
-      ],
-      "roles_not_used": [
-        "role_07",
-        "role_08"
-      ]
+      "active_roles": ["role_01", "role_02", "role_03", "role_04"],
+      "roles_converted_to_npc_evidence": ["role_05", "role_06"],
+      "roles_not_used": ["role_07", "role_08"]
     },
     "standard_6_players": {
-      "active_roles": [
-        "role_01",
-        "role_02",
-        "role_03",
-        "role_04",
-        "role_05",
-        "role_06"
-      ]
+      "active_roles": ["role_01", "role_02", "role_03", "role_04", "role_05", "role_06"],
+      "roles_converted_to_collective_evidence": ["role_07", "role_08"]
     },
     "extended_8_players": {
-      "active_roles": [
-        "role_01",
-        "role_02",
-        "role_03",
-        "role_04",
-        "role_05",
-        "role_06",
-        "role_07",
-        "role_08"
-      ]
+      "active_roles": ["role_01", "role_02", "role_03", "role_04", "role_05", "role_06", "role_07", "role_08"]
     }
   },
   "content_status": {
@@ -99,8 +73,11 @@
     "gameplay_contract": "specified",
     "compact_4_player_contract": "specified",
     "autonomous_progression": "specified",
+    "characters": "specified",
+    "character_relationships": "specified",
+    "character_revelations": "specified",
     "timeline": "to_write",
-    "characters": "to_write",
+    "character_documents": "named_not_written",
     "mandatory_clues": "to_write",
     "red_herrings": "to_write",
     "solution_proof": "to_write",
@@ -115,6 +92,8 @@
     "L'organisateur ne doit jamais recevoir la solution avant l'accusation finale.",
     "Aucune progression obligatoire ne peut dépendre d'un maître du jeu ou d'un animateur extérieur.",
     "La version quatre joueurs doit être résolue grâce aux preuves et non par simple élimination.",
-    "Les informations détenues par les rôles retirés doivent être transférées par des supports autonomes."
+    "Les informations détenues par les rôles retirés doivent être transférées par des supports autonomes.",
+    "Les noms et pronoms peuvent changer, mais les fonctions narratives, secrets, révélations et transferts de variante restent immuables.",
+    "Aucun détail réel de substance, dosage ou préparation toxique ne doit être ajouté."
   ]
 }
