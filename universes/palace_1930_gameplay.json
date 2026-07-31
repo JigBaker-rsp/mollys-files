@@ -1,0 +1,142 @@
+{
+  "universe_id": "palace_1930",
+  "version": "0.2.0",
+  "status": "gameplay_specified",
+  "format": {
+    "supported_player_counts": [
+      6,
+      8
+    ],
+    "recommended_duration_minutes": 150,
+    "duration_range_minutes": {
+      "min": 120,
+      "max": 180
+    },
+    "acts": 3,
+    "organizer_can_play": true,
+    "game_master_required": false
+  },
+  "preparation": {
+    "estimated_minutes": 30,
+    "spoiler_free": true,
+    "required_actions": [
+      "confirm_casting",
+      "send_invitations",
+      "print_or_distribute_player_packs",
+      "prepare_three_collective_envelopes",
+      "place_timeline_sheet_and_ballots",
+      "make_progress_qr_code_available"
+    ],
+    "optional_actions": [
+      "decorate_room",
+      "suggest_costumes",
+      "prepare_music"
+    ]
+  },
+  "acts": [
+    {
+      "number": 1,
+      "id": "appearances",
+      "title": "Les apparences",
+      "recommended_minutes": 40,
+      "player_focus": [
+        "discover_roles",
+        "state_initial_alibis",
+        "identify_motives"
+      ],
+      "collective_question": "Qui avait une raison crédible de souhaiter la mort d'Auguste de Valleroy ?",
+      "unlock_condition": "collective_question_answered_or_timer_elapsed",
+      "closing_reveal": "The death was probably not natural and the locked office is not the true core of the mystery."
+    },
+    {
+      "number": 2,
+      "id": "lies",
+      "title": "Les mensonges",
+      "recommended_minutes": 55,
+      "player_focus": [
+        "compare_documents",
+        "reconstruct_consumption_timeline",
+        "identify_poisoning_vector"
+      ],
+      "collective_question": "Quelle est la fenêtre probable de l'empoisonnement et quel objet ou aliment a servi de vecteur ?",
+      "unlock_condition": "collective_question_answered_or_timer_elapsed",
+      "closing_reveal": "Auguste de Valleroy was preparing to expose a fraud concerning the palace inheritance or ownership."
+    },
+    {
+      "number": 3,
+      "id": "truth",
+      "title": "La vérité",
+      "recommended_minutes": 45,
+      "player_focus": [
+        "connect_motive_method_opportunity",
+        "test_accusations",
+        "select_three_main_proofs"
+      ],
+      "collective_question": "Qui pouvait connaître le document falsifié, préparer le poison et anticiper le comportement de la victime ?",
+      "unlock_condition": "all_ballots_submitted",
+      "closing_reveal": "final_solution"
+    }
+  ],
+  "organizer_autonomy": {
+    "organizer_receives_solution_in_advance": false,
+    "organizer_has_special_runtime_role": false,
+    "materials_self_identify_when_to_open": true,
+    "digital_companion_controls_timing_and_unlocks": true,
+    "offline_fallback_included": true,
+    "rules_arbitration_source": "spoiler_free_troubleshooting_guide"
+  },
+  "disclosure_contract": {
+    "every_character_has": [
+      "public_identity",
+      "known_facts",
+      "secret",
+      "compromising_element",
+      "useful_information",
+      "personal_objective",
+      "reason_to_lie",
+      "mandatory_disclosure"
+    ],
+    "mandatory_disclosures_due_by_act_end": true,
+    "conditional_disclosures_have_fallback": true
+  },
+  "hint_content_required": {
+    "act_1": [
+      "motive_orientation",
+      "timeline_orientation"
+    ],
+    "act_2": [
+      "consumption_comparison",
+      "poisoning_not_in_office",
+      "unblocking_medical_or_service_clue"
+    ],
+    "act_3": [
+      "inheritance_document_comparison",
+      "knowledge_opportunity_link",
+      "unblocking_proof_chain"
+    ]
+  },
+  "finale": {
+    "accusation_modes": [
+      "individual",
+      "collective"
+    ],
+    "ballot_fields": [
+      "culprit",
+      "motive",
+      "method",
+      "poisoning_window",
+      "three_main_proofs"
+    ],
+    "solution_formats": [
+      "written",
+      "audio_ready_script"
+    ],
+    "culprit_final_confession_required": true,
+    "epilogue_for_all_characters_required": true
+  },
+  "late_absence": {
+    "eight_to_seven_players": "remove_one_optional_role_and_transfer_useful_information",
+    "seven_to_six_players": "remove_second_optional_role_and_transfer_useful_information",
+    "six_to_five_players": "unsupported_standard_mode_with_documentary_fallback_to_design_later"
+  }
+}
