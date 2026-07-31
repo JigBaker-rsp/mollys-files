@@ -1,0 +1,68 @@
+{
+  "id": "role_02",
+  "canonical_name": "Jeanne Mercier",
+  "role_type": "required",
+  "availability": {"compact_4_players": "active", "standard_6_players": "active", "extended_8_players": "active"},
+  "culprit": false,
+  "public_identity": {
+    "title": "La directrice du palace",
+    "description": "Responsable du Palace Belladone depuis douze ans, respectée du personnel et redoutée des fournisseurs.",
+    "public_relation_to_victim": "Collaboratrice indispensable, souvent humiliée en privé par Auguste.",
+    "apparent_motive": "Auguste envisageait de vendre l'établissement et de la remplacer.",
+    "costume_cues": ["tenue sobre et impeccable", "trousseau de clés", "carnet de service"]
+  },
+  "casting": {
+    "difficulty": "medium",
+    "play_style": ["autorité", "observation", "protection du groupe"],
+    "recommended_for": "Un joueur structuré qui aime recouper les témoignages.",
+    "organizer_friendly": true,
+    "culprit_opt_in_recommended": false
+  },
+  "private_truth": {
+    "relationship_to_victim": "Vous avez consacré votre vie au palace, tandis qu'Auguste s'attribuait tous les succès.",
+    "secret": "Vous avez falsifié plusieurs écritures comptables pour payer les salaires et empêcher une fermeture immédiate.",
+    "independent_secret": "Vous avez caché un grand livre dans l'ancien pavillon thermal pour éviter qu'Auguste ne vous accuse de détournement.",
+    "claimed_alibi": "Vous dites avoir supervisé sans interruption le service du gala.",
+    "actual_timeline": [
+      "Vous avez quitté les cuisines pendant dix-sept minutes pour déplacer le grand livre.",
+      "Vous avez vu Camille dans le couloir privé avant l'ouverture du gala.",
+      "Vous avez constaté qu'une clé de service avait été empruntée puis rendue.",
+      "Vous avez fait porter le café et les effets personnels d'Auguste selon ses habitudes."
+    ],
+    "knowledge_limits": [
+      "Vous ignorez le contenu exact du codicille.",
+      "Vous ne savez pas que la trousse du médecin a été ouverte.",
+      "Vous n'avez pas vu la substitution du flacon."
+    ]
+  },
+  "gameplay": {
+    "private_objective": "Protéger le personnel et prouver que les écritures falsifiées servaient à maintenir le palace, non à vous enrichir.",
+    "secondary_objective": "Empêcher Armand Keller de prendre le contrôle de l'établissement à vil prix.",
+    "reason_to_lie": "Votre grand livre caché vous donne un mobile financier et pourrait vous conduire devant un tribunal.",
+    "suspect_axes": ["clés", "service du café", "comptabilité falsifiée", "conflit sur la vente"],
+    "allowed_lies": ["minimiser la gravité des comptes", "retarder l'aveu de votre absence", "prétendre avoir oublié l'emprunt d'une clé jusqu'à la publication du registre"],
+    "forbidden_inventions": ["modifier les horaires inscrits au registre", "accuser un membre du personnel absent sans support", "cacher un document collectif après sa découverte"],
+    "known_facts": [
+      "Auguste prenait ses gouttes après le café lorsqu'il se plaignait de l'estomac.",
+      "Camille a emprunté une clé de service avant le gala.",
+      "Armand négociait une vente secrète.",
+      "Lucien avait préparé plusieurs dossiers pour le petit déjeuner."
+    ],
+    "documents_held": ["extrait du registre des clés", "page du grand livre falsifié", "note de service sur le plateau personnel d'Auguste"]
+  },
+  "relationships": [
+    {"target_role_id": "role_01", "public": "Membre de la famille à ménager.", "private": "Vous avez vu son nom dans le registre des clés."},
+    {"target_role_id": "role_04", "public": "Collaboration quotidienne.", "private": "Vous le soupçonnez de copier la correspondance d'Auguste."},
+    {"target_role_id": "role_06", "public": "Interlocuteur financier.", "private": "Vous pensez qu'il organise une reprise hostile."},
+    {"target_role_id": "role_05", "public": "Invitée prestigieuse.", "private": "Vous connaissez son ancienne liaison avec Auguste."}
+  ],
+  "act_revelations": [
+    {"act": 1, "class": "mandatory", "deadline": "end_of_act", "content": "Révéler qu'Auguste préparait une vente ou une restructuration majeure du palace.", "fallback": "Une note de réunion est ajoutée au dossier collectif."},
+    {"act": 2, "class": "mandatory", "deadline": "end_of_act", "content": "Admettre votre absence du service et présenter le registre indiquant l'emprunt de la clé par Camille.", "fallback": "Le compagnon débloque la copie du registre et le plan du couloir privé."},
+    {"act": 3, "class": "conditional", "trigger": "discussion sur les comptes", "content": "Présenter le grand livre et expliquer pourquoi vous l'avez falsifié.", "fallback": "Le document est rendu collectif avant les accusations."}
+  ],
+  "finale": {
+    "epilogue": "Vos falsifications sont découvertes, mais le personnel témoigne qu'elles ont empêché des licenciements immédiats.",
+    "personal_success": "Le groupe comprend que vous avez protégé le palace plutôt que détourné son argent."
+  }
+}
