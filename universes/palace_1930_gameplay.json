@@ -46,7 +46,7 @@
       ],
       "collective_question": "Qui avait une raison crédible de souhaiter la mort d'Auguste de Valleroy ?",
       "unlock_condition": "collective_question_answered_or_timer_elapsed",
-      "closing_reveal": "The death was probably not natural and the locked office is not the true core of the mystery."
+      "closing_reveal": "La mort n'est probablement pas naturelle et le bureau fermé n'est pas le véritable cœur du mystère."
     },
     {
       "number": 2,
@@ -60,7 +60,7 @@
       ],
       "collective_question": "Quelle est la fenêtre probable de l'empoisonnement et quel objet ou aliment a servi de vecteur ?",
       "unlock_condition": "collective_question_answered_or_timer_elapsed",
-      "closing_reveal": "Auguste de Valleroy was preparing to expose a fraud concerning the palace inheritance or ownership."
+      "closing_reveal": "Auguste de Valleroy s'apprêtait à révéler une fraude concernant l'héritage ou la propriété du palace."
     },
     {
       "number": 3,
