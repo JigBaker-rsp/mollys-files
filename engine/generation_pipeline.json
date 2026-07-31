@@ -1,5 +1,5 @@
 {
-  "version": "0.3.0",
+  "version": "0.5.0",
   "pipeline": [
     {
       "step": 1,
@@ -8,8 +8,13 @@
     },
     {
       "step": 2,
-      "id": "load_offer_universe_and_gameplay_contract",
-      "blocking": true
+      "id": "load_offer_universe_gameplay_and_timeline",
+      "blocking": true,
+      "outputs": [
+        "universe_contract",
+        "canonical_timeline",
+        "variant_delivery_map"
+      ]
     },
     {
       "step": 3,
@@ -19,7 +24,8 @@
         "selected_variant_id",
         "selected_gameplay_contract",
         "selected_role_set",
-        "selected_duration_profile"
+        "selected_duration_profile",
+        "selected_timeline_delivery"
       ]
     },
     {
@@ -55,31 +61,36 @@
     },
     {
       "step": 10,
-      "id": "run_autonomy_validation",
+      "id": "run_timeline_validation",
       "blocking": true
     },
     {
       "step": 11,
-      "id": "run_variant_validation",
+      "id": "run_autonomy_validation",
       "blocking": true
     },
     {
       "step": 12,
-      "id": "run_file_validation",
+      "id": "run_variant_validation",
       "blocking": true
     },
     {
       "step": 13,
-      "id": "package_delivery",
+      "id": "run_file_validation",
       "blocking": true
     },
     {
       "step": 14,
-      "id": "deliver_or_fulfill",
+      "id": "package_delivery",
       "blocking": true
     },
     {
       "step": 15,
+      "id": "deliver_or_fulfill",
+      "blocking": true
+    },
+    {
+      "step": 16,
       "id": "schedule_data_deletion",
       "blocking": false
     }
@@ -96,6 +107,8 @@
     "store_validation_report": true,
     "store_gameplay_contract_version": true,
     "store_variant_id": true,
-    "store_role_transfer_map": true
+    "store_role_transfer_map": true,
+    "store_canonical_timeline_version": true,
+    "store_variant_timeline_delivery_version": true
   }
 }
