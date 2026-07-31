@@ -1,0 +1,71 @@
+{
+  "id": "role_07",
+  "canonical_name": "Élise Morel",
+  "role_type": "optional",
+  "availability": {"compact_4_players": "not_used", "standard_6_players": "converted_to_collective_evidence", "extended_8_players": "active"},
+  "culprit": false,
+  "public_identity": {
+    "title": "La journaliste sous couverture",
+    "description": "Présentée comme chroniqueuse mondaine, venue en réalité enquêter sur la succession et les comptes du palace.",
+    "public_relation_to_victim": "Invitée tolérée par Auguste, qui ignorait l'objet véritable de son enquête.",
+    "apparent_motive": "Auguste avait découvert sa couverture et menaçait de la faire arrêter pour vol de documents.",
+    "costume_cues": ["appareil photo", "carnet", "carte de presse dissimulée"]
+  },
+  "casting": {
+    "difficulty": "medium",
+    "play_style": ["questions", "collecte d'informations", "révélation"],
+    "recommended_for": "Un joueur curieux qui aime provoquer les échanges.",
+    "organizer_friendly": true,
+    "culprit_opt_in_recommended": false
+  },
+  "private_truth": {
+    "relationship_to_victim": "Vous enquêtez sur lui depuis qu'un ancien comptable vous a confié des soupçons de fraude.",
+    "secret": "Vous êtes entrée sous un faux motif et avez photographié plusieurs pages du registre familial.",
+    "independent_secret": "Votre source a obtenu illégalement un document notarial et vous refusez de l'identifier.",
+    "claimed_alibi": "Vous dites avoir pris des photographies du gala toute la soirée.",
+    "actual_timeline": [
+      "Vous avez fouillé le vestiaire des dossiers.",
+      "Vous avez photographié une page montrant une incohérence de sceau.",
+      "Vous avez tenté d'intercepter la messagère attendue.",
+      "Vous avez été surprise par Auguste peu avant son dernier toast."
+    ],
+    "knowledge_limits": ["Vous ne savez pas qui a falsifié le codicille.", "Vous n'avez aucune information médicale fiable.", "Vous ignorez les déplacements précis de Camille."]
+  },
+  "gameplay": {
+    "private_objective": "Obtenir une preuve publiable de la fraude sans livrer l'identité de votre source.",
+    "secondary_objective": "Faire reconnaître votre enquête comme légitime malgré vos intrusions.",
+    "reason_to_lie": "Vous avez volé et photographié des documents, ce qui vous donne un mobile de panique.",
+    "suspect_axes": ["fausse identité", "vol de documents", "conflit avec Auguste", "accès aux dossiers"],
+    "allowed_lies": ["nier être journaliste", "dissimuler votre source", "minimiser les photographies prises"],
+    "forbidden_inventions": ["fabriquer un article ou une photographie", "attribuer une déclaration à votre source sans carte prévue", "prétendre connaître la méthode du meurtre"],
+    "known_facts": [
+      "Le sceau du codicille ne correspond pas au registre notarial.",
+      "Une copie authentique a été demandée à Genève.",
+      "Auguste comptait rendre la fraude publique.",
+      "Armand Keller cherchait lui aussi à obtenir le document."
+    ],
+    "documents_held": ["photographie du registre", "carte de presse", "note anonyme de la source", "coupure de journal"]
+  },
+  "relationships": [
+    {"target_role_id": "role_04", "public": "Source potentielle.", "private": "Vous pensez qu'il copie les dossiers d'Auguste."},
+    {"target_role_id": "role_06", "public": "Figure financière à interviewer.", "private": "Vous enquêtez sur ses méthodes de reprise."},
+    {"target_role_id": "role_08", "public": "Invitée du gala.", "private": "Vous avez tenté d'approcher le paquet qu'elle transporte."},
+    {"target_role_id": "role_02", "public": "Directrice de l'établissement.", "private": "Vous soupçonnez qu'elle protège le personnel en cachant des comptes."}
+  ],
+  "act_revelations": [
+    {"act": 1, "class": "conditional", "trigger": "découverte d'une photographie ou de votre carte", "content": "Reconnaître votre qualité de journaliste.", "fallback": "Votre carte de presse est découverte en fin d'acte."},
+    {"act": 2, "class": "mandatory", "deadline": "end_of_act", "content": "Présenter la photographie montrant l'incohérence du sceau.", "fallback": "Une copie photographique est ajoutée au dossier collectif."},
+    {"act": 3, "class": "mandatory", "deadline": "before_ballots", "content": "Révéler que la copie authentique a été demandée et qu'Auguste voulait exposer la fraude.", "fallback": "La note de votre source est publiée."}
+  ],
+  "variant_transfer": {
+    "standard_6_players": [
+      "photographie du registre notarial",
+      "note anonyme sur l'incohérence du sceau",
+      "coupure annonçant l'enquête sur les reprises hôtelières"
+    ]
+  },
+  "finale": {
+    "epilogue": "Votre article fera tomber plusieurs réputations, mais vous devrez choisir entre le scoop et la protection de votre source.",
+    "personal_success": "Vous réunissez trois preuves publiables sans révéler votre source."
+  }
+}
