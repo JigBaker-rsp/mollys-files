@@ -4,9 +4,9 @@ Moteur de génération d'expériences narratives personnalisées, conçu pour pr
 
 ## Vision
 
-Molly's Files sépare strictement les offres commerciales, les univers narratifs, les variantes de nombre de joueurs, les personnages, le moteur logique, le gameplay autonome et les assets de production.
+Molly's Files sépare strictement les offres commerciales, les univers narratifs, les variantes de nombre de joueurs, les personnages, la chronologie canonique, le moteur logique, le gameplay autonome et les assets de production.
 
-L'intrigue, les personnages, la chronologie, les preuves et la solution sont déterministes. La personnalisation modifie les noms et l'habillage, jamais la solvabilité de l'enquête.
+L'intrigue, les personnages, la chronologie du crime, les preuves et la solution sont déterministes. La personnalisation modifie les noms et l'habillage, jamais la solvabilité de l'enquête.
 
 ## Expérience promise
 
@@ -27,10 +27,10 @@ La progression repose sur des dossiers individuels, des enveloppes collectives, 
 
 ```text
 offers/      Définition des produits vendus
-universes/   Univers, personnages, gameplay et variantes
+universes/   Univers, personnages, chronologies, gameplay et variantes
 engine/      Génération, attribution, progression et validations
 assets/      Modèles PDF, graphiques, emails et impression
-schemas/     Contrats JSON des entrées, rôles, sorties et sessions
+schemas/     Contrats JSON des entrées, rôles, chronologies, sorties et sessions
 docs/        Spécifications produit et expérience
 ```
 
@@ -68,10 +68,31 @@ Contrats :
 - `engine/character_system.json` : règles d'attribution et de personnalisation ;
 - `docs/palace_1930_characters.md` : présentation lisible du casting.
 
+## Chronologie canonique
+
+La chronologie criminelle est identique dans les versions 4, 6 et 8 joueurs. Les scènes sociales supplémentaires peuvent varier, mais elles ne modifient jamais :
+
+- le prélèvement de la préparation fictive à 15:43 ;
+- la substitution du flacon entre 15:57 et 16:02 ;
+- l'ingestion à 22:21 ;
+- l'entrée dans le bureau verrouillé à 22:45 ;
+- la mort à 23:08 ;
+- la découverte à 07:55.
+
+Les rôles absents sont remplacés par des documents ou des témoignages ayant la même fonction démonstrative.
+
+Contrats :
+
+- `universes/palace_1930/timeline/canonical_timeline.json` : événements réels et horaires verrouillés ;
+- `universes/palace_1930/timeline/variant_delivery.json` : porteurs des preuves et scènes propres aux variantes ;
+- `schemas/timeline.schema.json` : structure obligatoire ;
+- `docs/palace_1930_timeline.md` : chronologie minute par minute et chaîne de démonstration.
+
 ## Principes non négociables
 
 - une solution unique et démontrable ;
 - un seul coupable verrouillé ;
+- même chronologie criminelle dans toutes les variantes ;
 - chaque rôle possède un mobile, un secret, un objectif, une raison de mentir et une information utile ;
 - aucun rôle purement décoratif ;
 - organisateur sans spoiler et autorisé à jouer ;
@@ -84,4 +105,4 @@ Contrats :
 
 ## Statut
 
-Socle produit, gameplay autonome, profils 4/6/8 joueurs et huit rôles canoniques spécifiés. Il reste à écrire la chronologie minute par minute, les documents, la chaîne de preuves, les dossiers joueurs finaux, le moteur exécutable, le compagnon web et les PDF.
+Socle produit, gameplay autonome, profils 4/6/8 joueurs, huit rôles canoniques et chronologie minute par minute spécifiés. Il reste à écrire les documents, la chaîne de preuves exécutable, les dossiers joueurs finaux, le moteur, le compagnon web et les PDF.
