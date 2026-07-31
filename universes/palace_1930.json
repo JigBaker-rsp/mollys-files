@@ -1,19 +1,35 @@
 {
   "id": "palace_1930",
   "name": "Le Palace des Ombres",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "status": "mvp_design",
   "setting": {
     "period": "1934",
     "location": "un palace alpin fictif coupé du monde par une tempête",
     "premise": "Au lendemain d'un gala privé, le propriétaire du palace est retrouvé mort dans son bureau fermé.",
-    "tone": ["elegant", "dramatic", "accessible"]
+    "tone": [
+      "elegant",
+      "dramatic",
+      "accessible"
+    ]
   },
   "gameplay": {
-    "duration_minutes": {"min": 120, "max": 180},
-    "player_counts": [6, 8],
+    "contract_path": "universes/palace_1930_gameplay.json",
+    "engine_path": "engine/autonomous_gameplay.json",
+    "duration_minutes": {
+      "min": 120,
+      "max": 180
+    },
+    "recommended_duration_minutes": 150,
+    "player_counts": [
+      6,
+      8
+    ],
     "acts": 3,
     "organizer_can_play": true,
+    "organizer_spoiler_free": true,
+    "game_master_required": false,
+    "offline_fallback_required": true,
     "solution_count": 1
   },
   "narrative_contract": {
@@ -31,18 +47,28 @@
     "role_05",
     "role_06"
   ],
-  "optional_roles": ["role_07", "role_08"],
+  "optional_roles": [
+    "role_07",
+    "role_08"
+  ],
   "content_status": {
+    "universe_brief": "specified",
+    "gameplay_contract": "specified",
+    "autonomous_progression": "specified",
     "timeline": "to_write",
     "characters": "to_write",
     "mandatory_clues": "to_write",
     "red_herrings": "to_write",
     "solution_proof": "to_write",
+    "hint_content": "to_write",
+    "offline_fallback_material": "to_write",
     "playtest": "not_started"
   },
   "restrictions": [
     "No real historical person is implicated.",
     "Personalization cannot change culprit, method, motive or mandatory clues.",
-    "All period references must remain understandable without specialist knowledge."
+    "All period references must remain understandable without specialist knowledge.",
+    "The organizer must never receive the solution before the final accusation.",
+    "No mandatory progression may depend on a game master or external facilitator."
   ]
 }
