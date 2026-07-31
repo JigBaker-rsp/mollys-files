@@ -2,9 +2,9 @@
   "project": {
     "id": "mollys_files",
     "name": "Molly's Files",
-    "version": "0.5.0",
+    "version": "0.6.0",
     "default_language": "fr",
-    "status": "timeline_foundation"
+    "status": "narrative_rebalance"
   },
   "product": {
     "category": "personalized_narrative_experiences",
@@ -30,15 +30,18 @@
     "schemas_path": "schemas",
     "gameplay_spec_path": "docs/gameplay_experience.md",
     "character_engine_path": "engine/character_system.json",
-    "timeline_schema_path": "schemas/timeline.schema.json"
+    "timeline_schema_path": "schemas/timeline.schema.json",
+    "lore_schema_path": "schemas/lore_secret.schema.json"
   },
   "mvp": {
     "universe_id": "palace_1930",
     "character_index": "universes/palace_1930/characters/index.json",
     "character_documentation": "docs/palace_1930_characters.md",
-    "canonical_timeline": "universes/palace_1930/timeline/canonical_timeline.json",
-    "variant_timeline_delivery": "universes/palace_1930/timeline/variant_delivery.json",
-    "timeline_documentation": "docs/palace_1930_timeline.md",
+    "embedded_lore": "universes/palace_1930/lore/foundation_secret.json",
+    "timeline_index": "universes/palace_1930/timeline/index.json",
+    "canonical_timeline": "universes/palace_1930/timeline/canonical_timeline_v0_6.json",
+    "variant_timeline_delivery": "universes/palace_1930/timeline/variant_delivery_v0_6.json",
+    "timeline_documentation": "docs/palace_1930_timeline_v0_6.md",
     "gameplay_contracts": {
       "compact_4_players": "universes/palace_1930_4p_gameplay.json",
       "standard_6_8_players": "universes/palace_1930_gameplay.json"
@@ -59,6 +62,14 @@
       "office_locked": "22:45",
       "death": "23:08",
       "body_discovered": "07:55"
+    },
+    "narrative_balance": {
+      "culprit_id": "role_01",
+      "culprit_may_be_early_suspect": true,
+      "culprit_must_not_be_early_provable": true,
+      "single_clue_conviction_forbidden": true,
+      "embedded_story_solves_murder": false,
+      "historical_death_is_accidental": true
     }
   }
 }
