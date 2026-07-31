@@ -2,67 +2,139 @@
   "id": "role_03",
   "canonical_name": "Docteur Gabriel Renaud",
   "role_type": "required",
-  "availability": {"compact_4_players": "active", "standard_6_players": "active", "extended_8_players": "active"},
+  "availability": {
+    "compact_4_players": "active",
+    "standard_6_players": "active",
+    "extended_8_players": "active"
+  },
   "culprit": false,
   "public_identity": {
     "title": "Le médecin de famille",
     "description": "Médecin d'Auguste depuis de nombreuses années et premier à examiner le corps.",
     "public_relation_to_victim": "Confident médical devenu dépendant de la protection financière d'Auguste.",
-    "apparent_motive": "Auguste menaçait de révéler des pratiques médicales et des certificats compromettants.",
-    "costume_cues": ["mallette médicale", "lunettes", "montre de gousset"]
+    "apparent_motive": "Auguste menaçait de révéler des certificats compromettants et de rouvrir les archives médicales liées à la mort d'Émile Mercier.",
+    "costume_cues": [
+      "mallette médicale",
+      "lunettes",
+      "montre de gousset"
+    ]
   },
   "casting": {
     "difficulty": "medium_high",
-    "play_style": ["analytique", "précis", "déduction"],
-    "recommended_for": "Un joueur qui aime expliquer les faits sans devoir jouer un grand personnage théâtral.",
+    "play_style": [
+      "analytique",
+      "précis",
+      "déduction"
+    ],
+    "recommended_for": "Un joueur qui aime expliquer les faits sans devenir un expert omniscient.",
     "organizer_friendly": true,
     "culprit_opt_in_recommended": false
   },
   "private_truth": {
     "relationship_to_victim": "Auguste finançait votre cabinet et exigeait en échange une discrétion absolue.",
     "secret": "Vous avez dissimulé la gravité de son état cardiaque à un assureur et à des investisseurs.",
-    "independent_secret": "Votre première conclusion de mort naturelle était trop rapide, car vous vouliez éviter l'examen de votre dossier médical.",
-    "claimed_alibi": "Vous affirmez n'avoir quitté le salon que pour répondre à un appel du personnel.",
+    "independent_secret": "Votre père a signé en 1920 le certificat de décès d'Émile Mercier après une expertise sommaire imposée par Alphonse de Valleroy. La mort était accidentelle, mais le dossier révèle une complaisance professionnelle familiale.",
+    "historical_stake": "L'ouverture des archives ne prouverait aucun meurtre ancien, mais pourrait ruiner le nom médical des Renaud et démontrer que la disparition d'Émile a été administrativement exploitée.",
+    "claimed_alibi": "Vous affirmez que votre trousse n'a jamais quitté votre contrôle et présentez votre premier diagnostic comme une prudence médicale.",
     "actual_timeline": [
-      "Vous avez examiné Camille dans l'après-midi après un malaise probablement simulé.",
-      "Votre trousse est restée brièvement sans surveillance.",
-      "Au matin, vous avez attribué la mort au cœur avant de remarquer des signes incompatibles.",
-      "Vous avez ensuite compris que l'ingestion avait précédé l'enfermement dans le bureau."
+      "À 15:34, vous examinez Camille après un malaise qui vous paraît seulement rétrospectivement opportun.",
+      "De 15:41 à 15:45, votre trousse reste sans surveillance dans le petit salon.",
+      "De 18:06 à 18:10, elle reste une seconde fois sur une table du poste de service pendant que vous soignez une coupure en cuisine.",
+      "Au matin, vous attribuez trop vite la mort au cœur afin d'éviter l'examen de vos dossiers.",
+      "Vous comprenez ensuite que l'ingestion a précédé l'enfermement dans le bureau."
     ],
     "knowledge_limits": [
-      "Vous ne savez pas qui a ouvert votre trousse.",
-      "Vous ignorez la fraude successorale au début de la partie.",
+      "Vous ne savez pas qui a ouvert votre trousse lors de la première fenêtre.",
+      "La seconde fenêtre rend plusieurs personnes théoriquement suspectes, mais elle intervient après la substitution du flacon.",
+      "Vous ignorez la portée exacte de l'acte Mercier au début de la partie.",
       "Vous ne pouvez identifier le coupable par la médecine seule."
     ]
   },
   "gameplay": {
-    "private_objective": "Corriger votre diagnostic sans révéler trop tôt la fraude médicale qui pourrait détruire votre carrière.",
-    "secondary_objective": "Retrouver la préparation manquante et comprendre qui connaissait les habitudes d'Auguste.",
-    "reason_to_lie": "Votre négligence et vos certificats dissimulés vous rendent responsable aux yeux du groupe.",
-    "suspect_axes": ["accès à une préparation dangereuse", "diagnostic initial", "dossier cardiaque caché", "dépendance financière"],
-    "allowed_lies": ["présenter le premier diagnostic comme prudent plutôt que complaisant", "retarder l'aveu de la préparation manquante", "minimiser votre dépendance envers Auguste"],
-    "forbidden_inventions": ["nommer une substance réelle ou un dosage absent du jeu", "déclarer médicalement impossible un fait prévu par la solution", "identifier arbitrairement un coupable par expertise"],
+    "private_objective": "Corriger votre diagnostic et établir la fenêtre d'ingestion sans révéler trop tôt les fautes médicales de votre famille.",
+    "secondary_objective": "Distinguer l'accident d'Émile Mercier de l'exploitation frauduleuse qui a suivi sa mort.",
+    "reason_to_lie": "Vous possédiez la préparation, connaissiez les délais possibles, avez laissé votre trousse sans surveillance deux fois et avez tenté de faire conclure à une mort naturelle.",
+    "suspect_axes": [
+      "accès à une préparation dangereuse",
+      "diagnostic initial",
+      "dossier cardiaque caché",
+      "certificat Mercier",
+      "dépendance financière"
+    ],
+    "allowed_lies": [
+      "présenter le premier diagnostic comme prudent plutôt que complaisant",
+      "retarder l'aveu des deux fenêtres sans surveillance",
+      "minimiser la pression exercée autrefois sur votre père",
+      "insister sur le fait que plusieurs personnes pouvaient approcher la trousse"
+    ],
+    "forbidden_inventions": [
+      "nommer une substance réelle ou un dosage absent du jeu",
+      "transformer l'avalanche d'Émile en meurtre",
+      "déclarer médicalement impossible un fait prévu par la solution",
+      "identifier arbitrairement un coupable par expertise"
+    ],
     "known_facts": [
       "Les symptômes impliquent une ingestion antérieure à l'entrée dans le bureau.",
       "Une préparation toxique fictive manque dans votre trousse.",
-      "Camille, Jeanne et Lucien connaissaient l'habitude des gouttes.",
-      "La réputation cardiaque d'Auguste pouvait masquer temporairement un empoisonnement."
+      "La première fenêtre sans surveillance suit immédiatement le malaise de Camille.",
+      "La seconde fenêtre est plus tardive et accessible à d'autres personnes.",
+      "La réputation cardiaque d'Auguste pouvait masquer temporairement un empoisonnement.",
+      "Le certificat de 1920 ne prouve pas un crime ancien."
     ],
-    "documents_held": ["fiche médicale confidentielle", "inventaire de la trousse", "note d'examen corrigée"]
+    "documents_held": [
+      "fiche médicale confidentielle d'Auguste",
+      "inventaire de la trousse",
+      "note d'examen corrigée",
+      "copie du certificat de décès d'Émile Mercier"
+    ]
   },
   "relationships": [
-    {"target_role_id": "role_01", "public": "Patient·e occasionnel·le.", "private": "Son malaise vous paraît rétrospectivement opportun."},
-    {"target_role_id": "role_02", "public": "Elle vous a appelé au matin.", "private": "Elle connaît mieux que quiconque les habitudes d'Auguste."},
-    {"target_role_id": "role_05", "public": "Simple connaissance.", "private": "Vous avez autrefois couvert une crise survenue après une dispute avec Auguste."},
-    {"target_role_id": "role_06", "public": "Investisseur du palace.", "private": "Il détient une copie du certificat médical transmis aux assureurs."}
+    {
+      "target_role_id": "role_01",
+      "public": "Patient·e occasionnel·le.",
+      "private": "Son malaise vous paraît rétrospectivement organisé."
+    },
+    {
+      "target_role_id": "role_02",
+      "public": "Elle vous a appelé au matin.",
+      "private": "Elle sait que votre père a signé le certificat d'Émile."
+    },
+    {
+      "target_role_id": "role_05",
+      "public": "Simple connaissance.",
+      "private": "Vous avez autrefois couvert une crise après une dispute avec Auguste."
+    },
+    {
+      "target_role_id": "role_06",
+      "public": "Investisseur du palace.",
+      "private": "Il détient une copie de votre certificat transmis aux assureurs."
+    }
   ],
   "act_revelations": [
-    {"act": 1, "class": "mandatory", "deadline": "end_of_act", "content": "Expliquer votre diagnostic initial de mort naturelle et reconnaître l'état cardiaque d'Auguste.", "fallback": "La fiche médicale est rendue collective."},
-    {"act": 2, "class": "mandatory", "deadline": "end_of_act", "content": "Corriger le diagnostic : l'action décisive a eu lieu avant le bureau ; révéler qu'une préparation manque.", "fallback": "Le rapport complémentaire et l'inventaire de la trousse sont débloqués."},
-    {"act": 3, "class": "conditional", "trigger": "question sur les personnes connaissant les gouttes", "content": "Donner la liste limitée des personnes informées de cette habitude.", "fallback": "Une note d'Auguste mentionnant ses gouttes est publiée."}
+    {
+      "act": 1,
+      "class": "mandatory",
+      "deadline": "end_of_act",
+      "content": "Expliquer votre diagnostic initial, reconnaître l'état cardiaque d'Auguste et révéler que votre père a signé le certificat d'Émile Mercier.",
+      "fallback": "Les deux fiches médicales sont rendues collectives."
+    },
+    {
+      "act": 2,
+      "class": "mandatory",
+      "deadline": "end_of_act",
+      "content": "Corriger le diagnostic, révéler la préparation manquante et les deux périodes pendant lesquelles la trousse est restée sans surveillance.",
+      "fallback": "Le rapport complémentaire, l'inventaire et le registre du poste de service sont débloqués."
+    },
+    {
+      "act": 3,
+      "class": "mandatory",
+      "deadline": "before_ballots",
+      "content": "Établir que la seconde fenêtre est trop tardive pour expliquer la substitution et donner la liste limitée des personnes connaissant les gouttes d'Auguste.",
+      "fallback": "Une note médicale de synthèse devient collective."
+    }
   ],
   "finale": {
-    "epilogue": "Votre réputation est ébranlée par les certificats cachés, mais votre correction du diagnostic permet de résoudre l'affaire.",
-    "personal_success": "Le groupe distingue votre faute professionnelle de la responsabilité du meurtre."
+    "epilogue": "Votre réputation est ébranlée par deux générations de certificats complaisants, mais votre correction du diagnostic permet de résoudre l'affaire.",
+    "personal_success": "Le groupe distingue vos fautes professionnelles du meurtre actuel et refuse d'inventer un second crime historique."
   }
 }
