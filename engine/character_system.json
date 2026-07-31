@@ -1,22 +1,41 @@
 {
-  "version": "0.1.0",
-  "role_types": ["required", "optional", "non_player_character"],
+  "version": "0.2.0",
+  "role_types": [
+    "required",
+    "optional",
+    "non_player_character"
+  ],
+  "schemas": {
+    "role": "schemas/character_role.schema.json"
+  },
   "character_contract": {
     "required_fields": [
       "id",
+      "canonical_name",
       "role_type",
+      "availability",
+      "culprit",
       "public_identity",
-      "private_objective",
-      "secret",
-      "known_facts",
+      "casting",
+      "private_truth",
+      "gameplay",
       "relationships",
-      "act_revelations"
+      "act_revelations",
+      "finale"
     ],
     "constraints": {
       "one_player_per_role": true,
       "one_role_per_player": true,
+      "exactly_one_locked_culprit_per_universe": true,
+      "all_player_roles_have_independent_secret": true,
+      "all_player_roles_have_personal_objective": true,
+      "all_player_roles_have_reason_to_lie": true,
+      "all_player_roles_have_mandatory_disclosure": true,
+      "all_conditional_disclosures_have_fallback": true,
       "all_mandatory_clues_have_holder_or_document": true,
-      "optional_role_removal_preserves_solution": true
+      "optional_role_removal_preserves_solution": true,
+      "variant_transfer_is_explicit": true,
+      "organizer_role_contains_no_solution_metadata": true
     }
   },
   "assignment": {
@@ -24,6 +43,26 @@
     "hard_constraints_first": true,
     "avoid_unrequested_romantic_roles": true,
     "avoid_reusing_same_pairings": true,
+    "respect_culprit_opt_in": true,
+    "prefer_organizer_friendly_role_for_organizer": true,
     "seeded_for_reproducibility": true
+  },
+  "personalization": {
+    "replaceable": [
+      "canonical_name",
+      "pronouns",
+      "gendered_title",
+      "costume_cues",
+      "secondary_biographical_details"
+    ],
+    "immutable": [
+      "role_id",
+      "culprit",
+      "private_truth",
+      "murder_truth",
+      "act_revelations",
+      "mandatory_clues",
+      "variant_transfer"
+    ]
   }
 }
