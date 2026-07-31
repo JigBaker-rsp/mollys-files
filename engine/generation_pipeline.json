@@ -1,17 +1,71 @@
 {
-  "version": "0.1.0",
+  "version": "0.2.0",
   "pipeline": [
-    {"step": 1, "id": "validate_order", "blocking": true},
-    {"step": 2, "id": "load_offer_and_universe", "blocking": true},
-    {"step": 3, "id": "resolve_variant", "blocking": true},
-    {"step": 4, "id": "assign_characters", "blocking": true},
-    {"step": 5, "id": "apply_personalization", "blocking": true},
-    {"step": 6, "id": "render_documents", "blocking": true},
-    {"step": 7, "id": "run_content_validation", "blocking": true},
-    {"step": 8, "id": "run_file_validation", "blocking": true},
-    {"step": 9, "id": "package_delivery", "blocking": true},
-    {"step": 10, "id": "deliver_or_fulfill", "blocking": true},
-    {"step": 11, "id": "schedule_data_deletion", "blocking": false}
+    {
+      "step": 1,
+      "id": "validate_order",
+      "blocking": true
+    },
+    {
+      "step": 2,
+      "id": "load_offer_universe_and_gameplay_contract",
+      "blocking": true
+    },
+    {
+      "step": 3,
+      "id": "resolve_variant",
+      "blocking": true
+    },
+    {
+      "step": 4,
+      "id": "assign_characters",
+      "blocking": true
+    },
+    {
+      "step": 5,
+      "id": "apply_personalization",
+      "blocking": true
+    },
+    {
+      "step": 6,
+      "id": "build_autonomous_session_package",
+      "blocking": true
+    },
+    {
+      "step": 7,
+      "id": "render_documents",
+      "blocking": true
+    },
+    {
+      "step": 8,
+      "id": "run_content_validation",
+      "blocking": true
+    },
+    {
+      "step": 9,
+      "id": "run_autonomy_validation",
+      "blocking": true
+    },
+    {
+      "step": 10,
+      "id": "run_file_validation",
+      "blocking": true
+    },
+    {
+      "step": 11,
+      "id": "package_delivery",
+      "blocking": true
+    },
+    {
+      "step": 12,
+      "id": "deliver_or_fulfill",
+      "blocking": true
+    },
+    {
+      "step": 13,
+      "id": "schedule_data_deletion",
+      "blocking": false
+    }
   ],
   "failure_policy": {
     "automatic_retries": 2,
@@ -22,6 +76,7 @@
   "reproducibility": {
     "store_version_ids": true,
     "store_generation_seed": true,
-    "store_validation_report": true
+    "store_validation_report": true,
+    "store_gameplay_contract_version": true
   }
 }
