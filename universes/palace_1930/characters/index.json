@@ -1,15 +1,34 @@
 {
   "universe_id": "palace_1930",
-  "version": "0.4.0",
-  "status": "characters_specified",
+  "version": "0.6.0",
+  "status": "characters_rebalanced",
+  "lore_contract": "universes/palace_1930/lore/foundation_secret.json",
   "design_principles": {
     "canonical_names_are_replaceable": true,
     "pronouns_and_titles_are_adaptable": true,
     "culprit_is_locked": "role_01",
+    "culprit_design": {
+      "rule": "Camille peut être un suspect précoce mais ne doit pas être le seul suspect complet avant l'acte III.",
+      "not_author_of_codicil": true,
+      "legitimate_key_explanation_required": true,
+      "conviction_requires_crossing": [
+        "mobile complet révélé tardivement",
+        "première fenêtre d'accès à la trousse",
+        "accès aux appartements",
+        "connaissance des habitudes d'Auguste",
+        "preuve de substitution ou contradiction finale"
+      ]
+    },
+    "embedded_story": {
+      "id": "belladone_foundation_secret",
+      "function": "Donner à plusieurs personnages des mobiles profonds et révéler le mensonge fondateur du palace sans créer une seconde enquête criminelle.",
+      "must_not_solve_murder_alone": true
+    },
     "every_role_has": [
       "credible_motive",
       "credible_opportunity",
       "independent_secret",
+      "historical_stake",
       "personal_objective",
       "useful_information",
       "reason_to_lie",
@@ -18,8 +37,10 @@
     ],
     "forbidden": [
       "un personnage purement décoratif",
+      "Camille désigné par une preuve directe avant l'acte III",
       "une information indispensable détenue par un seul joueur sans secours",
       "un mensonge inventé hors de la fiche",
+      "un second meurtre historique à résoudre",
       "une personnalisation modifiant la culpabilité ou la chaîne de preuves"
     ]
   },
@@ -29,73 +50,35 @@
     "age": 62,
     "public_identity": "Propriétaire du Palace Belladone et héritier d'une ancienne famille alpine.",
     "public_reputation": "Hôte brillant, mécène exigeant et négociateur redouté.",
-    "private_truth": "Il utilisait les dettes, les secrets et les dépendances de son entourage pour conserver le contrôle du palace.",
-    "final_intention": "Révéler au petit déjeuner une fraude successorale, écarter l'héritier désigné et préparer la vente du palace.",
+    "private_truth": "Il utilisait les dépendances de son entourage mais venait de découvrir que son propre héritage reposait sur l'effacement d'Émile Mercier.",
+    "final_intention": "Suspendre la vente, remettre le faux codicille à la police, reconnaître le rôle d'Émile Mercier et faire expertiser les droits de sa famille.",
     "death_contract": {
       "method": "Substitution de ses gouttes digestives habituelles par une préparation toxique fictive à effet différé.",
       "safety_note": "Le jeu ne décrit ni substance réelle exploitable, ni dosage, ni méthode de préparation.",
       "poisoning_window": "Avant la fin du gala, bien avant l'entrée de la victime dans son bureau.",
-      "locked_room_explanation": "La victime s'est enfermée elle-même après avoir absorbé la préparation ; personne n'avait besoin d'entrer dans le bureau au moment de la mort."
+      "locked_room_explanation": "La victime s'est enfermée elle-même après l'ingestion."
     }
   },
   "variant_maps": {
     "compact_4_players": {
-      "active_roles": [
-        "role_01",
-        "role_02",
-        "role_03",
-        "role_04"
-      ],
-      "npc_evidence_roles": [
-        "role_05",
-        "role_06"
-      ],
-      "unused_roles": [
-        "role_07",
-        "role_08"
-      ],
-      "required_transfer_rule": "Toutes les informations de role_05 et role_06 nécessaires à la solution deviennent des documents collectifs ou des révélations automatiques.",
-      "suspect_balance": "Les quatre rôles actifs conservent chacun un mobile, un accès plausible et un secret compromettant."
+      "active_roles": ["role_01", "role_02", "role_03", "role_04"],
+      "npc_evidence_roles": ["role_05", "role_06"],
+      "unused_roles": ["role_07", "role_08"],
+      "required_transfer_rule": "Les apports de Véra, Armand, Élise et Madeleine deviennent des documents historiques, financiers et testimoniaux sans créer de suspect extérieur principal.",
+      "suspect_balance": "Camille, Jeanne, Gabriel et Lucien disposent chacun d'un mobile actuel, d'un secret ancien et d'une possibilité matérielle partielle."
     },
     "standard_6_players": {
-      "active_roles": [
-        "role_01",
-        "role_02",
-        "role_03",
-        "role_04",
-        "role_05",
-        "role_06"
-      ],
-      "collective_evidence_roles": [
-        "role_07",
-        "role_08"
-      ],
-      "required_transfer_rule": "Les preuves notariales et journalistiques restent disponibles sous forme documentaire."
+      "active_roles": ["role_01", "role_02", "role_03", "role_04", "role_05", "role_06"],
+      "collective_evidence_roles": ["role_07", "role_08"],
+      "required_transfer_rule": "Les archives notariales et journalistiques restent disponibles sous forme documentaire."
     },
     "extended_8_players": {
-      "active_roles": [
-        "role_01",
-        "role_02",
-        "role_03",
-        "role_04",
-        "role_05",
-        "role_06",
-        "role_07",
-        "role_08"
-      ],
+      "active_roles": ["role_01", "role_02", "role_03", "role_04", "role_05", "role_06", "role_07", "role_08"],
       "required_transfer_rule": "Aucun transfert de rôle ; les supports de secours restent disponibles uniquement pour l'anti-blocage."
     }
   },
   "casting_matrix": {
-    "organizer_recommended_roles": [
-      "role_02",
-      "role_03",
-      "role_04",
-      "role_05",
-      "role_06",
-      "role_07",
-      "role_08"
-    ],
+    "organizer_recommended_roles": ["role_02", "role_03", "role_04", "role_05", "role_06", "role_07", "role_08"],
     "culprit_assignment": {
       "role_id": "role_01",
       "explicit_opt_in_preferred": true,
@@ -113,6 +96,7 @@
     "role_concepts": "specified",
     "public_profiles": "specified",
     "private_truths": "specified",
+    "historical_stakes": "specified",
     "relationships": "specified",
     "act_revelations": "specified",
     "documents_named": "specified_not_written",
@@ -121,101 +105,13 @@
     "playtest": "not_started"
   },
   "role_manifest": [
-    {
-      "id": "role_01",
-      "canonical_name": "Camille de Valleroy",
-      "path": "universes/palace_1930/characters/role_01.json",
-      "role_type": "required",
-      "culprit": true,
-      "availability": {
-        "compact_4_players": "active",
-        "standard_6_players": "active",
-        "extended_8_players": "active"
-      }
-    },
-    {
-      "id": "role_02",
-      "canonical_name": "Jeanne Mercier",
-      "path": "universes/palace_1930/characters/role_02.json",
-      "role_type": "required",
-      "culprit": false,
-      "availability": {
-        "compact_4_players": "active",
-        "standard_6_players": "active",
-        "extended_8_players": "active"
-      }
-    },
-    {
-      "id": "role_03",
-      "canonical_name": "Docteur Gabriel Renaud",
-      "path": "universes/palace_1930/characters/role_03.json",
-      "role_type": "required",
-      "culprit": false,
-      "availability": {
-        "compact_4_players": "active",
-        "standard_6_players": "active",
-        "extended_8_players": "active"
-      }
-    },
-    {
-      "id": "role_04",
-      "canonical_name": "Lucien Delmas",
-      "path": "universes/palace_1930/characters/role_04.json",
-      "role_type": "required",
-      "culprit": false,
-      "availability": {
-        "compact_4_players": "active",
-        "standard_6_players": "active",
-        "extended_8_players": "active"
-      }
-    },
-    {
-      "id": "role_05",
-      "canonical_name": "Véra Lenoir",
-      "path": "universes/palace_1930/characters/role_05.json",
-      "role_type": "required",
-      "culprit": false,
-      "availability": {
-        "compact_4_players": "converted_to_npc_evidence",
-        "standard_6_players": "active",
-        "extended_8_players": "active"
-      }
-    },
-    {
-      "id": "role_06",
-      "canonical_name": "Armand Keller",
-      "path": "universes/palace_1930/characters/role_06.json",
-      "role_type": "required",
-      "culprit": false,
-      "availability": {
-        "compact_4_players": "converted_to_npc_evidence",
-        "standard_6_players": "active",
-        "extended_8_players": "active"
-      }
-    },
-    {
-      "id": "role_07",
-      "canonical_name": "Élise Morel",
-      "path": "universes/palace_1930/characters/role_07.json",
-      "role_type": "optional",
-      "culprit": false,
-      "availability": {
-        "compact_4_players": "not_used",
-        "standard_6_players": "converted_to_collective_evidence",
-        "extended_8_players": "active"
-      }
-    },
-    {
-      "id": "role_08",
-      "canonical_name": "Madeleine Rochefort",
-      "path": "universes/palace_1930/characters/role_08.json",
-      "role_type": "optional",
-      "culprit": false,
-      "availability": {
-        "compact_4_players": "not_used",
-        "standard_6_players": "converted_to_collective_evidence",
-        "extended_8_players": "active"
-      }
-    }
+    {"id": "role_01", "canonical_name": "Camille de Valleroy", "path": "universes/palace_1930/characters/role_01.json", "role_type": "required", "culprit": true, "availability": {"compact_4_players": "active", "standard_6_players": "active", "extended_8_players": "active"}},
+    {"id": "role_02", "canonical_name": "Jeanne Mercier", "path": "universes/palace_1930/characters/role_02.json", "role_type": "required", "culprit": false, "availability": {"compact_4_players": "active", "standard_6_players": "active", "extended_8_players": "active"}},
+    {"id": "role_03", "canonical_name": "Docteur Gabriel Renaud", "path": "universes/palace_1930/characters/role_03.json", "role_type": "required", "culprit": false, "availability": {"compact_4_players": "active", "standard_6_players": "active", "extended_8_players": "active"}},
+    {"id": "role_04", "canonical_name": "Lucien Delmas", "path": "universes/palace_1930/characters/role_04.json", "role_type": "required", "culprit": false, "availability": {"compact_4_players": "active", "standard_6_players": "active", "extended_8_players": "active"}},
+    {"id": "role_05", "canonical_name": "Véra Lenoir", "path": "universes/palace_1930/characters/role_05.json", "role_type": "required", "culprit": false, "availability": {"compact_4_players": "converted_to_npc_evidence", "standard_6_players": "active", "extended_8_players": "active"}},
+    {"id": "role_06", "canonical_name": "Armand Keller", "path": "universes/palace_1930/characters/role_06.json", "role_type": "required", "culprit": false, "availability": {"compact_4_players": "converted_to_npc_evidence", "standard_6_players": "active", "extended_8_players": "active"}},
+    {"id": "role_07", "canonical_name": "Élise Morel", "path": "universes/palace_1930/characters/role_07.json", "role_type": "optional", "culprit": false, "availability": {"compact_4_players": "not_used", "standard_6_players": "converted_to_collective_evidence", "extended_8_players": "active"}},
+    {"id": "role_08", "canonical_name": "Madeleine Rochefort", "path": "universes/palace_1930/characters/role_08.json", "role_type": "optional", "culprit": false, "availability": {"compact_4_players": "not_used", "standard_6_players": "converted_to_collective_evidence", "extended_8_players": "active"}}
   ]
 }
