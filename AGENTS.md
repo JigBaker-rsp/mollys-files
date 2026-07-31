@@ -18,9 +18,19 @@ Les fichiers présents sur `main` sont la source de vérité. Ne pas inventer un
 
 1. Ne jamais laisser un modèle génératif choisir librement le coupable, les preuves obligatoires ou la solution.
 2. Les personnalisations ne doivent pas modifier le graphe logique de l'enquête.
-3. Toute génération doit être reproductible depuis un identifiant de version, un scénario et une graine.
+3. Toute génération doit être reproductible depuis un identifiant de version, un scénario, une variante et une graine.
 4. Les anecdotes doivent rester secondaires, non humiliantes et facultatives pour résoudre le jeu.
 5. Toute sortie client doit passer les validations bloquantes définies dans `engine/validation_rules.json`.
+
+## Gestion des variantes
+
+1. La variante compatible doit être résolue avant l'attribution des personnages.
+2. Ne jamais créer une variante en supprimant des dossiers d'une version déjà générée.
+3. Toute suppression de rôle doit produire une carte de transfert de ses informations indispensables.
+4. Les informations transférées doivent être livrées par un autre personnage, un document collectif ou le compagnon, sans intervention humaine.
+5. Une variante compacte doit conserver plusieurs suspects crédibles et ne peut pas être résolue par simple élimination.
+6. Chaque variante possède ses propres durées, budgets d'indices, limites d'absence et tests.
+7. Une variante ne peut pas être déclarée `playtest_ready` sur la base des tests d'une autre variante.
 
 ## Autonomie de jeu
 
@@ -35,7 +45,7 @@ Les fichiers présents sur `main` sont la source de vérité. Ne pas inventer un
 9. Le coupable peut mentir loyalement, mais ne peut pas contredire les faits immuables ou bloquer une preuve.
 10. Toute suppression de rôle doit transférer ses informations indispensables.
 
-Les règles génériques sont dans `engine/autonomous_gameplay.json`. Chaque univers doit fournir un fichier `*_gameplay.json` conforme à `schemas/gameplay_contract.schema.json`.
+Les règles génériques sont dans `engine/autonomous_gameplay.json`. Chaque univers et chaque variante doivent fournir un fichier `*_gameplay.json` conforme à `schemas/gameplay_contract.schema.json`.
 
 ## Qualité des changements
 
@@ -45,7 +55,7 @@ Les règles génériques sont dans `engine/autonomous_gameplay.json`. Chaque uni
 - Ajouter ou mettre à jour un schéma lors de l'introduction d'une nouvelle structure de données.
 - Un changement de règle moteur doit documenter son impact sur les univers existants.
 - Aucun fichier vide uniquement destiné à matérialiser un dossier.
-- Ne pas déclarer un univers `playtest_ready` tant que son gameplay autonome, ses aides et son mode hors ligne ne sont pas complets.
+- Ne pas déclarer un univers ou une variante `playtest_ready` tant que son gameplay autonome, ses aides, son mode hors ligne et ses tests dédiés ne sont pas complets.
 
 ## Sécurité et données
 
